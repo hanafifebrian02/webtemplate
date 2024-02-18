@@ -1,0 +1,1834 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Document Meta-->
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <!-- IE Compatibility Meta-->
+        <meta name="author" content="zytheme"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+        <meta name="description" content="Multi-purpose Business html5 landing page"/>
+        <link href="https://demos.codexcoder.com/labartisan/html/maxino/assets/css/favicon.png" rel="icon"/>
+        <!-- link cdn tailwindcss -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+        <!-- link icon -->
+        <!-- <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      /> -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.96w-96 text-center max-w-xs 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+          </svg>
+          <!-- animasi refresh
+          <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        /> -->
+        
+        <!-- lilita one start -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+        <!-- lilita one stop -->
+        <!-- Oswold & Roboto start -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <!-- Oswold & Roboto stop -->
+        <!-- jost start -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <!-- jost stop -->
+        <!-- playfair start -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <!-- playfair stop -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link
+          crossorigin="anonymous"
+          href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.css"
+          rel="stylesheet"
+        />
+        <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/ripple.js"></script>
+          <!-- stylesheet -->
+
+    </head>
+        <title>Maxino </title>
+        <script>
+            tailwind.config = {
+              theme: {
+                container:{
+                    center: true,
+                    padding: '20px',
+                },
+                extend: {
+                  colors: {
+                    birmud: '#6ad3e5',
+                    biru: '#00b0d3',
+                    gelap: '#0f172a',
+                    gelap1: '#1e293b',
+                    pdng: '#ffffff',
+                    ptng: '#ababab',
+                    birtu: '#1d4ed8',
+                    toska: '#333333',
+                    ijo: '#49b970',
+                  },
+                    backgroundImage: {
+                    // background gambar
+
+                    // example: 'pict': 'url("https://hanafifebriansyah.vercel.app/assets/profil/bg.png")',
+                    },
+                    fontFamily: {
+                        Lile:['Lilita One'],
+                        Oswald:['Oswald'],
+                        jos:['Jost'],
+                        play:['Playfair Display'],
+                        monreg:['monreg'],
+                        monul:['monul'],
+                        dm:['DM Sans']
+                    },
+                  screen:{
+                    '2xl' : '1400px',
+                  }
+                }
+              }
+            }
+        </script>
+        <style type="text/tailwindcss">
+            @font-face {
+                font-family: monreg;
+                src: url('/assets/font/MonumentExtended-Regular.otf');
+            }
+            @font-face {
+                font-family: monul;
+                src: url('/assets/font/MonumentExtended-Ultrabold.otf');
+            }
+            .marquee {
+                animation: marquee 15s linear infinite;
+            } 
+            body,html {
+                scroll-behavior: smooth;
+                font-family: 'Roboto',sans-serif;
+
+            }
+            .swiper-pagination {
+              bottom: 0;
+              position: relative;
+            }
+
+            .swiper-container {
+              overflow: hidden;
+            }
+            .swiper-pagination-bullet{
+              background-color:rgb(27, 211, 14);
+            }
+            .swiper-pagination-bullet-active{
+              background-color:rgb(27, 211, 14);
+            }
+            .nav-fixed{
+                @apply fixed z-50 py-5 bg-white/50 dark:bg-black/50  transition duration-200 ease-in-out;
+                backdrop-filter: blur(5px);
+                box-shadow: inset 0 -1px 0 0 rgba(0,0,0,0.1);
+            }
+        
+            .nav-fixed{
+                @apply  lg:bg-black/30  lg:dark:text-slate-100 lg:text-center lg:backdrop-blur-sm lg:shadow-lg lg:p-1 lg:fixed lg:w-full  transition-all duration-500 ease-in-out lg:z-50;
+            }
+            .nav-fixed > div:nth-child(1){
+                @apply lg:mx-auto;
+            }
+            .nav-fixed > div:nth-child(3){
+                @apply lg:space-x-4;
+            }
+            .hamburger-line{
+                 @apply w-[30px] h-1 my-1 rounded-md block bg-toska;
+            }
+            .nav-line2{
+                 @apply bg-black/30 shadow-2xl transition duration-200 ease-in-out;
+            }
+            .hamburger-active > span:nth-child(1){
+                 @apply  rotate-45 transition;
+            }
+            .hamburger-active > span:nth-child(2){
+                 @apply scale-0;
+            }
+            .hamburger-active > span:nth-child(3){
+                 @apply origin-bottom-left -rotate-45;
+            }
+            #hamburger{
+                @apply rounded-lg bg-slate-100 p-1;
+            }
+
+        </style>
+    </head>
+    <body class="overflow-y-scroll">        
+    <header class="bg-transparent container pt-6 absolute w-full font-semibold transition-all ease-in-out duration-500 flex items-center max-w-full z-50 ">
+            <div class="container">
+                <div class="flex items-center justify-between relative">
+                    <div class="px-4 flex">
+                     <p class="font-monul text-5xl text-white">Maxino</p>
+                    </div>
+                    <div class="flex item-center px-4">
+                        <button id="hamburger" name="hamburger" type="button" class="block right-4 transition duration-200">
+                            <svg id="icon" class="h-6 w-6 text-gray-400 cursor-pointer hover:text-blue-400" width="256px" height="256px" viewBox="0 0 24.00 24.00" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#000000" stroke-width="1.872">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path d="M5 8H13.75M5 12H19M10.25 16L19 16" stroke="#464455" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </g>
+                            </svg>
+                        </button>                        
+                        <nav  id="nav-menu" class="hidden absolute mx-auto py-5 nav-line2 mt-1 shadow-lg rounded-lg max-lg:w-[250px] w-full right-4 top-full lg:py-1 lg:max-w-full lg:rounded-none">
+                            <ul class="block lg:flex lg:text-md items-center font-monreg"> 
+                                <li class="group ">
+                                    <a href="#Home" class="hover:text-[#CCB98F] relative group animate__animated animate__fadeInRight py-2 mx-4  flex transition duration-400 ease-in-out">
+                                        <span class="">Home</span>
+                                    </a></li>
+                                <li class="group">
+                                    <a href="#Aboute" class=" hover:text-[#CCB98F] animate__animated animate__fadeInRight py-2 mx-4   flex  transition duration-400 ease-in-out"><span class=""> Aboute me</span></a></li>
+                                    <li class="group">
+                                    <a href="#Resume" class=" hover:text-[#CCB98F] animate__animated animate__fadeInRight py-2 mx-4   flex  transition duration-400 ease-in-out"><span class=""> Resume</span></a></li>
+                                <li class="group">
+                                    <a href="#Service" class=" hover:text-[#CCB98F] animate__animated animate__fadeInRight py-2 mx-4   flex  transition duration-400 ease-in-out"><span class=""> Service</span></a></li>
+                                <li class="group">
+                                    <a href="#Portfolio" class=" hover:text-[#CCB98F] animate__animated animate__fadeInRight py-2 mx-4   flex  transition duration-400 ease-in-out"><span class=""> Portfolio</span></a></li>
+                                <li class="group">
+                                    <a href="#Pricing" class=" hover:text-[#CCB98F] animate__animated animate__fadeInRight py-2 mx-4   flex  transition duration-400 ease-in-out"><span class=""> Pricing</span></a></li>
+                                <li class="group">
+                                    <a href="#Clients" class=" hover:text-[#CCB98F] animate__animated animate__fadeInRight py-2 mx-4   flex  transition duration-400 ease-in-out"><span class=""> Clients</span></a></li>
+                                <li class="group">
+                                    <a href="#Blogs" class=" hover:text-[#CCB98F] animate__animated animate__fadeInRight py-2 mx-4  flex  transition duration-400 ease-in-out"><span class="">Blogs</span></a></li>
+                                <li class="group">
+                                    <a href="#Contacts" class=" hover:text-[#CCB98F] animate__animated animate__fadeInRight py-2 mx-4  flex  transition duration-400 ease-in-out"><span class="">Contacts</span></a></li>
+                                </ul>
+                            </nav>
+                    </div>
+                </div>
+            </div>
+    </header>
+    <section id="home" class="pt-40 bg-gradient-to-bl lg:fixed lg:-z-10 w-full from-yellow-400 to-pink-900">
+        <div class="container max-w-7xl mx-auto">
+            <div class="flex flex-wrap">
+                <div id="fixedSection" class="w-full mt-20 lg:relative lg:top-0 lg:left-0 lg:w-1/2">
+                    <p class="font-monreg text-white text-lg mt-2 lg:text-2xl">Hello...</p>
+                    <h1 class="font-monul font-bold text-white text-4xl mt-2 lg:text-7xl">I'm Emma Grant</h1>
+                    <p class="font-monreg text-white text-lg mt-2 lg:text-2xl">A Professional Designer</p>
+                    <div class="mt-10">
+                        <a href="#" class="p-4 border-4 border-transparent rounded-md bg-pink-500 text-white font-bold font-monul hover:border-4 hover:border-pink-200 transition-all duration-300">View My Portfolio <i class="fa-solid fa-download mx-2"></i></a>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 w-full">
+                    <div class="relative">
+                        <img src="https://demos.codexcoder.com/labartisan/html/maxino/assets/images/banner/02.png" alt="" class="mx-auto">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="lg:w-[1350px] lg:mt-[580px] shadow-xl bg-white bg-cover p-5 mx-auto">
+        <div class="container">
+            <section class="" id="Aboute">
+                    <div class="flex flex-wrap justify-center my-5">
+                        <div class="p-6 my-5 mx-auto rounded-tl-xl rounded-br-xl hover:rounded-br-none hover:rounded-tl-none hover:rounded-bl-xl hover:rounded-tr-xl hover:scale-105 hover:translate-y-5 transition-all ease-in-out duration-300 bg-slate-200 lg:w-[300px] w-full">
+                            <div class="flex flex-wrap">
+                                <div class="lg:w-10">
+                                    <img src="https://demos.codexcoder.com/labartisan/html/maxino/assets/images/icon/01.png" alt="">
+                                </div>
+                                <div class="lg:w-[210px] px-3">
+                                    <p class="font-monreg">Give us a Call</p>
+                                    <p class="font-monreg font-bold">001-888-123-4567</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6 my-5 mx-auto rounded-tl-xl rounded-br-xl hover:rounded-br-none hover:rounded-tl-none hover:rounded-bl-xl hover:rounded-tr-xl hover:scale-105 hover:translate-y-5 transition-all ease-in-out duration-300 bg-slate-200 lg:w-[300px] w-full">
+                            <div class="flex flex-wrap">
+                                <div class="lg:w-10">
+                                    <img src="https://demos.codexcoder.com/labartisan/html/maxino/assets/images/icon/02.png" alt="">
+                                </div>
+                                <div class="lg:w-[210px] px-3">
+                                    <p class="font-monreg">Send us a Message</p>
+                                    <p class="font-monreg font-bold">maxinoadmin@mail.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6 my-5 mx-auto rounded-tl-xl rounded-br-xl hover:rounded-br-none hover:rounded-tl-none hover:rounded-bl-xl hover:rounded-tr-xl hover:scale-105 hover:translate-y-5 transition-all ease-in-out duration-300 bg-slate-200 lg:w-[300px] w-full">
+                            <div class="flex flex-wrap">
+                                <div class="lg:w-10">
+                                    <img src="https://demos.codexcoder.com/labartisan/html/maxino/assets/images/icon/03.png" alt="">
+                                </div>
+                                <div class="lg:w-[210px] px-3">
+                                    <p class="font-monreg">Visit our Location</p>
+                                    <p class="font-monreg font-bold">02/07 Suitland Street 120</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+            <section class="my-10">
+                <div class="container flex flex-wrap">
+                    <div class="lg:w-1/2 w-full">
+                        <p class="font-dm text-lg">Welcome to My Portfolio</p>
+                        <p class="font-dm text-2xl">Why <span class="font-bold text-pink-500">3650 People</span> Love Us Believe My Awesome Services</p>
+                        <img src="https://demos.codexcoder.com/labartisan/html/maxino/assets/images/about/01.png" alt="">
+                    </div>
+                    <div class="lg:w-1/2 w-full">
+                        <p class="px-3 py-2 bg-gradient-to-br from-pink-500 to-yellow-500 w-28 font-bold text-white font-monreg mb-2">Hello World</p>
+                        <p class="font-dm text-2xl">I am <span class="font-bold text-pink-500">Emma Grant</span> UX Designer From New York City 1200.</p>
+                        <p class="text-slate-400 font-dm my-2">Energisticaly Simplify Toping Line Solutions without Leveraged Resutrs are an Colabrerse Channels Throughe Qrthogonal e-Commerce Energistcaly Growing Practve Anding Platform Niches After Paralel Technolog</p>
+                        <div class="">
+                            <div class="flex my-2">
+                                <div class="w-32 mx-2 text-slate-400 font-dm">
+                                    <p>Name</p>
+                                </div>
+                                <div class="w-60">
+                                    <p>: 
+                                        Emma Grant</p>
+                                </div>
+                            </div>
+                            <div class="flex my-2">
+                                <div class="w-32 mx-2 text-slate-400 font-dm">
+                                    <p>Date of Birth</p>
+                                </div>
+                                <div class="w-60">
+                                    <p>: 
+                                        27 Feb 1994</p>
+                                </div>
+                            </div>
+                            <div class="flex my-2">
+                                <div class="w-32 mx-2 text-slate-400 font-dm">
+                                    <p>Email</p>
+                                </div>
+                                <div class="w-60">
+                                    <p>: 
+                                        smith7@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="flex my-2">
+                                <div class="w-32 mx-2 text-slate-400 font-dm">
+                                    <p>Phone</p>
+                                </div>
+                                <div class="w-60">
+                                    <p>: 
+                                        +258 369 147</p>
+                                </div>
+                            </div>
+                            <div class="flex my-2">
+                                <div class="w-32 mx-2 text-slate-400 font-dm">
+                                    <p>Fax</p>
+                                </div>
+                                <div class="w-60">
+                                    <p>: 
+                                        222 666 888</p>
+                                </div>
+                            </div>
+                            <div class="flex my-2">
+                                <div class="w-32 mx-2 text-slate-400 font-dm">
+                                    <p>Nationality</p>
+                                </div>
+                                <div class="w-60">
+                                    <p>: 
+                                        United States</p>
+                                </div>
+                            </div>
+                            <div class="flex my-2">
+                                <div class="w-32 mx-2 text-slate-400 font-dm">
+                                    <p>Adress</p>
+                                </div>
+                                <div class="w-60">
+                                    <p>: 
+                                        Suite 02 New Elephant Road</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="my-5">
+                            <a href="#" class="px-3 py-2 bg-gradient-to-br from-pink-500 to-yellow-500 w-28 font-bold text-white font-monreg mb-2 hover:from-yellow-500 hover:to-pink-500 transition-all ease-in duration-500">
+                                Download resum <i class="fa-solid fa-download ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="my-16" id="Resume">
+                <div class="container">
+                    <div class="flex flex-wrap justify-center items-center">
+                        <div class="lg:w-[100px] w-[120px] mx-auto my-2">
+                            <img src="https://demos.codexcoder.com/labartisan/html/maxino/assets/images/sponsor/01.png" alt="">
+                        </div>
+                        <div class="lg:w-[100px] w-[120px] mx-auto my-2">
+                            <img src="https://demos.codexcoder.com/labartisan/html/maxino/assets/images/sponsor/02.png" alt="">
+                        </div>
+                        <div class="lg:w-[100px] w-[120px] mx-auto my-2">
+                            <img src="https://demos.codexcoder.com/labartisan/html/maxino/assets/images/sponsor/03.png" alt="">
+                        </div>
+                        <div class="lg:w-[100px] w-[120px] mx-auto my-2">
+                            <img src="https://demos.codexcoder.com/labartisan/html/maxino/assets/images/sponsor/04.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="my-10" id="">
+                <div class="container">
+                    <p class="px-3 py-2 bg-gradient-to-br from-pink-500 to-yellow-500 w-52 font-bold text-white font-monreg mb-2">Education & Experience</p>
+                    <p class="font-dm text-2xl max-w-xl">I Have Completed My Master<span class="font-bold text-pink-500"> Degree & Experience</span> With Leading Companies</p>
+                    <div class="flex flex-wrap">
+                        <div class="lg:w-[590px] border mx-auto my-2 p-3 w-full hover:text-pink-500 duration-300">
+                            <div class="flex">
+                                <div class="flex">
+                                    <div class="flex lg:w-[450px]">
+                                        <img src="https://demos.codexcoder.com/labartisan/html/maxino/assets/images/exp/01.png" alt="">
+                                        <p class="self-center px-2 text-xs text-black">Boxsouth University</p>
+                                    </div>
+                                    <p class="mx-2 py-2 px-3 bg-gradient-to-br from-pink-500 to-yellow-500 w-24 font-bold text-white font-dm text-xs mb-2">2014 - 2019</p>
+                                </div>
+                            </div>
+                            <p class="p-3 font-monreg text-3xl">Master Degree Visual Art & Design</p>
+                            <p class="p-3 text-sm max-w-lg font-dm text-slate-400">Profesiona Qrovide Access Whating Exceptional Vortals Without Crossun Dynamically eenable extensible information</p>
+                        </div>
+                        <div class="lg:w-[590px] border mx-auto my-2 p-3 w-full hover:text-pink-500 duration-300">
+                            <div class="flex">
+                                <div class="flex">
+                                    <div class="flex lg:w-[450px]">
+                                        <img src="https://demos.codexcoder.com/labartisan/html/maxino/assets/images/exp/01.png" alt="">
+                                        <p class="self-center px-2 text-xs text-black">Boxsouth University</p>
+                                    </div>
+                                    <p class="mx-2 py-2 px-3 bg-gradient-to-br from-pink-500 to-yellow-500 w-24 font-bold text-white font-dm text-xs mb-2">2014 - 2019</p>
+                                </div>
+                            </div>
+                            <p class="p-3 font-monreg text-3xl">Master Degree Visual Art & Design</p>
+                            <p class="p-3 text-sm max-w-lg font-dm text-slate-400">Profesiona Qrovide Access Whating Exceptional Vortals Without Crossun Dynamically eenable extensible information</p>
+                        </div>
+                        <div class="lg:w-[590px] border mx-auto my-2 p-3 w-full hover:text-pink-500 duration-300">
+                            <div class="flex">
+                                <div class="flex">
+                                    <div class="flex lg:w-[450px]">
+                                        <img src="https://demos.codexcoder.com/labartisan/html/maxino/assets/images/exp/01.png" alt="">
+                                        <p class="self-center px-2 text-xs text-black">Boxsouth University</p>
+                                    </div>
+                                    <p class="mx-2 py-2 px-3 bg-gradient-to-br from-pink-500 to-yellow-500 w-24 font-bold text-white font-dm text-xs mb-2">2014 - 2019</p>
+                                </div>
+                            </div>
+                            <p class="p-3 font-monreg text-3xl">Master Degree Visual Art & Design</p>
+                            <p class="p-3 text-sm max-w-lg font-dm text-slate-400">Profesiona Qrovide Access Whating Exceptional Vortals Without Crossun Dynamically eenable extensible information</p>
+                        </div>
+                        <div class="lg:w-[590px] border mx-auto my-2 p-3 w-full hover:text-pink-500 duration-300">
+                            <div class="flex">
+                                <div class="flex">
+                                    <div class="flex lg:w-[450px]">
+                                        <img src="https://demos.codexcoder.com/labartisan/html/maxino/assets/images/exp/01.png" alt="">
+                                        <p class="self-center px-2 text-xs text-black">Boxsouth University</p>
+                                    </div>
+                                    <p class="mx-2 py-2 px-3 bg-gradient-to-br from-pink-500 to-yellow-500 w-24 font-bold text-white font-dm text-xs mb-2">2014 - 2019</p>
+                                </div>
+                            </div>
+                            <p class="p-3 font-monreg text-3xl">Master Degree Visual Art & Design</p>
+                            <p class="p-3 text-sm max-w-lg font-dm text-slate-400">Profesiona Qrovide Access Whating Exceptional Vortals Without Crossun Dynamically eenable extensible information</p>
+                        </div>
+                        <div class="my-5 mx-auto">
+                            <a href="#" class="px-3 py-2 bg-gradient-to-br from-pink-500 to-yellow-500 w-28 font-bold text-white font-monreg mb-2 hover:from-yellow-500 hover:to-pink-500 transition-all ease-in duration-500">
+                                Download My CV <i class="fa-solid fa-download ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="my-10" id="Service">
+                <div class="container">
+                    <p class="px-3 py-2 bg-gradient-to-br from-pink-500 to-yellow-500 w-28 font-bold text-white font-monreg mb-2">My Services</p>
+                    <p class="font-dm text-2xl max-w-xl">We Have Done Lot's of <span class="font-bold text-pink-500"> My Best Services</span> Lets Check Some of Them</p>
+                    <div class="flex flex-wrap my-5">
+                        <div class="lg:w-[590px] border mx-auto my-2 w-full">
+                            <div class="flex flex-wrap">
+                                <div class="lg:w-[400px] p-5 w-full">
+                                    <p class="text-3xl font-bold font-monul">PSD Template Design</p>
+                                    <p class="py-2 max-w-xs text-slate-500">
+                                        Mnique deplo scalable catals forin Monec formu was unique
+                                    </p>
+                                    <ul class="px-5 text-slate-500">
+                                        <li class="list-disc">Motion Graphic Design</li>
+                                        <li class="list-disc">3D animation Design</li>
+                                        <li class="list-disc">Info Graphic Design</li>
+                                        <li class="list-disc">Vector Design</li>
+                                    </ul>
+                                </div>
+                                <div class="lg:w-44 w-full self-center ">
+                                    <img src="https://demos.codexcoder.com/labartisan/html/maxino/assets/images/service/01.png" alt="" class="w-full">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:w-[590px] border mx-auto my-2 w-full">
+                            <div class="flex flex-wrap">
+                                <div class="lg:w-[400px] p-5 w-full">
+                                    <p class="text-3xl font-bold font-monul">PSD Template Design</p>
+                                    <p class="py-2 max-w-xs text-slate-500">
+                                        Mnique deplo scalable catals forin Monec formu was unique
+                                    </p>
+                                    <ul class="px-5 text-slate-500">
+                                        <li class="list-disc">Motion Graphic Design</li>
+                                        <li class="list-disc">3D animation Design</li>
+                                        <li class="list-disc">Info Graphic Design</li>
+                                        <li class="list-disc">Vector Design</li>
+                                    </ul>
+                                </div>
+                                <div class="lg:w-44 w-full self-center ">
+                                    <img src="https://demos.codexcoder.com/labartisan/html/maxino/assets/images/service/02.png" alt="" class="w-full">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:w-[590px] border mx-auto my-2 w-full">
+                            <div class="flex flex-wrap">
+                                <div class="lg:w-[400px] p-5 w-full">
+                                    <p class="text-3xl font-bold font-monul">PSD Template Design</p>
+                                    <p class="py-2 max-w-xs text-slate-500">
+                                        Mnique deplo scalable catals forin Monec formu was unique
+                                    </p>
+                                    <ul class="px-5 text-slate-500">
+                                        <li class="list-disc">Motion Graphic Design</li>
+                                        <li class="list-disc">3D animation Design</li>
+                                        <li class="list-disc">Info Graphic Design</li>
+                                        <li class="list-disc">Vector Design</li>
+                                    </ul>
+                                </div>
+                                <div class="lg:w-44 w-full self-center ">
+                                    <img src="https://demos.codexcoder.com/labartisan/html/maxino/assets/images/service/03.png" alt="" class="w-full">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:w-[590px] border mx-auto my-2 w-full">
+                            <div class="flex flex-wrap">
+                                <div class="lg:w-[400px] p-5 w-full">
+                                    <p class="text-3xl font-bold font-monul">PSD Template Design</p>
+                                    <p class="py-2 max-w-xs text-slate-500">
+                                        Mnique deplo scalable catals forin Monec formu was unique
+                                    </p>
+                                    <ul class="px-5 text-slate-500">
+                                        <li class="list-disc">Motion Graphic Design</li>
+                                        <li class="list-disc">3D animation Design</li>
+                                        <li class="list-disc">Info Graphic Design</li>
+                                        <li class="list-disc">Vector Design</li>
+                                    </ul>
+                                </div>
+                                <div class="lg:w-44 w-full self-center ">
+                                    <img src="https://demos.codexcoder.com/labartisan/html/maxino/assets/images/service/04.png" alt="" class="w-full">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="my-10" id="Portfolio">
+                <div class="container">
+                    <div class="flex flex-wrap">
+                        <div class="lg:w-1/2 w-full">
+                            <p class="px-3 py-2 bg-gradient-to-br from-pink-500 to-yellow-500 w-28 font-bold text-white font-monreg mb-2">My Portfolio</p>
+                            <p class="font-dm text-2xl max-w-xl">We Have Done Lot's of <span class="font-bold text-pink-500"> My Best Services</span> Lets Check Some of Them</p>
+                        </div>
+                        <div class="lg:w-1/2 w-full self-center justify-center">
+                            <button id="all" class="bg-pink-500 px-4 py-2 font-bold text-white font-monreg mb-2">All</button>
+                            <button id="img" class="mx-3 px-4 py-2 font-bold focus:outline-none">Images Gallery</button>
+                            <button id="vid" class="mx-3 px-4 py-2 font-bold focus:outline-none">Video Gallery</button>
+                        </div>
+                        <div class="justify-center mx-auto lg:mt-10">
+                            <div id="allText" class="flex flex-wrap justify-center">
+                                <div class="w-80">
+                                    <img src="https://demos.codexcoder.com/labartisan/html/maxino/assets/images/portfolio/01.jpg" class="w-80 h-52 my-2 object-cover rounded-xl hover:scale-95 duration-300" alt="">
+                                    <img src="https://demos.codexcoder.com/labartisan/html/maxino/assets/images/portfolio/03.jpg" class="w-80 h-52 my-2 object-cover rounded-xl hover:scale-95 duration-300" alt="">
+                                </div>
+                                <img src="https://demos.codexcoder.com/labartisan/html/maxino/assets/images/portfolio/02.jpg" class="w-72 mx-2 object-cover rounded-xl hover:scale-95 duration-300 my-2" alt="">
+                                <div class="w-80">
+                                    <img src="https://demos.codexcoder.com/labartisan/html/maxino/assets/images/portfolio/04.jpg" class="w-80 h-52 my-2 object-cover rounded-xl hover:scale-95 duration-300" alt="">
+                                    <img src="https://demos.codexcoder.com/labartisan/html/maxino/assets/images/portfolio/05.jpg" class="w-80 h-52 my-2 object-cover rounded-xl hover:scale-95 duration-300" alt="">
+                                </div>
+                            </div>
+                            <div id="imgText" class="hidden">
+                                <div class="flex flex-wrap mx-auto justify-center">
+                                    <img src="https://demos.codexcoder.com/labartisan/html/maxino/assets/images/portfolio/01.jpg" class="w-80 h-52 my-2 mx-2 object-cover rounded-xl hover:scale-95 duration-300" alt="">
+                                    <img src="https://demos.codexcoder.com/labartisan/html/maxino/assets/images/portfolio/02.jpg" class="w-80 h-52 my-2 mx-2 object-cover rounded-xl hover:scale-95 duration-300" alt="">
+                                    <img src="https://demos.codexcoder.com/labartisan/html/maxino/assets/images/portfolio/04.jpg" class="w-80 h-52 my-2 mx-2 object-cover rounded-xl hover:scale-95 duration-300" alt="">
+                                    <img src="https://demos.codexcoder.com/labartisan/html/maxino/assets/images/portfolio/06.jpg" class="w-80 h-52 my-2 mx-2 object-cover rounded-xl hover:scale-95 duration-300" alt="">
+                                </div>
+                            </div>
+                            <div id="vidText" class="hidden">
+                                <div class="flex flex-wrap mx-auto justify-center">
+                                    <img src="https://demos.codexcoder.com/labartisan/html/maxino/assets/images/portfolio/05.jpg" class="w-80 h-52 my-2 mx-2 object-cover rounded-xl hover:scale-95 duration-300" alt="">
+                                    <img src="https://demos.codexcoder.com/labartisan/html/maxino/assets/images/portfolio/03.jpg" class="w-80 h-52 my-2 mx-2 object-cover rounded-xl hover:scale-95 duration-300" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section
+   class="
+   bg-white
+   pt-20
+   lg:pt-[120px]
+   pb-12
+   lg:pb-[90px]
+   relative
+   z-20
+   overflow-hidden
+   "
+   id="Pricing"
+   >
+   <div class="container">
+      <div class="flex flex-wrap -mx-4">
+         <div class="w-full px-4 my-10">
+            <p class="px-3 py-2 bg-gradient-to-br from-pink-500 to-yellow-500 w-28 font-bold text-white font-monreg mb-2">Pricing Plan</p>
+            <p class="font-dm text-3xl max-w-xl">No Hidden Charge,Choose Your<span class="font-bold text-pink-500"> Best Pricing Plan</span></p>
+         </div>
+      </div>
+      <div class="flex flex-wrap justify-center -mx-4">
+         <div class="w-full md:w-1/2 lg:w-1/3 px-4">
+            <div
+               class="
+               bg-white
+               rounded-xl
+               relative
+               z-10
+               overflow-hidden
+               border border-primary border-opacity-20
+               shadow-pricing
+               py-10
+               px-8
+               sm:p-12
+               lg:py-10 lg:px-6
+               xl:p-12
+               mb-10
+               "
+               >
+               <span class="text-primary font-semibold text-lg block mb-4">
+                Silver Plan
+               </span>
+               <h2 class="font-bold text-dark mb-5 text-[42px]">
+                $20
+                  <span class="text-base text-body-color font-medium">
+                    /Onetime
+                  </span>
+               </h2>
+               <p
+                  class="
+                  text-base text-body-color
+                  pb-8
+                  mb-8
+                  border-b border-[#F2F2F2]
+                  "
+                  >
+                  Holisticly initiate functionalized information without viral imperatives.
+               </p>
+               <div class="mb-7">
+                <p>For Onetime Services only </p>
+                  <p class="text-base text-body-color leading-loose mb-1 ">
+                    <i class="fa-solid fa-check text-pink-500 mr-2"></i>4 Hosting Attendance
+                  </p>
+                  <p class="text-base text-body-color leading-loose mb-1 ">
+                    <i class="fa-solid fa-check text-pink-500 mr-2"></i>9 Email Marketing
+                  </p>
+                  <p class="text-base text-body-color leading-loose mb-1 ">
+                    <i class="fa-solid fa-check text-pink-500 mr-2"></i>3 Data Bases
+                  </p>
+                  <p class="text-base text-body-color leading-loose mb-1 ">
+                    <i class="fa-solid fa-check text-pink-500 mr-2"></i>2 Design Pack
+                  </p>
+                  <p class="text-base text-body-color leading-loose mb-1 ">
+                    <i class="fa-solid fa-check text-pink-500 mr-2"></i>3 Website Layouts
+                  </p>
+                  <p class="text-base text-body-color leading-loose mb-1 ">
+                    <i class="fa-solid fa-check text-pink-500 mr-2"></i>5 Header Style
+                  </p>
+               </div>
+               <a
+                  href="javascript:void(0)"
+                  class="
+                  w-full
+                  block
+                  text-base
+                  font-semibold
+                  text-primary
+                  bg-transparent
+                  border border-[#D4DEFF]
+                  rounded-md
+                  text-center
+                  p-4
+                  hover:text-white hover:bg-pink-500 duration-300
+                  transition
+                  "
+                  >
+               Choose Personal
+               </a>
+               <div>
+                  <span class="absolute right-0 top-7 z-[-1]">
+                     <svg
+                        width="77"
+                        height="172"
+                        viewBox="0 0 77 172"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        >
+                        <circle cx="86" cy="86" r="86" fill="url(#paint0_linear)" />
+                        <defs>
+                           <linearGradient
+                              id="paint0_linear"
+                              x1="86"
+                              y1="0"
+                              x2="86"
+                              y2="172"
+                              gradientUnits="userSpaceOnUse"
+                              >
+                              <stop stop-color="#EC4899" stop-opacity="0.09" />
+                              <stop
+                                 offset="1"
+                                 stop-color="#C4C4C4"
+                                 stop-opacity="0"
+                                 />
+                           </linearGradient>
+                        </defs>
+                     </svg>
+                  </span>
+                  <span class="absolute right-4 top-4 z-[-1]">
+                     <svg
+                        width="41"
+                        height="89"
+                        viewBox="0 0 41 89"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        >
+                        <circle
+                           cx="38.9138"
+                           cy="87.4849"
+                           r="1.42021"
+                           transform="rotate(180 38.9138 87.4849)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="38.9138"
+                           cy="74.9871"
+                           r="1.42021"
+                           transform="rotate(180 38.9138 74.9871)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="38.9138"
+                           cy="62.4892"
+                           r="1.42021"
+                           transform="rotate(180 38.9138 62.4892)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="38.9138"
+                           cy="38.3457"
+                           r="1.42021"
+                           transform="rotate(180 38.9138 38.3457)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="38.9138"
+                           cy="13.634"
+                           r="1.42021"
+                           transform="rotate(180 38.9138 13.634)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="38.9138"
+                           cy="50.2754"
+                           r="1.42021"
+                           transform="rotate(180 38.9138 50.2754)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="38.9138"
+                           cy="26.1319"
+                           r="1.42021"
+                           transform="rotate(180 38.9138 26.1319)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="38.9138"
+                           cy="1.42021"
+                           r="1.42021"
+                           transform="rotate(180 38.9138 1.42021)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="26.4157"
+                           cy="87.4849"
+                           r="1.42021"
+                           transform="rotate(180 26.4157 87.4849)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="26.4157"
+                           cy="74.9871"
+                           r="1.42021"
+                           transform="rotate(180 26.4157 74.9871)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="26.4157"
+                           cy="62.4892"
+                           r="1.42021"
+                           transform="rotate(180 26.4157 62.4892)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="26.4157"
+                           cy="38.3457"
+                           r="1.42021"
+                           transform="rotate(180 26.4157 38.3457)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="26.4157"
+                           cy="13.634"
+                           r="1.42021"
+                           transform="rotate(180 26.4157 13.634)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="26.4157"
+                           cy="50.2754"
+                           r="1.42021"
+                           transform="rotate(180 26.4157 50.2754)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="26.4157"
+                           cy="26.1319"
+                           r="1.42021"
+                           transform="rotate(180 26.4157 26.1319)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="26.4157"
+                           cy="1.4202"
+                           r="1.42021"
+                           transform="rotate(180 26.4157 1.4202)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="13.9177"
+                           cy="87.4849"
+                           r="1.42021"
+                           transform="rotate(180 13.9177 87.4849)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="13.9177"
+                           cy="74.9871"
+                           r="1.42021"
+                           transform="rotate(180 13.9177 74.9871)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="13.9177"
+                           cy="62.4892"
+                           r="1.42021"
+                           transform="rotate(180 13.9177 62.4892)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="13.9177"
+                           cy="38.3457"
+                           r="1.42021"
+                           transform="rotate(180 13.9177 38.3457)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="13.9177"
+                           cy="13.634"
+                           r="1.42021"
+                           transform="rotate(180 13.9177 13.634)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="13.9177"
+                           cy="50.2754"
+                           r="1.42021"
+                           transform="rotate(180 13.9177 50.2754)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="13.9177"
+                           cy="26.1319"
+                           r="1.42021"
+                           transform="rotate(180 13.9177 26.1319)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="13.9177"
+                           cy="1.42019"
+                           r="1.42021"
+                           transform="rotate(180 13.9177 1.42019)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="1.41963"
+                           cy="87.4849"
+                           r="1.42021"
+                           transform="rotate(180 1.41963 87.4849)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="1.41963"
+                           cy="74.9871"
+                           r="1.42021"
+                           transform="rotate(180 1.41963 74.9871)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="1.41963"
+                           cy="62.4892"
+                           r="1.42021"
+                           transform="rotate(180 1.41963 62.4892)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="1.41963"
+                           cy="38.3457"
+                           r="1.42021"
+                           transform="rotate(180 1.41963 38.3457)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="1.41963"
+                           cy="13.634"
+                           r="1.42021"
+                           transform="rotate(180 1.41963 13.634)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="1.41963"
+                           cy="50.2754"
+                           r="1.42021"
+                           transform="rotate(180 1.41963 50.2754)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="1.41963"
+                           cy="26.1319"
+                           r="1.42021"
+                           transform="rotate(180 1.41963 26.1319)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="1.41963"
+                           cy="1.4202"
+                           r="1.42021"
+                           transform="rotate(180 1.41963 1.4202)"
+                           fill="#EC4899"
+                           />
+                     </svg>
+                  </span>
+               </div>
+            </div>
+         </div>
+         <div class="w-full md:w-1/2 lg:w-1/3 px-4">
+            <div
+               class="
+               bg-white
+               rounded-xl
+               relative
+               z-10
+               overflow-hidden
+               border border-primary border-opacity-20
+               shadow-pricing
+               py-10
+               px-8
+               sm:p-12
+               lg:py-10 lg:px-6
+               xl:p-12
+               mb-10
+               "
+               >
+               <span class="text-primary font-semibold text-lg block mb-4">
+                Gold Plan
+               </span>
+               <h2 class="font-bold text-dark mb-5 text-[42px]">
+                $40
+                  <span class="text-base text-body-color font-medium">
+                    /Onetime
+                  </span>
+               </h2>
+               <p
+                  class="
+                  text-base text-body-color
+                  pb-8
+                  mb-8
+                  border-b border-[#F2F2F2]
+                  "
+                  >
+                  Holisticly initiate functionalized information without viral imperatives.
+               </p>
+               <div class="mb-7">
+                <p>For Onetime Services only </p>
+                  <p class="text-base text-body-color leading-loose mb-1 ">
+                    <i class="fa-solid fa-check text-pink-500 mr-2"></i>4 Hosting Attendance
+                  </p>
+                  <p class="text-base text-body-color leading-loose mb-1 ">
+                    <i class="fa-solid fa-check text-pink-500 mr-2"></i>9 Email Marketing
+                  </p>
+                  <p class="text-base text-body-color leading-loose mb-1 ">
+                    <i class="fa-solid fa-check text-pink-500 mr-2"></i>3 Data Bases
+                  </p>
+                  <p class="text-base text-body-color leading-loose mb-1 ">
+                    <i class="fa-solid fa-check text-pink-500 mr-2"></i>2 Design Pack
+                  </p>
+                  <p class="text-base text-body-color leading-loose mb-1 ">
+                    <i class="fa-solid fa-check text-pink-500 mr-2"></i>3 Website Layouts
+                  </p>
+                  <p class="text-base text-body-color leading-loose mb-1 ">
+                    <i class="fa-solid fa-check text-pink-500 mr-2"></i>5 Header Style
+                  </p>
+               </div>
+               <a
+                  href="javascript:void(0)"
+                  class="
+                  w-full
+                  block
+                  text-base
+                  font-semibold
+                  text-primary
+                  bg-transparent
+                  border border-[#D4DEFF]
+                  rounded-md
+                  text-center
+                  p-4
+                  hover:text-white hover:bg-pink-500 duration-300
+                  transition
+                  "
+                  >
+               Choose Personal
+               </a>
+               <div>
+                  <span class="absolute right-0 top-7 z-[-1]">
+                     <svg
+                        width="77"
+                        height="172"
+                        viewBox="0 0 77 172"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        >
+                        <circle cx="86" cy="86" r="86" fill="url(#paint0_linear)" />
+                        <defs>
+                           <linearGradient
+                              id="paint0_linear"
+                              x1="86"
+                              y1="0"
+                              x2="86"
+                              y2="172"
+                              gradientUnits="userSpaceOnUse"
+                              >
+                              <stop stop-color="#EC4899" stop-opacity="0.09" />
+                              <stop
+                                 offset="1"
+                                 stop-color="#C4C4C4"
+                                 stop-opacity="0"
+                                 />
+                           </linearGradient>
+                        </defs>
+                     </svg>
+                  </span>
+                  <span class="absolute right-4 top-4 z-[-1]">
+                     <svg
+                        width="41"
+                        height="89"
+                        viewBox="0 0 41 89"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        >
+                        <circle
+                           cx="38.9138"
+                           cy="87.4849"
+                           r="1.42021"
+                           transform="rotate(180 38.9138 87.4849)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="38.9138"
+                           cy="74.9871"
+                           r="1.42021"
+                           transform="rotate(180 38.9138 74.9871)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="38.9138"
+                           cy="62.4892"
+                           r="1.42021"
+                           transform="rotate(180 38.9138 62.4892)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="38.9138"
+                           cy="38.3457"
+                           r="1.42021"
+                           transform="rotate(180 38.9138 38.3457)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="38.9138"
+                           cy="13.634"
+                           r="1.42021"
+                           transform="rotate(180 38.9138 13.634)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="38.9138"
+                           cy="50.2754"
+                           r="1.42021"
+                           transform="rotate(180 38.9138 50.2754)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="38.9138"
+                           cy="26.1319"
+                           r="1.42021"
+                           transform="rotate(180 38.9138 26.1319)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="38.9138"
+                           cy="1.42021"
+                           r="1.42021"
+                           transform="rotate(180 38.9138 1.42021)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="26.4157"
+                           cy="87.4849"
+                           r="1.42021"
+                           transform="rotate(180 26.4157 87.4849)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="26.4157"
+                           cy="74.9871"
+                           r="1.42021"
+                           transform="rotate(180 26.4157 74.9871)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="26.4157"
+                           cy="62.4892"
+                           r="1.42021"
+                           transform="rotate(180 26.4157 62.4892)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="26.4157"
+                           cy="38.3457"
+                           r="1.42021"
+                           transform="rotate(180 26.4157 38.3457)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="26.4157"
+                           cy="13.634"
+                           r="1.42021"
+                           transform="rotate(180 26.4157 13.634)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="26.4157"
+                           cy="50.2754"
+                           r="1.42021"
+                           transform="rotate(180 26.4157 50.2754)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="26.4157"
+                           cy="26.1319"
+                           r="1.42021"
+                           transform="rotate(180 26.4157 26.1319)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="26.4157"
+                           cy="1.4202"
+                           r="1.42021"
+                           transform="rotate(180 26.4157 1.4202)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="13.9177"
+                           cy="87.4849"
+                           r="1.42021"
+                           transform="rotate(180 13.9177 87.4849)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="13.9177"
+                           cy="74.9871"
+                           r="1.42021"
+                           transform="rotate(180 13.9177 74.9871)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="13.9177"
+                           cy="62.4892"
+                           r="1.42021"
+                           transform="rotate(180 13.9177 62.4892)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="13.9177"
+                           cy="38.3457"
+                           r="1.42021"
+                           transform="rotate(180 13.9177 38.3457)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="13.9177"
+                           cy="13.634"
+                           r="1.42021"
+                           transform="rotate(180 13.9177 13.634)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="13.9177"
+                           cy="50.2754"
+                           r="1.42021"
+                           transform="rotate(180 13.9177 50.2754)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="13.9177"
+                           cy="26.1319"
+                           r="1.42021"
+                           transform="rotate(180 13.9177 26.1319)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="13.9177"
+                           cy="1.42019"
+                           r="1.42021"
+                           transform="rotate(180 13.9177 1.42019)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="1.41963"
+                           cy="87.4849"
+                           r="1.42021"
+                           transform="rotate(180 1.41963 87.4849)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="1.41963"
+                           cy="74.9871"
+                           r="1.42021"
+                           transform="rotate(180 1.41963 74.9871)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="1.41963"
+                           cy="62.4892"
+                           r="1.42021"
+                           transform="rotate(180 1.41963 62.4892)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="1.41963"
+                           cy="38.3457"
+                           r="1.42021"
+                           transform="rotate(180 1.41963 38.3457)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="1.41963"
+                           cy="13.634"
+                           r="1.42021"
+                           transform="rotate(180 1.41963 13.634)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="1.41963"
+                           cy="50.2754"
+                           r="1.42021"
+                           transform="rotate(180 1.41963 50.2754)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="1.41963"
+                           cy="26.1319"
+                           r="1.42021"
+                           transform="rotate(180 1.41963 26.1319)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="1.41963"
+                           cy="1.4202"
+                           r="1.42021"
+                           transform="rotate(180 1.41963 1.4202)"
+                           fill="#EC4899"
+                           />
+                     </svg>
+                  </span>
+               </div>
+            </div>
+         </div>
+         <div class="w-full md:w-1/2 lg:w-1/3 px-4">
+            <div
+               class="
+               bg-white
+               rounded-xl
+               relative
+               z-10
+               overflow-hidden
+               border border-primary border-opacity-20
+               shadow-pricing
+               py-10
+               px-8
+               sm:p-12
+               lg:py-10 lg:px-6
+               xl:p-12
+               mb-10
+               "
+               >
+               <span class="text-primary font-semibold text-lg block mb-4">
+                Gold Plan
+               </span>
+               <h2 class="font-bold text-dark mb-5 text-[42px]">
+                $60
+                  <span class="text-base text-body-color font-medium">
+                    /Onetime
+                  </span>
+               </h2>
+               <p
+                  class="
+                  text-base text-body-color
+                  pb-8
+                  mb-8
+                  border-b border-[#F2F2F2]
+                  "
+                  >
+                  Holisticly initiate functionalized information without viral imperatives.
+               </p>
+               <div class="mb-7">
+                <p>For Onetime Services only </p>
+                  <p class="text-base text-body-color leading-loose mb-1 ">
+                    <i class="fa-solid fa-check text-pink-500 mr-2"></i>4 Hosting Attendance
+                  </p>
+                  <p class="text-base text-body-color leading-loose mb-1 ">
+                    <i class="fa-solid fa-check text-pink-500 mr-2"></i>9 Email Marketing
+                  </p>
+                  <p class="text-base text-body-color leading-loose mb-1 ">
+                    <i class="fa-solid fa-check text-pink-500 mr-2"></i>3 Data Bases
+                  </p>
+                  <p class="text-base text-body-color leading-loose mb-1 ">
+                    <i class="fa-solid fa-check text-pink-500 mr-2"></i>2 Design Pack
+                  </p>
+                  <p class="text-base text-body-color leading-loose mb-1 ">
+                    <i class="fa-solid fa-check text-pink-500 mr-2"></i>3 Website Layouts
+                  </p>
+                  <p class="text-base text-body-color leading-loose mb-1 ">
+                    <i class="fa-solid fa-check text-pink-500 mr-2"></i>5 Header Style
+                  </p>
+               </div>
+               <a
+                  href="javascript:void(0)"
+                  class="
+                  w-full
+                  block
+                  text-base
+                  font-semibold
+                  text-primary
+                  bg-transparent
+                  border border-[#D4DEFF]
+                  rounded-md
+                  text-center
+                  p-4
+                  hover:text-white hover:bg-pink-500 duration-300
+                  transition
+                  "
+                  >
+               Choose Personal
+               </a>
+               <div>
+                  <span class="absolute right-0 top-7 z-[-1]">
+                     <svg
+                        width="77"
+                        height="172"
+                        viewBox="0 0 77 172"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        >
+                        <circle cx="86" cy="86" r="86" fill="url(#paint0_linear)" />
+                        <defs>
+                           <linearGradient
+                              id="paint0_linear"
+                              x1="86"
+                              y1="0"
+                              x2="86"
+                              y2="172"
+                              gradientUnits="userSpaceOnUse"
+                              >
+                              <stop stop-color="#EC4899" stop-opacity="0.09" />
+                              <stop
+                                 offset="1"
+                                 stop-color="#C4C4C4"
+                                 stop-opacity="0"
+                                 />
+                           </linearGradient>
+                        </defs>
+                     </svg>
+                  </span>
+                  <span class="absolute right-4 top-4 z-[-1]">
+                     <svg
+                        width="41"
+                        height="89"
+                        viewBox="0 0 41 89"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        >
+                        <circle
+                           cx="38.9138"
+                           cy="87.4849"
+                           r="1.42021"
+                           transform="rotate(180 38.9138 87.4849)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="38.9138"
+                           cy="74.9871"
+                           r="1.42021"
+                           transform="rotate(180 38.9138 74.9871)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="38.9138"
+                           cy="62.4892"
+                           r="1.42021"
+                           transform="rotate(180 38.9138 62.4892)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="38.9138"
+                           cy="38.3457"
+                           r="1.42021"
+                           transform="rotate(180 38.9138 38.3457)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="38.9138"
+                           cy="13.634"
+                           r="1.42021"
+                           transform="rotate(180 38.9138 13.634)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="38.9138"
+                           cy="50.2754"
+                           r="1.42021"
+                           transform="rotate(180 38.9138 50.2754)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="38.9138"
+                           cy="26.1319"
+                           r="1.42021"
+                           transform="rotate(180 38.9138 26.1319)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="38.9138"
+                           cy="1.42021"
+                           r="1.42021"
+                           transform="rotate(180 38.9138 1.42021)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="26.4157"
+                           cy="87.4849"
+                           r="1.42021"
+                           transform="rotate(180 26.4157 87.4849)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="26.4157"
+                           cy="74.9871"
+                           r="1.42021"
+                           transform="rotate(180 26.4157 74.9871)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="26.4157"
+                           cy="62.4892"
+                           r="1.42021"
+                           transform="rotate(180 26.4157 62.4892)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="26.4157"
+                           cy="38.3457"
+                           r="1.42021"
+                           transform="rotate(180 26.4157 38.3457)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="26.4157"
+                           cy="13.634"
+                           r="1.42021"
+                           transform="rotate(180 26.4157 13.634)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="26.4157"
+                           cy="50.2754"
+                           r="1.42021"
+                           transform="rotate(180 26.4157 50.2754)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="26.4157"
+                           cy="26.1319"
+                           r="1.42021"
+                           transform="rotate(180 26.4157 26.1319)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="26.4157"
+                           cy="1.4202"
+                           r="1.42021"
+                           transform="rotate(180 26.4157 1.4202)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="13.9177"
+                           cy="87.4849"
+                           r="1.42021"
+                           transform="rotate(180 13.9177 87.4849)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="13.9177"
+                           cy="74.9871"
+                           r="1.42021"
+                           transform="rotate(180 13.9177 74.9871)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="13.9177"
+                           cy="62.4892"
+                           r="1.42021"
+                           transform="rotate(180 13.9177 62.4892)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="13.9177"
+                           cy="38.3457"
+                           r="1.42021"
+                           transform="rotate(180 13.9177 38.3457)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="13.9177"
+                           cy="13.634"
+                           r="1.42021"
+                           transform="rotate(180 13.9177 13.634)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="13.9177"
+                           cy="50.2754"
+                           r="1.42021"
+                           transform="rotate(180 13.9177 50.2754)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="13.9177"
+                           cy="26.1319"
+                           r="1.42021"
+                           transform="rotate(180 13.9177 26.1319)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="13.9177"
+                           cy="1.42019"
+                           r="1.42021"
+                           transform="rotate(180 13.9177 1.42019)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="1.41963"
+                           cy="87.4849"
+                           r="1.42021"
+                           transform="rotate(180 1.41963 87.4849)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="1.41963"
+                           cy="74.9871"
+                           r="1.42021"
+                           transform="rotate(180 1.41963 74.9871)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="1.41963"
+                           cy="62.4892"
+                           r="1.42021"
+                           transform="rotate(180 1.41963 62.4892)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="1.41963"
+                           cy="38.3457"
+                           r="1.42021"
+                           transform="rotate(180 1.41963 38.3457)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="1.41963"
+                           cy="13.634"
+                           r="1.42021"
+                           transform="rotate(180 1.41963 13.634)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="1.41963"
+                           cy="50.2754"
+                           r="1.42021"
+                           transform="rotate(180 1.41963 50.2754)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="1.41963"
+                           cy="26.1319"
+                           r="1.42021"
+                           transform="rotate(180 1.41963 26.1319)"
+                           fill="#EC4899"
+                           />
+                        <circle
+                           cx="1.41963"
+                           cy="1.4202"
+                           r="1.42021"
+                           transform="rotate(180 1.41963 1.4202)"
+                           fill="#EC4899"
+                           />
+                     </svg>
+                  </span>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+            </section>
+            <section class="my-10" id="Clients">
+                <div class="container">
+                    <p class="px-3 py-2 bg-gradient-to-br from-pink-500 to-yellow-500 w-28 font-bold text-white font-monreg mb-2">Testimonial</p>
+                    <p class="font-dm text-2xl max-w-xl">Clientâ€™s Feedback Latest Reviews <span class="font-bold text-pink-500"> From My Clients</span> </p>
+                    <div class="-mx-3 md:flex items-start">
+                        <div class="w-full lg:w-[400px] mx-auto rounded-lg bg-white border border-gray-200 p-5 text-gray-800 font-light mb-6">
+                            <div class="w-full flex mb-4 items-center">
+                                <div class="overflow-hidden rounded-full w-10 h-10 bg-gray-50 border border-gray-200">
+                                    <img src="https://i.pravatar.cc/100?img=3" alt="">
+                                </div>
+                                <div class="flex pl-3">
+                                    <div class="lg:w-[250px]">
+                                        <h6 class="font-bold text-sm uppercase text-gray-600">Tommie Ewart</h6>
+                                    <p class="text-xs">Founder</p>
+                                    </div>
+                                    <div class="w-10">
+                                        <img src="https://demos.codexcoder.com/labartisan/html/maxino/assets/images/testimonial/logo/01.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-full">
+                                <p class="text-sm leading-tight"><span class="text-lg leading-none italic font-bold text-gray-400 mr-1">"</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, obcaecati ullam excepturi dicta error deleniti sequi.Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias officia id quod molestias explicabo optio sunt dolorum, fugit repudiandae ea cum quo officiis dolore architecto perspiciatis a doloremque saepe corporis!<span class="text-lg leading-none italic font-bold text-gray-400 ml-1"> "</span></p>
+                            </div>
+                            <div class="flex my-5">
+                                <i class="fa-solid fa-star text-yellow-500"></i><i class="fa-solid fa-star text-yellow-500"></i><i class="fa-solid fa-star text-yellow-500"></i><i class="fa-solid fa-star text-yellow-500"></i>
+                            </div>
+                        </div>
+                        <div class="w-full lg:w-[400px] mx-auto rounded-lg bg-white border border-gray-200 p-5 text-gray-800 font-light mb-6">
+                            <div class="w-full flex mb-4 items-center">
+                                <div class="overflow-hidden rounded-full w-10 h-10 bg-gray-50 border border-gray-200">
+                                    <img src="https://i.pravatar.cc/100?img=3" alt="">
+                                </div>
+                                <div class="flex pl-3">
+                                    <div class="lg:w-[250px]">
+                                        <h6 class="font-bold text-sm uppercase text-gray-600">Tommie Ewart</h6>
+                                    <p class="text-xs">Founder</p>
+                                    </div>
+                                    <div class="w-10">
+                                        <img src="https://demos.codexcoder.com/labartisan/html/maxino/assets/images/testimonial/logo/03.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-full">
+                                <p class="text-sm leading-tight"><span class="text-lg leading-none italic font-bold text-gray-400 mr-1">"</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, obcaecati ullam excepturi dicta error deleniti sequi.Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias officia id quod molestias explicabo optio sunt dolorum, fugit repudiandae ea cum quo officiis dolore architecto perspiciatis a doloremque saepe corporis!<span class="text-lg leading-none italic font-bold text-gray-400 ml-1"> "</span></p>
+                            </div>
+                            <div class="flex my-5">
+                                <i class="fa-solid fa-star text-yellow-500"></i><i class="fa-solid fa-star text-yellow-500"></i><i class="fa-solid fa-star text-yellow-500"></i><i class="fa-solid fa-star text-yellow-500"></i>
+                            </div>
+                        </div>
+                        <div class="w-full lg:w-[400px] mx-auto rounded-lg bg-white border border-gray-200 p-5 text-gray-800 font-light mb-6">
+                            <div class="w-full flex mb-4 items-center">
+                                <div class="overflow-hidden rounded-full w-10 h-10 bg-gray-50 border border-gray-200">
+                                    <img src="https://i.pravatar.cc/100?img=3" alt="">
+                                </div>
+                                <div class="flex pl-3">
+                                    <div class="lg:w-[250px]">
+                                        <h6 class="font-bold text-sm uppercase text-gray-600">Tommie Ewart</h6>
+                                    <p class="text-xs">Founder</p>
+                                    </div>
+                                    <div class="w-10">
+                                        <img src="https://demos.codexcoder.com/labartisan/html/maxino/assets/images/testimonial/logo/02.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-full">
+                                <p class="text-sm leading-tight"><span class="text-lg leading-none italic font-bold text-gray-400 mr-1">"</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, obcaecati ullam excepturi dicta error deleniti sequi.Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias officia id quod molestias explicabo optio sunt dolorum, fugit repudiandae ea cum quo officiis dolore architecto perspiciatis a doloremque saepe corporis!<span class="text-lg leading-none italic font-bold text-gray-400 ml-1"> "</span></p>
+                            </div>
+                            <div class="flex my-5">
+                                <i class="fa-solid fa-star text-yellow-500"></i><i class="fa-solid fa-star text-yellow-500"></i><i class="fa-solid fa-star text-yellow-500"></i><i class="fa-solid fa-star text-yellow-500"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="my-10" id="Blogs">
+                <div class="container">
+                    <div class="flex flex-wrap">
+                        <div class="lg:w-1/2 w-full">
+                            <p class="px-3 py-2 bg-gradient-to-br from-pink-500 to-yellow-500 w-28 font-bold text-white font-monreg mb-2">Blog Post</p>
+                    <p class="font-dm text-4xl max-w-xl">Recent News Latest Posts <span class="font-bold text-pink-500"> From My Blog</span> </p>
+                        </div>
+                        <div class="lg:w-1/2 w-full self-center justify-center text-center">
+                            <button id="all" class="bg-pink-500 px-4 py-2 font-bold text-white font-monreg mb-2">View All Blog</button>
+                            
+                        </div>
+                    </div>
+                    <div class="flex-wrap flex justify-center">
+                        <div class="bg-white m-2 shadow-md border border-gray-200 rounded-lg max-w-sm mb-5">
+                                <a href="#">
+                                    <img class="rounded-t-lg" src="https://demos.codexcoder.com/labartisan/html/maxino/assets/images/blog/01.jpg" alt="">
+                                </a>
+                                <div class="p-5">
+                                    <div class="flex">
+                                        <p class="mr-2 text-xs">Admin : <span class="text-pink-500">Emma Grant</span></p>
+                                        <p class="mx-2 text-xs">Date  : <span class="text-pink-500">14 April 2018</span></p>
+                                    </div>
+                                    <a href="#">
+                                        <h5 class="text-gray-900 font-bold text-2xl tracking-tight mb-2">Noteworthy technology acquisitions 2021</h5>
+                                    </a>
+                                    <p class="font-normal text-gray-700 mb-3">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                                    <div class="flex">
+                                        <div class="lg:w-1/2 w-full">
+                                            <a class="text-white bg-gradient-to-br from-yellow-500 to-pink-500 hover:bg-gradient-to-br hover:from-pink-500 hover:to-yellow-500 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center duration-300" href="#">
+                                                Read more
+                                            </a>
+                                        </div>
+                                        <div class="lg:w-1/2 w-full self-center">
+                                            <a href="#"><i class="fa-solid fa-share text-pink-500 text-2xl mx-2"></i></a>
+                                            <a href="#"><i class="fa-solid fa-message text-pink-500 text-2xl mx-2"></i></a>
+                                            <a href="#"><i class="fa-regular fa-heart text-pink-500 text-2xl mx-2"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="bg-white m-2 shadow-md border border-gray-200 rounded-lg max-w-sm mb-5">
+                                <a href="#">
+                                    <img class="rounded-t-lg" src="https://demos.codexcoder.com/labartisan/html/maxino/assets/images/blog/02.jpg" alt="">
+                                </a>
+                                <div class="p-5">
+                                    <div class="flex">
+                                        <p class="mr-2 text-xs">Admin : <span class="text-pink-500">Emma Grant</span></p>
+                                        <p class="mx-2 text-xs">Date  : <span class="text-pink-500">14 April 2018</span></p>
+                                    </div>
+                                    <a href="#">
+                                        <h5 class="text-gray-900 font-bold text-2xl tracking-tight mb-2">Noteworthy technology acquisitions 2021</h5>
+                                    </a>
+                                    <p class="font-normal text-gray-700 mb-3">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                                    <div class="flex">
+                                        <div class="lg:w-1/2 w-full">
+                                            <a class="text-white bg-gradient-to-br from-yellow-500 to-pink-500 hover:bg-gradient-to-br hover:from-pink-500 hover:to-yellow-500 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center duration-300" href="#">
+                                                Read more
+                                            </a>
+                                        </div>
+                                        <div class="lg:w-1/2 w-full self-center">
+                                            <a href="#"><i class="fa-solid fa-share text-pink-500 text-2xl mx-2"></i></a>
+                                            <a href="#"><i class="fa-solid fa-message text-pink-500 text-2xl mx-2"></i></a>
+                                            <a href="#"><i class="fa-regular fa-heart text-pink-500 text-2xl mx-2"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="my-10" id="Contacts">
+                <p class="px-3 py-2 bg-gradient-to-br from-pink-500 to-yellow-500 w-28 font-bold text-white font-monreg mb-2">Hire Me</p>
+                <p class="font-dm text-3xl max-w-xl">I Am Available For Your Next Awesome Project<span class="font-bold text-pink-500"> Then Hire Me!</span> </p>
+                <div class="flex flex-wrap justify-center my-5">
+                    <div class="p-6 my-5 mx-auto rounded-tl-xl rounded-br-xl hover:rounded-br-none hover:rounded-tl-none hover:rounded-bl-xl hover:rounded-tr-xl hover:scale-105 hover:translate-y-5 transition-all ease-in-out duration-300 bg-slate-200 lg:w-[300px] w-full">
+                        <div class="flex flex-wrap">
+                            <div class="lg:w-10">
+                                <img src="https://demos.codexcoder.com/labartisan/html/maxino/assets/images/icon/01.png" alt="">
+                            </div>
+                            <div class="lg:w-[210px] px-3">
+                                <p class="font-monreg">Give us a Call</p>
+                                <p class="font-monreg font-bold">001-888-123-4567</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 my-5 mx-auto rounded-tl-xl rounded-br-xl hover:rounded-br-none hover:rounded-tl-none hover:rounded-bl-xl hover:rounded-tr-xl hover:scale-105 hover:translate-y-5 transition-all ease-in-out duration-300 bg-slate-200 lg:w-[300px] w-full">
+                        <div class="flex flex-wrap">
+                            <div class="lg:w-10">
+                                <img src="https://demos.codexcoder.com/labartisan/html/maxino/assets/images/icon/02.png" alt="">
+                            </div>
+                            <div class="lg:w-[210px] px-3">
+                                <p class="font-monreg">Send us a Message</p>
+                                <p class="font-monreg font-bold">maxinoadmin@mail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 my-5 mx-auto rounded-tl-xl rounded-br-xl hover:rounded-br-none hover:rounded-tl-none hover:rounded-bl-xl hover:rounded-tr-xl hover:scale-105 hover:translate-y-5 transition-all ease-in-out duration-300 bg-slate-200 lg:w-[300px] w-full">
+                        <div class="flex flex-wrap">
+                            <div class="lg:w-10">
+                                <img src="https://demos.codexcoder.com/labartisan/html/maxino/assets/images/icon/03.png" alt="">
+                            </div>
+                            <div class="lg:w-[210px] px-3">
+                                <p class="font-monreg">Visit our Location</p>
+                                <p class="font-monreg font-bold">02/07 Suitland Street 120</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form action="#">
+                    <div class="grid grid-cols-2 gap-5 my-5">
+                      <input type="text" placeholder="Your Name" class="h-16 w-full border bg-transparent border-gray-400 py-1 rounded-md ring-0 px-2">
+                      <input type="email" placeholder="Your Email address" class="h-16 w-full border bg-transparent border-gray-400 py-1 rounded-md ring-0 px-2">
+                    </div>
+                    <div class="grid grid-cols-2 gap-5 my-5">
+                      <input type="text" placeholder="Phone Number" class="h-16 w-full border bg-transparent border-gray-400 py-1 rounded-md ring-0 px-2">
+                      <input type="text" placeholder="Subject" class="h-16 w-full border bg-transparent border-gray-400 py-1 rounded-md ring-0 px-2">
+                    </div>
+                    <div class="">
+                      <input type="text" placeholder="message here" class="border bg-transparent border-gray-400 py-1 px-2 h-28 rounded-md ring-0 w-full">
+                    </div>
+                    <div class="mt-5">
+                      <button class="w-52 rounded-full bg-gradient-to-tr from-pink-500 to-yellow-500 hover:bg-gradient-to-tr hover:from-yellow-500 hover:to-pink-500 duration-300 py-3 text-center font-extrabold text-white">Submit Message <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                  </form>
+            </section>
+        </div>
+    </section>
+    <section class="mx-auto py-10 justify-center text-center lg:w-[1350px] bg-pink-500">
+        <img src="https://demos.codexcoder.com/labartisan/html/maxino/assets/images/logo/footer-logo.png" alt="" class="mx-auto">
+        <p class="text-white">© 2019. Maxino Designed By <span class="font-bold">LabArtisan</span></p>
+        <div class="flex flex-wrap">
+            <div class="my-5 mx-auto">
+                <a href="#" class="p-2 m-2 text-white hover:border-transparent hover:bg-pink-500 duration-300 rounded-full border text-2xk"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="p-2 m-2 text-white hover:border-transparent hover:bg-pink-500 duration-300 rounded-full border text-2xk"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="p-2 m-2 text-white hover:border-transparent hover:bg-pink-500 duration-300 rounded-full border text-2xk"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

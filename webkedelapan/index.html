@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Document Meta-->
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <!-- IE Compatibility Meta-->
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.3/dist/alpine.min.js" defer></script>
+        <meta name="author" content="zytheme"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+        <meta name="description" content="Multi-purpose Business html5 landing page"/>
+        <link href="https://lh3.googleusercontent.com/oysRDNAVUygJKDavZJ9QTmlBbEaQvK_GgwazjheYcpm8oC5KH5VowIjQ4z8IfKS4jRsrbqNAxVCuyKJC" rel="icon"/>
+        <!-- link cdn tailwindcss -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- link icon -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.96w-96 text-center max-w-xs 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+          </svg>
+          <!-- animasi refresh
+          <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        /> -->
+        
+        <!-- lilita one start -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+        <!-- lilita one stop -->
+        <!-- Oswold & Roboto start -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <!-- Oswold & Roboto stop -->
+        <!-- jost start -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <!-- jost stop -->
+        <!-- playfair start -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <!-- playfair stop -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>iKnow</title>
+        <script>
+            tailwind.config = {
+              theme: {
+                container:{
+                    center: true,
+                    padding: '20px',
+                },
+                extend: {
+                  colors: {
+                    birmud: '#6ad3e5',
+                    biru: '#00b0d3',
+                    gelap: '#0f172a',
+                    gelap1: '#1e293b',
+                    pdng: '#ffffff',
+                    ptng: '#ababab',
+                    birtu: '#1d4ed8',
+                    toska: '#333333',
+                    ijo: '#49b970',
+                  },
+                    backgroundImage: {
+                    // background gambar
+
+                    // example: 'pict': 'url("https://hanafifebriansyah.vercel.app/assets/profil/bg.png")',
+                    },
+                    fontFamily: {
+                        Lile:['Lilita One'],
+                        Oswald:['Oswald'],
+                        jos:['Jost'],
+                        play:['Playfair Display'],
+                    },
+                  screen:{
+                    '2xl' : '1400px',
+                  }
+                }
+              }
+            }
+        </script>
+        <style type="text/tailwindcss">
+            body,html {
+                scroll-behavior: smooth;
+                font-family: 'Roboto',sans-serif;
+                color: #eaeaea;
+
+            }
+            .nav-fixed{
+                @apply fixed z-50 py-5 bg-white/50 dark:bg-black/50  transition duration-200 ease-in-out;
+                backdrop-filter: blur(5px);
+                box-shadow: inset 0 -1px 0 0 rgba(0,0,0,0.1);
+            }
+        
+            .nav-fixed{
+                @apply lg:bg-white/30  lg:dark:bg-black/30  lg:dark:text-slate-100 lg:text-center lg:backdrop-blur-sm lg:shadow-lg lg:p-1 lg:fixed lg:w-full  transition-all duration-500 ease-in-out lg:z-50;
+            }
+            .nav-fixed > div:nth-child(1){
+                @apply lg:mx-auto;
+            }
+            .nav-fixed > div:nth-child(3){
+                @apply lg:space-x-4;
+            }
+            .hamburger-line{
+                 @apply w-[30px] h-1 my-1 rounded-md block bg-toska;
+            }
+            .nav-line2{
+                 @apply bg-white/30 dark:bg-black/30 md:bg-transparent md:dark:bg-transparent shadow-2xl md:shadow-none lg:bg-transparent lg:dark:bg-transparent transition duration-200 ease-in-out;
+            }
+            .hamburger-active > span:nth-child(1){
+                 @apply  rotate-45 transition;
+            }
+            .hamburger-active > span:nth-child(2){
+                 @apply scale-0;
+            }
+            .hamburger-active > span:nth-child(3){
+                 @apply origin-bottom-left -rotate-45;
+            }
+            #hamburger{
+                @apply rounded-lg bg-slate-100 p-1;
+            }
+
+        </style>
+    </head>
+    <body class="bg-slate-700">        
+    <header class="bg-transparent container pt-6 absolute w-full font-semibold transition-all ease-in-out duration-500 flex items-center max-w-full z-50 ">
+            <div class="container">
+                <div class="flex items-center justify-between relative">
+                    <div class="px-4">
+                     <img src="https://iknow-react.vercel.app/img/logo/dark.png" alt="karir anak" class="w-32 lg:w-44 text-center max-w-xs ">
+                    </div>
+                    <div class="flex item-center px-4">
+                        <button id="hamburger" name="hamburger" type="button" class="hidden right-4 lg:hidden  transition duration-200">
+                            <span class="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
+                            <span class="hamburger-line transition duration-300 ease-in-out"></span>
+                            <span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
+                        </button>
+                        
+                        <nav  id="nav-menu" class="">
+                            <div class="flex">
+                            <a href="#download" class="hidden text-white hover:text-orange-500 self-center text-4xl mx-4  lg:flex transition-all duration-400 ease-in-out"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="#download" class="hidden text-white hover:text-orange-500 self-center text-4xl mx-4  lg:flex transition-all duration-400 ease-in-out"><i class="fa-brands fa-whatsapp"></i></a>
+                            <a href="#download" class="hidden text-white hover:text-orange-500 self-center text-4xl mx-4  lg:flex transition-all duration-400 ease-in-out"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#download" class="hidden text-white hover:text-orange-500 self-center text-4xl mx-4  lg:flex transition-all duration-400 ease-in-out"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#download" class="  p-4 border border-transparent hover:border-orange-400 text-white hover:text-orange-500 bg-orange-400 hover:bg-transparent rounded-full animate__animated animate__fadeInRight py-2 mx-4 flex px-10 transition-all duration-400 ease-in-out">Download CV</a>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+    </header>
+    <section id="home" class="pt-40  lg:max-w-7xl mx-auto"> 
+        <div class="container">
+            <div class="flex flex-wrap">
+                <div class="w-full inline lg:mt-0 mb-7 lg:w-1/2 font-jos lg:hidden flex-wrap relative self-center px-4 animate__animated animate__fadeInDown transition duration-300">
+                    <img src="https://iknow-react.vercel.app/img/hero/1.jpg" class="w-[400px] mx-auto rounded-xl" alt="">
+
+                </div>
+                <div class="w-full lg:w-1/2 font-jos flex flex-wrap relative self-center px-4 animate__animated animate__fadeInDown transition duration-300">
+                    <h1 class="w-full font-extrabold mb-2 mx-auto italic text-xl lg:text-2xl text-orange-500">I'm</h1>
+                    <h1 class="w-full font-extrabold mb-2 mx-auto text-7xl lg:text-8xl">Jessica Parker</h1>
+                    <h1 class="w-full font-extrabold mb-2 mx-auto text-2xl lg:text-2xl">A passionate UI/UX Designer and Web Developer based In NYC, USA</h1>
+                    <div class="flex">
+                        <div class="my-5">
+                            <a href="#pricing" class="text-4xl hover:text-yellow-400 duration-300 ease-in-out font-bold"><i class="fa-solid fa-circle-play text-5xl mr-2"></i><span class="text-white">About Me</span>                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full hidden lg:mt-0 mb-7 lg:w-1/2 font-jos lg:flex flex-wrap relative self-center px-4 animate__animated animate__fadeInDown transition duration-300">
+                    <img src="https://iknow-react.vercel.app/img/hero/1.jpg" class="w-[400px] mx-auto rounded-xl" alt="">
+                    <img src="https://iknow-react.vercel.app/img/hero/1.jpg" class="w-[400px] mx-auto rounded-xl hidden lg:inline absolute mt-16 ml-12" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="yy" class="py-20  lg:max-w-7xl mx-auto"> 
+            <div class="flex flex-wrap my-5 justify-center font-bold">
+                <button id="all" class="mx-3 my-3 text-orange-500 border-orange-500 hover:text-white hover:bg-orange-500 hover:border-transparent transition-all ease-in-out duration-300 focus:outline-none rounded-xl p-4 border text-xl relative">
+                    <i class="fa-solid fa-fingerprint mr-2"></i><span id="aboutMeText" class="hidden">About Me</span>
+                  </button>
+                <button id="res" class="mx-3 my-3 text-orange-500 border-orange-500 hover:text-white hover:bg-orange-500 hover:border-transparent transition-all ease-in-out duration-300 focus:outline-none rounded-xl p-4 border text-xl relative">
+                    <i class="fa-solid fa-file mr-2"></i><span id="ResText" class="hidden">Resume</span>
+                  </button>
+                <button id="port" class="mx-3 my-3 text-orange-500 border-orange-500 hover:text-white hover:bg-orange-500 hover:border-transparent transition-all ease-in-out duration-300 focus:outline-none rounded-xl p-4 border text-xl relative">
+                    <i class="fa-solid fa-address-card mr-2"></i><span id="porText" class="hidden">Portfolio</span>
+                  </button>
+                <button id="serv" class="mx-3 my-3 text-orange-500 border-orange-500 hover:text-white hover:bg-orange-500 hover:border-transparent transition-all ease-in-out duration-300 focus:outline-none rounded-xl p-4 border text-xl relative">
+                    <i class="fa-solid fa-thumbs-up mr-2"></i><span id="serText" class="hidden">Service</span>
+                  </button>
+                <button id="test" class="mx-3 my-3 text-orange-500 border-orange-500 hover:text-white hover:bg-orange-500 hover:border-transparent transition-all ease-in-out duration-300 focus:outline-none rounded-xl p-4 border text-xl relative">
+                    <i class="fa-solid fa-earth-asia mr-2"></i><span id="tesText" class="hidden">Testimonial</span>
+                  </button>
+                <button id="blog" class="mx-3 my-3 text-orange-500 border-orange-500 hover:text-white hover:bg-orange-500 hover:border-transparent transition-all ease-in-out duration-300 focus:outline-none rounded-xl p-4 border text-xl relative">
+                    <i class="fa-solid fa-newspaper mr-2"></i><span id="bloText" class="hidden">Blog</span>
+                  </button>
+                <button id="cont" class="mx-3 my-3 text-orange-500 border-orange-500 hover:text-white hover:bg-orange-500 hover:border-transparent transition-all ease-in-out duration-300 focus:outline-none rounded-xl p-4 border text-xl relative">
+                    <i class="fa-solid fa-id-card mr-2"></i><span id="coText" class="hidden">Contact</span>
+                  </button>
+            </div>
+            
+            <div class="justify-center">
+                <div id="allText" class="hidden justify-center">
+                   <div class="max-w-7xl mx-auto">
+                    <div class="bg-black/20 my-20 backdrop-blur-xl p-10 rounded-xl shadow-xl flex flex-wrap mx-5 lg:mx-0">
+                        <div class="w-full lg:w-[600px] flex px-10">
+                            <img src="https://i.pinimg.com/originals/31/c0/1b/31c01b38a5ab5ebe065dd748630fb9cd.jpg" alt="" class=" mx-auto lg:mx-0 my-10 w-[300px] rounded-xl">
+                            <div class="bg-orange-500 p-10 hidden lg:inline lg:absolute lg:ml-44 lg:mt-16 rounded-xl">
+                                <p class="font-bold text-sm text-slate-400">Name</p>
+                                <p class="font-bold">Jessica Parker</p>
+                                <div class="border-b border-dashed mb-2"></div>
+                                <p class="font-bold text-sm text-slate-400">Birthday</p>
+                                <p class="font-bold">April 22, 1990</p>
+                                <div class="border-b border-dashed mb-2"></div>
+                                <p class="font-bold text-sm text-slate-400">Mail</p>
+                                <p class="font-bold">hello@anderson.com</p>
+                                <div class="border-b border-dashed mb-2"></div>
+                                <p class="font-bold text-sm text-slate-400">Phone</p>
+                                <p class="font-bold">+123 456 7890</p>
+                                <div class="border-b border-dashed mb-2"></div>
+                                <p class="font-bold text-sm text-slate-400">Address</p>
+                                <p class="font-bold">20, Bardeshi, Dhaka</p>
+                                <div class="border-b border-dashed mb-2"></div>
+                                <p class="font-bold text-sm text-slate-400">Nationality</p>
+                                <p class="font-bold">Bangladeshi</p>
+                            </div>
+                        </div>
+
+                        <div class="w-full lg:w-[600px] px-10">
+                            <p class="font-extrabold text-2xl text-orange-500">About Me</p>
+                            <h1 class="max-w-5xl font-extrabold text-5xl">World leading UI/UX designer</h1>
+                            <p class="my-5 font-bold text-lg">A passionate UI/UX Designer and Web Developer based In NYC, USA</p>
+                            <p>Hi! My name is Jessica Parker. I am UI/UX designer, and I'm very passionate and dedicated to my work. With 20 years experience as a professional graphic designer, I have acquired the skills and knowledge necessary to make your project a success.</p>
+                            <div class="my-5">
+                                <a href="#pricing" class="w-44 text-lg border border-transparent hover:border-orange-600 text-white hover:text-orange-500 bg-orange-500 hover:bg-transparent rounded-xl animate__animated animate__fadeInRight py-2 lg:flex px-10 transition-all duration-400 ease-in-out font-bold">About Me
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <footer class="mt-20 bg-cover bg-no-repeat bg-center pt-20">
+                        <div class="container lg:max-w-7xl mx-auto">
+                            <div class="grid grid-cols-1 only-md:grid-cols-2 lg:grid-cols-2">
+                                <div class="flex">
+                                  <p class="mx-auto text-center items-center flex-wrap justify-center text-xl  text-slate-200">Designed with love ©<span class="px-[3px] text-paragraph  text-white">
+                                    </span><span class=" px-[3px]"><a class="text-accent1 font-extrabold hover:font-bold text-orange-500" href="#">CodeeFly</a></span></p>
+                                </div>
+                                <div class="flex items-center flex-wrap gap-8 justify-center sm:mt-[15px]">
+                                    <a href="#" class="text-paragraph  text-slate-200 hover:text-accent1 font-medium text-[20px] sm:text-[16px]">Terms & Condition</a>
+                                    <a href="#" class="text-paragraph  text-slate-200 hover:text-accent1 font-medium text-[20px] sm:text-[16px]"> Privacy Policy</a>
+                                    <a href="#" class="text-paragraph  text-slate-200 hover:text-accent1 font-medium text-[20px] sm:text-[16px]"> Login</a>
+                                </div>
+                            </div>
+                        </div>
+                      </footer>
+                   </div>
+                </div>
+                <div id="resText" class="hidden justify-center">
+                   <div class="max-w-7xl mx-auto">
+                    <div class="bg-black/20 my-20 backdrop-blur-xl p-10 rounded-xl shadow-xl flex flex-wrap mx-5 lg:mx-0">
+                        <div class="flex flex-wrap relative mt-10">
+                            <div class="flex flex-wrap justify-center">
+                                <div class="lg:w-1/2 w-full">
+                                    <p class="text-orange-500 text-2xl font-bold px-10">Resume</p>
+                                    <h1 class="font-bold text-4xl text-white px-10">Combination of Skill & Experience</h1>
+                                </div>
+                                <div class="lg:w-1/2 w-full">
+                                    <p class="text-lg self-center text-transparent lg:max-w-[590px] px-10">Promote your blog posts, case udie, and product ouncems with the the branded videoscustomers coming back for services Makes best effort.</p>
+                                </div>
+                            </div>
+                            <div class="w-full lg:w-1/2 p-10">
+                               <h1 class="text-3xl mb-5 font-bold"><i class="fa-solid fa-circle-notch mr-2 text-orange-500"></i>Education</h1>
+                               <div class="py-2">
+                                <div class="flex flex-wrap">
+                                    <div class="w-60">
+                                        <h1 class="font-bold text-2xl ">Cognitive Sciences</h1>
+                                        <h1>University of Maine</h1>
+                                    </div>
+                                    <div class="w-60">
+                                        <h1 class="self-center text-orange-500 text-xl py-2">2018 - 2020</h1>
+                                    </div>
+                                    <div class="w-full py-5 max-w-sm">
+                                        <p>The goal of cognitive science is to understand the principles of intelligence with the hope that this will lead to better comprehension.</p>
+                                    </div>
+                                </div>
+                               </div>
+                               <div class="py-2">
+                                <div class="flex flex-wrap">
+                                    <div class="w-60">
+                                        <h1 class="font-bold text-2xl ">Civil Engineering</h1>
+                                        <h1>University of Texas</h1>
+                                    </div>
+                                    <div class="w-60">
+                                        <h1 class="self-center text-orange-500 text-xl py-2">2016 - 2017</h1>
+                                    </div>
+                                    <div class="w-full py-5 max-w-sm">
+                                        <p>The goal of cognitive science is to understand the principles of intelligence with the hope that this will lead to better comprehension.</p>
+                                    </div>
+                                </div>
+                               </div>
+                               <div class="py-2">
+                                <div class="flex flex-wrap">
+                                    <div class="w-60">
+                                        <h1 class="font-bold text-2xl ">Bachelor of Science</h1>
+                                        <h1>Univercity of Dhaka</h1>
+                                    </div>
+                                    <div class="w-60">
+                                        <h1 class="self-center text-orange-500 text-xl py-2">2012 - 2015</h1>
+                                    </div>
+                                    <div class="w-full py-5 max-w-sm">
+                                        <p>The goal of cognitive science is to understand the principles of intelligence with the hope that this will lead to better comprehension.</p>
+                                    </div>
+                                </div>
+                               </div>
+                               <h1 class="text-3xl mb-5 font-bold"><i class="fa-solid fa-circle-notch mr-2 text-orange-500"></i>Experience</h1>
+                               <div class="py-2">
+                                <div class="flex flex-wrap">
+                                    <div class="w-60">
+                                        <h1 class="font-bold text-2xl ">UI/UX Designer</h1>
+                                        <h1>Envato Market</h1>
+                                    </div>
+                                    <div class="w-60">
+                                        <h1 class="self-center text-orange-500 text-xl py-2">2018 - running</h1>
+                                    </div>
+                                    <div class="w-full py-5 max-w-sm">
+                                        <p>Web Developers are build a website’s core structure using coding languages, while designers are more visually creative and user-focused.</p>
+                                    </div>
+                                </div>
+                               </div>
+                               <div class="py-2">
+                                <div class="flex flex-wrap">
+                                    <div class="w-60">
+                                        <h1 class="font-bold text-2xl ">Creative Designer</h1>
+                                        <h1>Bahanno Digital</h1>
+                                    </div>
+                                    <div class="w-60">
+                                        <h1 class="self-center text-orange-500 text-xl py-2">2015 - 2017</h1>
+                                    </div>
+                                    <div class="w-full py-5 max-w-sm">
+                                        <p>Web Developers are build a website’s core structure using coding languages, while designers are more visually creative and user-focused.</p>
+                                    </div>
+                                </div>
+                               </div>
+                            </div>
+                            <div class="w-full lg:w-1/2 p-10">
+                                <h1 class="text-3xl mb-5 font-bold"><i class="fa-solid fa-circle-notch mr-2 text-orange-500"></i>Personal Skills</h1>
+                                <div class="relative mb-7">
+                                    <div class="flex justify-between mb-1">
+                                        <span class="text-lg font-medium text-primary dark:text-white">Time Management</span>
+                                        <span class="text-xs font-medium text-white absolute py-1.5 px-1.5 bottom-6 rounded-sm" style="left: 90%; color: #EE5F38;">90%</span>                </div>
+                                    <div class="w-full rounded-full h-2 dark:bg-gray-700 flex items-center">
+                                        <div class="bg-accent1 h-full rounded-full" style="width: 90%; background-color: #EE5F38;"></div>
+                                    </div>
+                                </div>
+                                <div class="relative mb-7">
+                                    <div class="flex justify-between mb-1">
+                                        <span class="text-lg font-medium text-primary dark:text-white">Effeciency</span>
+                                        <span class="text-xs font-medium text-white absolute py-1.5 px-1.5 bottom-6 rounded-sm" style="left: 72%; color: #EE5F38;">72%</span>
+                                    </div>
+                                    <div class="w-full rounded-full h-2 dark:bg-gray-700 flex items-center">
+                                        <div class="bg-accent1 h-full rounded-full" style="width: 72%; background-color: #EE5F38;"></div>
+                                    </div>
+                                </div>
+                                <div class="relative mb-7">
+                                    <div class="flex justify-between mb-1">
+                                        <span class="text-lg font-medium text-primary dark:text-white">React.js</span>
+                                        <span class="text-xs font-medium text-white absolute py-1.5 px-1.5 bottom-6 rounded-sm" style="left: 80%; color: #EE5F38;">80%</span>
+                                    </div>
+                                    <div class="w-full rounded-full h-2 dark:bg-gray-700 flex items-center">
+                                        <div class="bg-accent1 h-full rounded-full" style="width: 80%; background-color: #EE5F38;"></div>
+                                    </div>
+                                </div>
+                               <div class="pt-20 w-80">
+                                <div class="flex  items-center flex-wrap max-w-md px-10 bg-white shadow-xl rounded-2xl h-20"
+                                x-data="{ circumference: 50 * 2 * Math.PI, percent: 80 }"
+                                >
+                                   <div class="flex items-center justify-center -m-6 overflow-hidden bg-white rounded-full">
+                                     <svg class="w-32 h-32 transform translate-x-1 translate-y-1" x-cloak aria-hidden="true">
+                                       <circle
+                                         class="text-gray-300"
+                                         stroke-width="10"
+                                         stroke="currentColor"
+                                         fill="transparent"
+                                         r="50"
+                                         cx="60"
+                                         cy="60"
+                                         />
+                                       <circle
+                                         class="text-orange-600"
+                                         stroke-width="10"
+                                         :stroke-dasharray="circumference"
+                                         :stroke-dashoffset="circumference - percent / 100 * circumference"
+                                         stroke-linecap="round"
+                                         stroke="currentColor"
+                                         fill="transparent"
+                                         r="50"
+                                         cx="60"
+                                         cy="60"
+                                        />
+                                     </svg>
+                                     <span class="absolute text-2xl text-orange-700" x-text="`${percent}%`"></span>
+                                   </div>
+                                   <p class="ml-10 font-medium text-gray-600 sm:text-xl">Ms Office</p>
+                         
+                                   <span class="ml-auto text-xl font-medium text-transparent text-blue-600 hidden sm:block">+25%</span>
+                               </div>
+                               </div>
+                               <div class="pt-20 w-80">
+                                <div class="flex  items-center flex-wrap max-w-md px-10 bg-white shadow-xl rounded-2xl h-20"
+                                x-data="{ circumference: 50 * 2 * Math.PI, percent: 75 }"
+                                >
+                                   <div class="flex items-center justify-center -m-6 overflow-hidden bg-white rounded-full">
+                                     <svg class="w-32 h-32 transform translate-x-1 translate-y-1" x-cloak aria-hidden="true">
+                                       <circle
+                                         class="text-gray-300"
+                                         stroke-width="10"
+                                         stroke="currentColor"
+                                         fill="transparent"
+                                         r="50"
+                                         cx="60"
+                                         cy="60"
+                                         />
+                                       <circle
+                                         class="text-orange-600"
+                                         stroke-width="10"
+                                         :stroke-dasharray="circumference"
+                                         :stroke-dashoffset="circumference - percent / 100 * circumference"
+                                         stroke-linecap="round"
+                                         stroke="currentColor"
+                                         fill="transparent"
+                                         r="50"
+                                         cx="60"
+                                         cy="60"
+                                        />
+                                     </svg>
+                                     <span class="absolute text-2xl text-orange-700" x-text="`${percent}%`"></span>
+                                   </div>
+                                   <p class="ml-10 font-medium text-gray-600 sm:text-xl">Photoshop</p>
+                         
+                                   <span class="ml-auto text-xl font-medium text-transparent text-blue-600 hidden sm:block">+25%</span>
+                               </div>
+                               </div>
+                               <div class="pt-20 w-80">
+                                <div class="flex  items-center flex-wrap max-w-md px-10 bg-white shadow-xl rounded-2xl h-20"
+                                x-data="{ circumference: 50 * 2 * Math.PI, percent: 90 }"
+                                >
+                                   <div class="flex items-center justify-center -m-6 overflow-hidden bg-white rounded-full">
+                                     <svg class="w-32 h-32 transform translate-x-1 translate-y-1" x-cloak aria-hidden="true">
+                                       <circle
+                                         class="text-gray-300"
+                                         stroke-width="10"
+                                         stroke="currentColor"
+                                         fill="transparent"
+                                         r="50"
+                                         cx="60"
+                                         cy="60"
+                                         />
+                                       <circle
+                                         class="text-orange-600"
+                                         stroke-width="10"
+                                         :stroke-dasharray="circumference"
+                                         :stroke-dashoffset="circumference - percent / 100 * circumference"
+                                         stroke-linecap="round"
+                                         stroke="currentColor"
+                                         fill="transparent"
+                                         r="50"
+                                         cx="60"
+                                         cy="60"
+                                        />
+                                     </svg>
+                                     <span class="absolute text-2xl text-orange-700" x-text="`${percent}%`"></span>
+                                   </div>
+                                   <p class="ml-10 font-medium text-gray-600 sm:text-xl">Illustrator</p>
+                         
+                                   <span class="ml-auto text-xl font-medium text-transparent text-blue-600 hidden sm:block">+25%</span>
+                               </div>
+                               </div>
+                               <div class="pt-20 w-80">
+                                <div class="flex  items-center flex-wrap max-w-md px-10 bg-white shadow-xl rounded-2xl h-20"
+                                x-data="{ circumference: 50 * 2 * Math.PI, percent: 65 }"
+                                >
+                                   <div class="flex items-center justify-center -m-6 overflow-hidden bg-white rounded-full">
+                                     <svg class="w-32 h-32 transform translate-x-1 translate-y-1" x-cloak aria-hidden="true">
+                                       <circle
+                                         class="text-gray-300"
+                                         stroke-width="10"
+                                         stroke="currentColor"
+                                         fill="transparent"
+                                         r="50"
+                                         cx="60"
+                                         cy="60"
+                                         />
+                                       <circle
+                                         class="text-orange-600"
+                                         stroke-width="10"
+                                         :stroke-dasharray="circumference"
+                                         :stroke-dashoffset="circumference - percent / 100 * circumference"
+                                         stroke-linecap="round"
+                                         stroke="currentColor"
+                                         fill="transparent"
+                                         r="50"
+                                         cx="60"
+                                         cy="60"
+                                        />
+                                     </svg>
+                                     <span class="absolute text-2xl text-orange-700" x-text="`${percent}%`"></span>
+                                   </div>
+                                   <p class="ml-10 font-medium text-gray-600 sm:text-xl">Figma</p>
+                         
+                                   <span class="ml-auto text-xl font-medium text-transparent text-blue-600 hidden sm:block">+25%</span>
+                               </div>
+                               </div>
+                            </div>
+                        </div>
+                    </div>
+                    <footer class="mt-20 bg-cover bg-no-repeat bg-center pt-20">
+                        <div class="container lg:max-w-7xl mx-auto">
+                            <div class="grid grid-cols-1 only-md:grid-cols-2 lg:grid-cols-2">
+                                <div class="flex">
+                                  <p class="mx-auto text-center items-center flex-wrap justify-center text-xl  text-slate-200">Designed with love ©<span class="px-[3px] text-paragraph  text-white">
+                                    </span><span class=" px-[3px]"><a class="text-accent1 font-extrabold hover:font-bold text-orange-500" href="#">CodeeFly</a></span></p>
+                                </div>
+                                <div class="flex items-center flex-wrap gap-8 justify-center sm:mt-[15px]">
+                                    <a href="#" class="text-paragraph  text-slate-200 hover:text-accent1 font-medium text-[20px] sm:text-[16px]">Terms & Condition</a>
+                                    <a href="#" class="text-paragraph  text-slate-200 hover:text-accent1 font-medium text-[20px] sm:text-[16px]"> Privacy Policy</a>
+                                    <a href="#" class="text-paragraph  text-slate-200 hover:text-accent1 font-medium text-[20px] sm:text-[16px]"> Login</a>
+                                </div>
+                            </div>
+                        </div>
+                      </footer>
+                   </div>
+                </div>
+                <div id="portText" class="hidden justify-center">
+                    <div class="max-w-7xl mx-auto">
+                     <div class="bg-black/20 my-20 backdrop-blur-xl p-10 rounded-xl shadow-xl flex flex-wrap mx-5 lg:mx-0">
+                        <div class="container">
+            <div class="flex flex-wrap justify-center">
+                <div class="lg:w-1/2 w-full">
+                    <p class="text-orange-500 text-2xl font-bold px-10">Resume</p>
+                    <h1 class="font-bold text-4xl text-white px-10">My works that I did for clients</h1>
+                </div>
+                <div class="lg:w-1/2 w-full">
+                    <p class="text-lg text-transparent self-center lg:max-w-[590px] px-10">Promote your blog posts, case udie, and product ouncems with the the branded videoscustomers coming back for services Makes best effort.</p>
+                </div>
+            </div>
+            <div class="flex flex-wrap my-5 justify-center font-bold">
+                <button class="mx-3 my-3 text-red-500 focus:outline-none">Show All</button>
+                <button class="mx-3 my-3 focus:outline-none">Web</button>
+                <button class="mx-3 my-3 focus:outline-none">Graphics</button>
+                <button class="mx-3 my-3 focus:outline-none">Developments</button>
+                <button class="mx-3 my-3 focus:outline-none">mobile</button>
+            </div>
+            
+            <div class="justify-center">
+                <div class="flex flex-wrap justify-center">
+                    <div class="w-80">
+                        <img src="https://themihub.com/html/morex-demo/morex/assets/images/portfolio/1.png" class="w-80 h-32 hover:h-52 my-2 object-cover rounded-xl hover:scale-95 duration-300" alt="">
+                        <img src="https://themihub.com/html/morex-demo/morex/assets/images/portfolio/2.png" class="w-80 h-32 hover:h-52 my-2 object-cover rounded-xl hover:scale-95 duration-300" alt="">
+                        <img src="https://themihub.com/html/morex-demo/morex/assets/images/portfolio/6.png" class="w-80 h-32 hover:h-52 my-2 object-cover rounded-xl hover:scale-95 duration-300" alt="">
+                    </div>
+                    <div class="w-80 justify-center">
+                        <img src="https://themihub.com/html/morex-demo/morex/assets/images/portfolio/3.png" class="w-80 lg:w-72 lg:mx-4 h-32 hover:h-72 object-cover rounded-xl hover:scale-95 duration-300 my-2" alt="">
+                        <img src="https://themihub.com/html/morex-demo/morex/assets/images/portfolio/7.png" class="w-80 lg:w-72 lg:mx-4 h-32 hover:h-72 object-cover rounded-xl hover:scale-95 duration-300 my-2" alt="">
+                        <img src="https://themihub.com/html/morex-demo/morex/assets/images/portfolio/8.png" class="w-80 lg:w-72 lg:mx-4 h-32 hover:h-72 object-cover rounded-xl hover:scale-95 duration-300 my-2" alt="">
+                    </div>
+                    <div class="w-80">
+                        <img src="https://themihub.com/html/morex-demo/morex/assets/images/portfolio/9.png" class="w-80 h-32 hover:h-52 my-2 object-cover rounded-xl hover:scale-95 duration-300" alt="">
+                        <img src="https://themihub.com/html/morex-demo/morex/assets/images/portfolio/4.png" class="w-80 h-32 hover:h-52 my-2 object-cover rounded-xl hover:scale-95 duration-300" alt="">
+                        <img src="https://themihub.com/html/morex-demo/morex/assets/images/portfolio/5.png" class="w-80 h-32 hover:h-52 my-2 object-cover rounded-xl hover:scale-95 duration-300" alt="">
+                    </div>
+                </div>
+                </div>
+            </div>
+                     </div>
+                     <footer class="mt-20 bg-cover bg-no-repeat bg-center pt-20">
+                         <div class="container lg:max-w-7xl mx-auto">
+                             <div class="grid grid-cols-1 only-md:grid-cols-2 lg:grid-cols-2">
+                                 <div class="flex">
+                                   <p class="mx-auto text-center items-center flex-wrap justify-center text-xl  text-slate-200">Designed with love ©<span class="px-[3px] text-paragraph  text-white">
+                                     </span><span class=" px-[3px]"><a class="text-accent1 font-extrabold hover:font-bold text-orange-500" href="#">CodeeFly</a></span></p>
+                                 </div>
+                                 <div class="flex items-center flex-wrap gap-8 justify-center sm:mt-[15px]">
+                                     <a href="#" class="text-paragraph  text-slate-200 hover:text-accent1 font-medium text-[20px] sm:text-[16px]">Terms & Condition</a>
+                                     <a href="#" class="text-paragraph  text-slate-200 hover:text-accent1 font-medium text-[20px] sm:text-[16px]"> Privacy Policy</a>
+                                     <a href="#" class="text-paragraph  text-slate-200 hover:text-accent1 font-medium text-[20px] sm:text-[16px]"> Login</a>
+                                 </div>
+                             </div>
+                         </div>
+                       </footer>
+                    </div>
+                </div>
+                <div id="servText" class="hidden justify-center">
+                    <div class="max-w-7xl mx-auto">
+                     <div class="bg-black/20 my-20 backdrop-blur-xl p-10 rounded-xl shadow-xl flex flex-wrap mx-5 lg:mx-0">
+                        <div class="container mx-auto">
+                            <!-- Section title start -->
+                             <div class="flex justify-between items-center gap-[20px] lg:gap-[30px] mb-[55px] flex-wrap">
+                                  <div class="max-w-full lg:max-w-[580px] px-10 w-full">
+                                    <span class="text-accent1 text-[20px] lg:text-[24px] font-medium mb-[10px] lg:mb-[5px] text-orange-500">CREATIVE SERVICE</span>
+                                    <h2 class="text-[28px] lg:text-[48px] font-bold font-heebo leading-[36x] lg:leading-[58px] text-[#ff9f39] dark:text-white">What can i do for service clients you</h2>
+                                  </div>
+                             </div>
+                            <!-- Section title end -->
+              
+                            <!-- Services list start -->
+                            <div class="grid gap-[30px] lg:grid-cols-3 grid-cols-1 only-md:grid-cols-2">
+              
+                                  <!-- Single service start -->
+                                  <div class="shadow-lg hover:shadow-xl  dark:shadow-[0_0_20px_0_rgba(0,0,0,0.1)] dark:hover:shadow-[0_0_50px_0_rgba(0,0,0,0.2)] hover:translate-y-[-10px] transition duration-500">
+                                      <div class="overflow-hidden px-[30px] xl:px-[40px] lg:pt-[50px] md:pt-[40px] pb-[40px] ">
+                                        <span class="bg-[#48CDA0] text-white w-[70px] h-[70px] lg:w-[93px] lg:h-[93px] flex items-center justify-center rounded-full service-shape before:bg-[#79DAB9] before:opacity-[0.26]">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                                        
+                                        </span>
+                                        <h3 class="text-primary dark:text-white text-[20px] xl:text-[25px] font-bold font-heebo mt-[20px] mb-[15px]">Wireframing</h3>
+                                        <p class="text-[17px] text-[#636363] dark:text-slate-200">Promote your blog posts, case udie, and product ouncems nts with the the branded videos.</p>
+                                        <a href="#" class="link-button text-[#48CDA0] before:bg-[#48CDA0] mt-[15px] hover:text-[#333] dark:hover:text-white">Read More</a>
+                                      </div>
+                                  </div>
+                                  <!-- Single service end -->
+                                  
+                                  <!-- Single service start -->
+                                  <div class="shadow-lg hover:shadow-xl  dark:shadow-[0_0_20px_0_rgba(0,0,0,0.1)] dark:hover:shadow-[0_0_50px_0_rgba(0,0,0,0.2)] hover:translate-y-[-10px] transition duration-500">
+                                      <div class="overflow-hidden px-[30px] xl:px-[40px] lg:pt-[50px] md:pt-[40px] pb-[40px] ">
+                                        <span class="bg-[#ED5F38] text-white w-[70px] h-[70px] lg:w-[93px] lg:h-[93px] flex items-center justify-center rounded-full service-shape before:bg-[#ED5F38] before:opacity-[0.16]">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-life-buoy"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="4"></circle><line x1="4.93" y1="4.93" x2="9.17" y2="9.17"></line><line x1="14.83" y1="14.83" x2="19.07" y2="19.07"></line><line x1="14.83" y1="9.17" x2="19.07" y2="4.93"></line><line x1="14.83" y1="9.17" x2="18.36" y2="5.64"></line><line x1="4.93" y1="19.07" x2="9.17" y2="14.83"></line></svg>
+                                          
+                                        </span>
+                                        <h3 class="text-primary dark:text-white text-[20px] xl:text-[25px] font-bold font-heebo mt-[20px] mb-[15px]">Prototype</h3>
+                                        <p class="text-[17px] text-[#636363] dark:text-slate-200">Promote your blog posts, case udie, and product ouncems nts with the the branded videos.</p>
+                                        <a href="#" class="link-button text-[#ED5F38] before:bg-[#ED5F38] mt-[15px] hover:text-[#333] dark:hover:text-white">Read More</a>
+                                      </div>
+                                  </div>
+                                  <!-- Single service end -->
+              
+                                  <!-- Single service start -->
+                                  <div class="shadow-lg hover:shadow-xl  dark:shadow-[0_0_20px_0_rgba(0,0,0,0.1)] dark:hover:shadow-[0_0_50px_0_rgba(0,0,0,0.2)] hover:translate-y-[-10px] transition duration-500">
+                                      <div class="overflow-hidden px-[30px] xl:px-[40px] lg:pt-[50px] md:pt-[40px] pb-[40px] ">
+                                        <span class="bg-[#007EFF] text-white w-[70px] h-[70px] lg:w-[93px] lg:h-[93px] flex items-center justify-center rounded-full service-shape before:bg-[#007EFF] before:opacity-[0.16]">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                                        </span>
+                                        <h3 class="text-primary dark:text-white text-[20px] xl:text-[25px] font-bold font-heebo mt-[20px] mb-[15px]">UI Design</h3>
+                                        <p class="text-[17px] text-[#636363] dark:text-slate-200">Promote your blog posts, case udie, and product ouncems nts with the the branded videos.</p>
+                                        <a href="#" class="link-button text-[#007EFF] before:bg-[#007EFF] mt-[15px] hover:text-[#333] dark:hover:text-white">Read More</a>
+                                      </div>
+                                  </div>
+                                  <!-- Single service end -->
+              
+              
+                                  <!-- Single service start -->
+                                  <div class="shadow-lg hover:shadow-xl  dark:shadow-[0_0_20px_0_rgba(0,0,0,0.1)] dark:hover:shadow-[0_0_50px_0_rgba(0,0,0,0.2)] hover:translate-y-[-10px] transition duration-500">
+                                      <div class="overflow-hidden px-[30px] xl:px-[40px] lg:pt-[50px] md:pt-[40px] pb-[40px] ">
+                                        <span class="bg-[#E6BC13] text-white w-[70px] h-[70px] lg:w-[93px] lg:h-[93px] flex items-center justify-center rounded-full service-shape before:bg-[#E6BC13] before:opacity-[0.22]">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-headphones"><path d="M3 18v-6a9 9 0 0 1 18 0v6"></path><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path></svg>
+                                        </span>
+                                        <h3 class="text-primary dark:text-white text-[20px] xl:text-[25px] font-bold font-heebo mt-[20px] mb-[15px]">Personal Creation</h3>
+                                        <p class="text-[17px] text-[#636363] dark:text-slate-200">Promote your blog posts, case udie, and product ouncems nts with the the branded videos.</p>
+                                        <a href="#" class="link-button text-[#E6BC13] before:bg-[#E6BC13] mt-[15px] hover:text-[#333] dark:hover:text-white">Read More</a>
+                                      </div>
+                                  </div>
+                                  <!-- Single service end -->
+              
+                                  
+              
+                                  <!-- Single service start -->
+                                  <div class="shadow-lg hover:shadow-xl  dark:shadow-[0_0_20px_0_rgba(0,0,0,0.1)] dark:hover:shadow-[0_0_50px_0_rgba(0,0,0,0.2)] hover:translate-y-[-10px] transition duration-500">
+                                      <div class="overflow-hidden px-[30px] xl:px-[40px] lg:pt-[50px] md:pt-[40px] pb-[40px] ">
+                                        <span class="bg-[#ED38D1] text-white w-[70px] h-[70px] lg:w-[93px] lg:h-[93px] flex items-center justify-center rounded-full service-shape before:bg-[#ED38D1] before:opacity-[0.16]">
+                                          <svg width="40" height="40" stroke="currentColor" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M272 384c9.6-31.9 29.5-59.1 49.2-86.2l0 0c5.2-7.1 10.4-14.2 15.4-21.4c19.8-28.5 31.4-63 31.4-100.3C368 78.8 289.2 0 192 0S16 78.8 16 176c0 37.3 11.6 71.9 31.4 100.3c5 7.2 10.2 14.3 15.4 21.4l0 0c19.8 27.1 39.7 54.4 49.2 86.2H272zM192 512c44.2 0 80-35.8 80-80V416H112v16c0 44.2 35.8 80 80 80zM112 176c0 8.8-7.2 16-16 16s-16-7.2-16-16c0-61.9 50.1-112 112-112c8.8 0 16 7.2 16 16s-7.2 16-16 16c-44.2 0-80 35.8-80 80z"/></svg>
+                                        </span>
+                                        <h3 class="text-primary dark:text-white text-[20px] xl:text-[25px] font-bold font-heebo mt-[20px] mb-[15px]">Case Study</h3>
+                                        <p class="text-[17px] text-[#636363] dark:text-slate-200">Promote your blog posts, case udie, and product ouncems nts with the the branded videos.</p>
+                                        <a href="#" class="link-button text-[#ED38D1] before:bg-[#ED38D1] mt-[15px] hover:text-[#333] dark:hover:text-white">Read More</a>
+                                      </div>
+                                  </div>
+                                  <!-- Single service end -->
+              
+                                  
+                                    <!-- Single service start -->
+                                    <div class="shadow-lg hover:shadow-xl  dark:shadow-[0_0_20px_0_rgba(0,0,0,0.1)] dark:hover:shadow-[0_0_50px_0_rgba(0,0,0,0.2)] hover:translate-y-[-10px] transition duration-500">
+                                      <div class="overflow-hidden px-[30px] xl:px-[40px] lg:pt-[50px] md:pt-[40px] pb-[40px] ">
+                                        <span class="bg-[#A348CD] text-white w-[70px] h-[70px] lg:w-[93px] lg:h-[93px] flex items-center justify-center rounded-full service-shape before:bg-[#A348CD] before:opacity-[0.16]">
+                                          <svg width="40" height="40" stroke="currentColor" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M135.2 117.4L109.1 192H402.9l-26.1-74.6C372.3 104.6 360.2 96 346.6 96H165.4c-13.6 0-25.7 8.6-30.2 21.4zM39.6 196.8L74.8 96.3C88.3 57.8 124.6 32 165.4 32H346.6c40.8 0 77.1 25.8 90.6 64.3l35.2 100.5c23.2 9.6 39.6 32.5 39.6 59.2V400v48c0 17.7-14.3 32-32 32H448c-17.7 0-32-14.3-32-32V400H96v48c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32V400 256c0-26.7 16.4-49.6 39.6-59.2zM128 288c0-17.7-14.3-32-32-32s-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32zm288 32c17.7 0 32-14.3 32-32s-14.3-32-32-32s-32 14.3-32 32s14.3 32 32 32z"/></svg>
+                                        </span>
+                                        <h3 class="text-primary dark:text-white text-[20px] xl:text-[25px] font-bold font-heebo mt-[20px] mb-[15px]">Experience Design</h3>
+                                        <p class="text-[17px] text-[#636363] dark:text-slate-200">Promote your blog posts, case udie, and product ouncems nts with the the branded videos.</p>
+                                        <a href="#" class="link-button text-[#A348CD] before:bg-[#A348CD] mt-[15px] hover:text-[#333] dark:hover:text-white">Read More</a>
+                                      </div>
+                                  </div>
+                                  <!-- Single service end -->
+              
+                            </div>
+                            <!-- Services list end -->
+              
+                          </div>
+                     </div>
+                     <footer class="mt-20 bg-cover bg-no-repeat bg-center pt-20">
+                         <div class="container lg:max-w-7xl mx-auto">
+                             <div class="grid grid-cols-1 only-md:grid-cols-2 lg:grid-cols-2">
+                                 <div class="flex">
+                                   <p class="mx-auto text-center items-center flex-wrap justify-center text-xl  text-slate-200">Designed with love ©<span class="px-[3px] text-paragraph  text-white">
+                                     </span><span class=" px-[3px]"><a class="text-accent1 font-extrabold hover:font-bold text-orange-500" href="#">CodeeFly</a></span></p>
+                                 </div>
+                                 <div class="flex items-center flex-wrap gap-8 justify-center sm:mt-[15px]">
+                                     <a href="#" class="text-paragraph  text-slate-200 hover:text-accent1 font-medium text-[20px] sm:text-[16px]">Terms & Condition</a>
+                                     <a href="#" class="text-paragraph  text-slate-200 hover:text-accent1 font-medium text-[20px] sm:text-[16px]"> Privacy Policy</a>
+                                     <a href="#" class="text-paragraph  text-slate-200 hover:text-accent1 font-medium text-[20px] sm:text-[16px]"> Login</a>
+                                 </div>
+                             </div>
+                         </div>
+                       </footer>
+                    </div>
+                 </div>
+                <div id="testText" class="hidden justify-center">
+                    <div class="max-w-7xl mx-auto">
+                     <div class="bg-black/20 my-20 backdrop-blur-xl p-10 rounded-xl shadow-xl flex flex-wrap mx-5 lg:mx-0">
+                        <div class="container mx-auto">
+                            <!-- Section title start -->
+                             <div class="flex justify-between items-center gap-[20px] lg:gap-[30px] mb-[55px] flex-wrap">
+                                  <div class="max-w-full lg:max-w-[580px] px-10 w-full">
+                                    <span class="text-accent1 text-[20px] lg:text-[24px] font-medium mb-[10px] lg:mb-[5px] text-orange-500">CREATIVE SERVICE</span>
+                                    <h2 class="text-[28px] lg:text-[48px] font-bold font-heebo leading-[36x] lg:leading-[58px] text-[#ff9f39] dark:text-white">What can i do for service clients you</h2>
+                                  </div>
+                             </div>
+                             <div class="flex flex-wrap">
+                                <div class="w-[400px] mx-auto border rounded-xl border-slate-500 my-5 justify-center items-center flex flex-wrap">
+                                    <div class="w-60 lg:w-[500px]  p-2 mx-2 rounded-xl transform transition-all duration-300">
+                                        <p class="">Loved the template design, documentation, customizability and the customer support from Marketify team! I am a noob in programming with very little knowledge about coding but the Marketify team helped me to launch my resume website successfully. Much recommended!
+                                            </p>
+                                        <div class="flex">
+                                            <img src="https://th.bing.com/th/id/R.aa4589ed312ce64e215eabe951219da7?rik=o2jTYVccKRNodg&riu=http%3a%2f%2fwww.indramayujeh.com%2fwp-content%2fuploads%2f2020%2f05%2fWAWAN-1-1.jpeg&ehk=HLI4ztrLP%2fa1MA5reyrSWckYpiC5ElldEiCzQNCvpvQ%3d&risl=&pid=ImgRaw&r=0" alt="" class="w-14 m-4 rounded-full">
+                                            <div class=" m-4">
+                                                <p class="font-bold">Wawan</p>
+                                                <p class="font-ptng text-xs">Designer Visualx.id</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                 </div>
+                                <div class="w-[400px] mx-auto border rounded-xl border-slate-500 my-5 justify-center items-center flex flex-wrap">
+                                    <div class="w-60 lg:w-[500px]  p-2 mx-2 rounded-xl transform transition-all duration-300">
+                                        <p class="">Loved the template design, documentation, customizability and the customer support from Marketify team! I am a noob in programming with very little knowledge about coding but the Marketify team helped me to launch my resume website successfully. Much recommended!
+                                            </p>
+                                        <div class="flex">
+                                            <img src="https://th.bing.com/th/id/R.aa4589ed312ce64e215eabe951219da7?rik=o2jTYVccKRNodg&riu=http%3a%2f%2fwww.indramayujeh.com%2fwp-content%2fuploads%2f2020%2f05%2fWAWAN-1-1.jpeg&ehk=HLI4ztrLP%2fa1MA5reyrSWckYpiC5ElldEiCzQNCvpvQ%3d&risl=&pid=ImgRaw&r=0" alt="" class="w-14 m-4 rounded-full">
+                                            <div class=" m-4">
+                                                <p class="font-bold">Wawan</p>
+                                                <p class="font-ptng text-xs">Designer Visualx.id</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                 </div>
+                             </div>
+                        </div>
+                     </div>
+                     <footer class="mt-20 bg-cover bg-no-repeat bg-center pt-20">
+                         <div class="container lg:max-w-7xl mx-auto">
+                             <div class="grid grid-cols-1 only-md:grid-cols-2 lg:grid-cols-2">
+                                 <div class="flex">
+                                   <p class="mx-auto text-center items-center flex-wrap justify-center text-xl  text-slate-200">Designed with love ©<span class="px-[3px] text-paragraph  text-white">
+                                     </span><span class=" px-[3px]"><a class="text-accent1 font-extrabold hover:font-bold text-orange-500" href="#">CodeeFly</a></span></p>
+                                 </div>
+                                 <div class="flex items-center flex-wrap gap-8 justify-center sm:mt-[15px]">
+                                     <a href="#" class="text-paragraph  text-slate-200 hover:text-accent1 font-medium text-[20px] sm:text-[16px]">Terms & Condition</a>
+                                     <a href="#" class="text-paragraph  text-slate-200 hover:text-accent1 font-medium text-[20px] sm:text-[16px]"> Privacy Policy</a>
+                                     <a href="#" class="text-paragraph  text-slate-200 hover:text-accent1 font-medium text-[20px] sm:text-[16px]"> Login</a>
+                                 </div>
+                             </div>
+                         </div>
+                       </footer>
+                    </div>
+                 </div>
+                <div id="blogText" class="hidden justify-center">
+                    <div class="max-w-7xl mx-auto">
+                     <div class="bg-black/20 my-20 backdrop-blur-xl p-10 rounded-xl shadow-xl flex flex-wrap mx-5 lg:mx-0">
+                        <div class="container mx-auto">
+                            <!-- Section title start -->
+                             <div class="flex justify-between items-center gap-[20px] lg:gap-[30px] mb-[55px] flex-wrap">
+                                  <div class="max-w-full lg:max-w-[580px] px-10 w-full">
+                                    <span class="text-accent1 text-[20px] lg:text-[24px] font-medium mb-[10px] lg:mb-[5px] text-orange-500">Blog</span>
+                                    <h2 class="text-[28px] lg:text-[48px] font-bold font-heebo leading-[36x] lg:leading-[58px] text-[#ff9f39] dark:text-white">Latest tips, tricks & Updates</h2>
+                                  </div>
+                             </div>
+                             <div class="flex flex-wrap justify-center my-5">
+                                <div class="w-full lg:w-[300px] mx-2">
+                                    <img src="https://themihub.com/html/morex-demo/morex/assets/images/blog/1.png" class="rounded-xl" alt="">
+                                    <div class="px-6">
+                                        <div class="flex my-1">
+                                            <p class="text-orange-500 p-2 rounded-sm  mr-2">Web Design</p>
+                                        </div>
+                                        <h1 class="text-2xl font-bold mb-2">Angular team welarges to trequests blog</h1>
+                                        <p>It is a long established fact that a reader will be distracted by the readable content of a page is when looking at its layout.</p>
+                                    </div>
+                                </div>
+                                <div class="w-full lg:w-[300px] mx-2">
+                                    <img src="https://themihub.com/html/morex-demo/morex/assets/images/blog/2.png" class="rounded-xl" alt="">
+                                    <div class="px-6">
+                                        <div class="flex my-1">
+                                            <p class="text-orange-500 p-2 rounded-sm  mr-2">Branding</p>
+                                        </div>
+                                        <h1 class="text-2xl font-bold mb-2">Angular team welarges to trequests blog</h1>
+                                        <p>It is a long established fact that a reader will be distracted by the readable content of a page is when looking at its layout.</p>
+                                    </div>
+                                </div>
+                                <div class="w-full lg:w-[300px] mx-2">
+                                    <img src="https://themihub.com/html/morex-demo/morex/assets/images/blog/3.png" class="rounded-xl" alt="">
+                                    <div class="px-6">
+                                        <div class="flex my-1">
+                                            <p class="text-orange-500 p-2 rounded-sm  mr-2">UI Design</p>
+                                        </div>
+                                        <h1 class="text-2xl font-bold mb-2">Angular team welarges to trequests blog</h1>
+                                        <p>It is a long established fact that a reader will be distracted by the readable content of a page is when looking at its layout.</p>
+                                    </div>
+                                </div>
+                             </div>
+                        </div>
+                     </div>
+                     <footer class="mt-20 bg-cover bg-no-repeat bg-center pt-20">
+                         <div class="container lg:max-w-7xl mx-auto">
+                             <div class="grid grid-cols-1 only-md:grid-cols-2 lg:grid-cols-2">
+                                 <div class="flex">
+                                   <p class="mx-auto text-center items-center flex-wrap justify-center text-xl  text-slate-200">Designed with love ©<span class="px-[3px] text-paragraph  text-white">
+                                     </span><span class=" px-[3px]"><a class="text-accent1 font-extrabold hover:font-bold text-orange-500" href="#">CodeeFly</a></span></p>
+                                 </div>
+                                 <div class="flex items-center flex-wrap gap-8 justify-center sm:mt-[15px]">
+                                     <a href="#" class="text-paragraph  text-slate-200 hover:text-accent1 font-medium text-[20px] sm:text-[16px]">Terms & Condition</a>
+                                     <a href="#" class="text-paragraph  text-slate-200 hover:text-accent1 font-medium text-[20px] sm:text-[16px]"> Privacy Policy</a>
+                                     <a href="#" class="text-paragraph  text-slate-200 hover:text-accent1 font-medium text-[20px] sm:text-[16px]"> Login</a>
+                                 </div>
+                             </div>
+                         </div>
+                       </footer>
+                    </div>
+                 </div>
+                <div id="contText" class="hidden justify-center">
+                    <div class="max-w-7xl mx-auto">
+                     <div class="bg-black/20 my-20 backdrop-blur-xl p-10 rounded-xl shadow-xl flex flex-wrap mx-5 lg:mx-0">
+                        <div class="container mx-auto">
+                            <!-- Section title start -->
+                             <div class="flex justify-between items-center gap-[20px] lg:gap-[30px] mb-[55px] flex-wrap">
+                                  <div class="max-w-full lg:max-w-[580px] px-10 w-full">
+                                    <span class="text-accent1 text-[20px] lg:text-[24px] font-medium mb-[10px] lg:mb-[5px] text-orange-500">Blog</span>
+                                    <h2 class="text-[28px] lg:text-[48px] font-bold font-heebo leading-[36x] lg:leading-[58px] text-[#ff9f39] dark:text-white">Latest tips, tricks & Updates</h2>
+                                  </div>
+                             </div>
+                             <div class="flex flex-wrap my-5">
+                                <div class="lg:w-1/2 w-full">
+                                    <div class="w-52 lg:w-[450px] flex m-3 hover:scale-105 duration-300">
+                                        <!-- Image -->
+                                        <div class="px-3 self-center">
+                                            <i class="fa-solid fa-phone py-3 bg-orange-500 p-4 text-5xl text-white rounded-full"></i>
+                                        </div>
+                                        <div class="px-2 py-2">
+                                            <!-- Heading -->
+                                            <!-- Description -->
+                                            <h1 class="font-bold text-2xl ">Phone</h1>
+                                            <p class="text-sm text-gray-600">
+                                                +123 456 7890</p>
+                                        </div>
+                                    </div>
+                                    <div class="w-52 lg:w-[450px] flex m-3 hover:scale-105 duration-300">
+                                        <!-- Image -->
+                                        <div class="px-3 self-center">
+                                            <i class="fa-solid fa-envelope-open py-3 bg-orange-500 p-4 text-5xl text-white rounded-full"></i>
+                                        </div>
+                                        <div class="px-2 py-2">
+                                            <!-- Heading -->
+                                            <!-- Description -->
+                                            <h1 class="font-bold text-2xl ">Email Us</h1>
+                                            <p class="text-sm text-gray-600">
+                                                hello@iknow.com</p>
+                                        </div>
+                                    </div>
+                                    <div class="w-52 lg:w-[450px] flex m-3 hover:scale-105 duration-300">
+                                        <!-- Image -->
+                                        <div class="px-5 self-center">
+                                            <i class="fa-solid fa-location-dot py-3 bg-orange-500 p-4 text-5xl text-white rounded-full"></i>
+                                        </div>
+                                        <div class="px-2 py-2">
+                                            <!-- Heading -->
+                                            <!-- Description -->
+                                            <h1 class="font-bold text-2xl ">Address</h1>
+                                            <p class="text-sm text-gray-600">
+                                                20, Bardeshi, Amin Bazar</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lg:w-1/2 w-full">
+                                    <form action="#">
+                                        <div class="grid grid-cols-2 gap-5">
+                                          <input type="text" placeholder="Your Name" class="h-16 w-full border bg-transparent border-gray-400 py-1 rounded-md ring-0 px-2">
+                                          <input type="email" placeholder="Your Email address" class="h-16 w-full border bg-transparent border-gray-400 py-1 rounded-md ring-0 px-2">
+                                        </div>
+                                        <div class="mt-5">
+                                          <input type="text" placeholder="message here" class="border bg-transparent border-gray-400 py-1 px-2 h-28 rounded-md ring-0 w-full">
+                                        </div>
+                                        <div class="mt-5">
+                                          <button class="w-52 rounded-full bg-orange-500 hover:bg-red-500 duration-300 py-3 text-center font-extrabold text-white">SUBMIT NOW</button>
+                                        </div>
+                                      </form>
+                                </div>
+                             </div>
+                        </div>
+                     </div>
+                     <footer class="mt-20 bg-cover bg-no-repeat bg-center pt-20">
+                         <div class="container lg:max-w-7xl mx-auto">
+                             <div class="grid grid-cols-1 only-md:grid-cols-2 lg:grid-cols-2">
+                                 <div class="flex">
+                                   <p class="mx-auto text-center items-center flex-wrap justify-center text-xl  text-slate-200">Designed with love ©<span class="px-[3px] text-paragraph  text-white">
+                                     </span><span class=" px-[3px]"><a class="text-accent1 font-extrabold hover:font-bold text-orange-500" href="#">CodeeFly</a></span></p>
+                                 </div>
+                                 <div class="flex items-center flex-wrap gap-8 justify-center sm:mt-[15px]">
+                                     <a href="#" class="text-paragraph  text-slate-200 hover:text-accent1 font-medium text-[20px] sm:text-[16px]">Terms & Condition</a>
+                                     <a href="#" class="text-paragraph  text-slate-200 hover:text-accent1 font-medium text-[20px] sm:text-[16px]"> Privacy Policy</a>
+                                     <a href="#" class="text-paragraph  text-slate-200 hover:text-accent1 font-medium text-[20px] sm:text-[16px]"> Login</a>
+                                 </div>
+                             </div>
+                         </div>
+                       </footer>
+                    </div>
+                 </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

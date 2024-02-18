@@ -1,0 +1,769 @@
+<html lang="en">
+    <head>
+        <!-- Document Meta-->
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <!-- IE Compatibility Meta-->
+        <meta name="author" content="zytheme"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+        <meta name="description" content="Multi-purpose Business html5 landing page"/>
+        <link href="https://themihub.com/html/morex-demo/morex/assets/images/favicon.ico" rel="icon"/>
+        <!-- link cdn tailwindcss -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- link icon -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.96w-96 text-center max-w-xs 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+          </svg>
+          <!-- animasi refresh
+          <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        /> -->
+        
+        <!-- lilita one start -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+        <!-- lilita one stop -->
+        <!-- Oswold & Roboto start -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <!-- Oswold & Roboto stop -->
+        <!-- jost start -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <!-- jost stop -->
+        <!-- playfair start -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <!-- playfair stop -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Morex</title>
+        <script>
+            tailwind.config = {
+              theme: {
+                container:{
+                    center: true,
+                    padding: '20px',
+                },
+                extend: {
+                  colors: {
+                    birmud: '#6ad3e5',
+                    biru: '#00b0d3',
+                    gelap: '#0f172a',
+                    gelap1: '#1e293b',
+                    pdng: '#ffffff',
+                    ptng: '#ababab',
+                    birtu: '#1d4ed8',
+                    toska: '#333333',
+                    ijo: '#49b970',
+                  },
+                    backgroundImage: {
+                    // background gambar
+
+                    // example: 'pict': 'url("https://hanafifebriansyah.vercel.app/assets/profil/bg.png")',
+                    },
+                    fontFamily: {
+                        Lile:['Lilita One'],
+                        Oswald:['Oswald'],
+                        jos:['Jost'],
+                        play:['Playfair Display'],
+                    },
+                  screen:{
+                    '2xl' : '1400px',
+                  }
+                }
+              }
+            }
+        </script>
+        <style type="text/tailwindcss">
+            body,html {
+                scroll-behavior: smooth;
+                font-family: 'Roboto',sans-serif;
+                color: #eaeaea;
+
+            }
+            .nav-fixed{
+                @apply fixed z-50 py-5 bg-white/50 dark:bg-black/50  transition duration-200 ease-in-out;
+                backdrop-filter: blur(5px);
+                box-shadow: inset 0 -1px 0 0 rgba(0,0,0,0.1);
+            }
+        
+            .nav-fixed{
+                @apply lg:bg-white/30  lg:dark:bg-black/30  lg:dark:text-slate-100 lg:text-center lg:backdrop-blur-sm lg:shadow-lg lg:p-1 lg:fixed lg:w-full  transition-all duration-500 ease-in-out lg:z-50;
+            }
+            .nav-fixed > div:nth-child(1){
+                @apply lg:mx-auto;
+            }
+            .nav-fixed > div:nth-child(3){
+                @apply lg:space-x-4;
+            }
+            .hamburger-line{
+                 @apply w-[30px] h-1 my-1 rounded-md block bg-toska;
+            }
+            .nav-line2{
+                 @apply bg-white/30 dark:bg-black/30 md:bg-transparent md:dark:bg-transparent shadow-2xl md:shadow-none lg:bg-transparent lg:dark:bg-transparent transition duration-200 ease-in-out;
+            }
+            .hamburger-active > span:nth-child(1){
+                 @apply  rotate-45 transition;
+            }
+            .hamburger-active > span:nth-child(2){
+                 @apply scale-0;
+            }
+            .hamburger-active > span:nth-child(3){
+                 @apply origin-bottom-left -rotate-45;
+            }
+            #hamburger{
+                @apply rounded-lg bg-slate-100 p-1;
+            }
+
+        </style>
+    </head>
+    <body class="bg-[#181a1d]">        
+    <header class="bg-transparent container pt-6 absolute w-full font-semibold transition-all ease-in-out duration-500 flex items-center max-w-full z-50 ">
+            <div class="container">
+                <div class="flex items-center justify-between relative">
+                    <div class="px-4">
+                     <img src="https://themihub.com/html/morex-demo/morex/assets/images/logo-light.png" alt="karir anak" class="w-44 text-center max-w-xs ">
+                    </div>
+                    <div class="flex item-center px-4">
+                        <button id="hamburger" name="hamburger" type="button" class="block right-4 lg:hidden  transition duration-200">
+                            <span class="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
+                            <span class="hamburger-line transition duration-300 ease-in-out"></span>
+                            <span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
+                        </button>
+                        
+                        <nav  id="nav-menu" class="hidden absolute mx-auto py-5 nav-line2 mt-1 shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:py-1 lg:block lg:relative lg:max-w-full lg:bg-transparent lg:shadow-none lg:rounded-none">
+                            <ul class="block lg:flex lg:text-md items-center font-play"> 
+                                <li class="group ">
+                                    <a href="#home" class="hover:text-orange-500 relative group animate__animated animate__fadeInRight py-2 mx-4  flex transition duration-400 ease-in-out">
+                                        <i class="sm:inline lg:hidden fas fa-home mr-2"></i>
+                                        <span class="lang-home">home</span>
+                                    </a></li>
+                                <li class="group">
+                                    <a href="#about" class=" hover:text-orange-500 animate__animated animate__fadeInRight py-2 mx-4   flex  transition duration-400 ease-in-out"><i class="sm:inline lg:hidden fas fa-info-circle mr-2"></i><span class="lang-about"> About</span></a></li>
+                                <li class="group">
+                                    <a href="#service" class=" hover:text-orange-500 animate__animated animate__fadeInRight py-2 mx-4   flex  transition duration-400 ease-in-out"><i class="sm:inline lg:hidden fas fa-info-circle mr-2"></i><span class="lang-about"> Service</span></a></li>
+                                <li class="group">
+                                    <a href="#port" class=" hover:text-orange-500 animate__animated animate__fadeInRight py-2 mx-4   flex  transition duration-400 ease-in-out"><i class="sm:inline lg:hidden fas fa-info-circle mr-2"></i><span class="lang-about"> Portfolio</span></a></li>
+                                <li class="group">
+                                    <a href="#blog" class=" hover:text-orange-500 animate__animated animate__fadeInRight py-2 mx-4  flex  transition duration-400 ease-in-out"><i class="sm:inline lg:hidden fas fa-code mr-2"></i><span class="lang-portp">Blog</span></a></li>
+                                    <li class="group">
+                                    <a href="#contact" class=" hover:text-orange-500 animate__animated animate__fadeInRight py-2 mx-4  flex  transition duration-400 ease-in-out"><i class="sm:inline lg:hidden fas  fa-address-card mr-2"></i><span class="lang-contact">Contact
+                                    </span></a></li>                           
+                                    <a href="#download" class="hidden  p-4 border border-transparent hover:border-orange-400 text-white hover:text-orange-500 bg-orange-400 hover:bg-transparent rounded-full animate__animated animate__fadeInRight py-2 mx-4  lg:flex px-10 transition-all duration-400 ease-in-out">Download CV</a>
+                                </ul>
+                            </nav>
+                    </div>
+                </div>
+            </div>
+    </header>
+    <section id="home" class="pt-40  lg:max-w-7xl mx-auto"> 
+        <div class="container">
+            <div class="flex flex-wrap">
+                <div class="w-full lg:mt-0 mb-7 lg:w-1/2 font-jos flex flex-wrap relative self-center px-4 animate__animated animate__fadeInDown transition duration-300">
+                    <img src="https://themihub.com/html/morex-demo/morex/assets/images/hero-man-dark.png" class="w-[400px] mx-auto" alt="">
+                    <p class="absolute"></p>
+                </div>
+                <div class="w-full lg:w-1/2 font-jos flex flex-wrap relative self-center px-4 animate__animated animate__fadeInDown transition duration-300">
+                    <h1 class="w-full font-extrabold mb-2 mx-auto italic text-xl lg:text-2xl text-orange-500">Hello, I'm</h1>
+                    <h1 class="w-full font-extrabold mb-2 mx-auto text-4xl lg:text-5xl">Maras Faron!</h1>
+                    <h1 class="w-full font-extrabold mb-2 mx-auto text-2xl lg:text-2xl">UX/UI Designer and Developer</h1>
+                    <p class="py-2">There are many variations of sum availabled
+                        in alley of type and scrambled it some.</p>
+                    <div class="flex">
+                        <div class="my-5">
+                            <a href="#pricing" class="  p-4 border border-transparent hover:border-orange-600 text-white hover:text-orange-500 bg-orange-500 hover:bg-transparent rounded-xl animate__animated animate__fadeInRight py-2 lg:flex px-10 transition-all duration-400 ease-in-out font-bold">About Me
+                            </a>
+                        </div>
+                        <div class="m-2">
+                            <a href="#" class="text-2xl lg:ml-3"><i class="fa-brands fa-instagram self-center my-5 hover:text-orange-500 duration-300"></i></a>
+                            <a href="#" class="text-2xl lg:ml-3"><i class="fa-brands fa-twitter self-center my-5 hover:text-orange-500 duration-300"></i></a>
+                            <a href="#" class="text-2xl lg:ml-3"><i class="fa-brands fa-whatsapp self-center my-5 hover:text-orange-500 duration-300"></i></a>
+                            <a href="#" class="text-2xl lg:ml-3"><i class="fa-brands fa-facebook self-center my-5 hover:text-orange-500 duration-300"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section id="service" class="lg:py-[100px] py-[70px] lg:max-w-7xl lg:mx-auto" >
+                <div class="container mx-auto">
+                  <!-- Section title start -->
+                   <div class="flex justify-between items-center gap-[20px] lg:gap-[30px] mb-[55px] flex-wrap">
+                        <div class="max-w-full lg:max-w-[580px] px-20 w-full">
+                          <span class="text-accent1 text-[20px] lg:text-[24px] font-medium mb-[10px] lg:mb-[5px] text-orange-500">CREATIVE SERVICE</span>
+                          <h2 class="text-[28px] lg:text-[48px] font-bold font-heebo leading-[36x] lg:leading-[58px] text-[#ff9f39] dark:text-white">What can i do for service clients you</h2>
+                        </div>
+                        <div class="md:grow lg:px-10">
+                          <p class="text-[#636363] text-[17px] leading-[28px] lg:max-w-[472px] w-full dark:text-slate-200">Promote your blog posts, case udie, and product ouncems
+                            with the the branded videoscustomers coming back for
+                            services Makes best effort.</p>
+                        </div>
+                   </div>
+                  <!-- Section title end -->
+    
+                  <!-- Services list start -->
+                  <div class="grid gap-[30px] lg:grid-cols-3 grid-cols-1 only-md:grid-cols-2">
+    
+                        <!-- Single service start -->
+                        <div class="shadow-lg hover:shadow-xl  dark:shadow-[0_0_20px_0_rgba(0,0,0,0.1)] dark:hover:shadow-[0_0_50px_0_rgba(0,0,0,0.2)] hover:translate-y-[-10px] transition duration-500">
+                            <div class="overflow-hidden px-[30px] xl:px-[40px] lg:pt-[50px] md:pt-[40px] pb-[40px] ">
+                              <span class="bg-[#48CDA0] text-white w-[70px] h-[70px] lg:w-[93px] lg:h-[93px] flex items-center justify-center rounded-full service-shape before:bg-[#79DAB9] before:opacity-[0.26]">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                              
+                              </span>
+                              <h3 class="text-primary dark:text-white text-[20px] xl:text-[25px] font-bold font-heebo mt-[20px] mb-[15px]">Web Development</h3>
+                              <p class="text-[17px] text-[#636363] dark:text-slate-200">Promote your blog posts, case udie, and product ouncems nts with the the branded videos.</p>
+                              <a href="#" class="link-button text-[#48CDA0] before:bg-[#48CDA0] mt-[15px] hover:text-[#333] dark:hover:text-white">Read More</a>
+                            </div>
+                        </div>
+                        <!-- Single service end -->
+                        
+                        <!-- Single service start -->
+                        <div class="shadow-lg hover:shadow-xl  dark:shadow-[0_0_20px_0_rgba(0,0,0,0.1)] dark:hover:shadow-[0_0_50px_0_rgba(0,0,0,0.2)] hover:translate-y-[-10px] transition duration-500">
+                            <div class="overflow-hidden px-[30px] xl:px-[40px] lg:pt-[50px] md:pt-[40px] pb-[40px] ">
+                              <span class="bg-[#ED5F38] text-white w-[70px] h-[70px] lg:w-[93px] lg:h-[93px] flex items-center justify-center rounded-full service-shape before:bg-[#ED5F38] before:opacity-[0.16]">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-life-buoy"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="4"></circle><line x1="4.93" y1="4.93" x2="9.17" y2="9.17"></line><line x1="14.83" y1="14.83" x2="19.07" y2="19.07"></line><line x1="14.83" y1="9.17" x2="19.07" y2="4.93"></line><line x1="14.83" y1="9.17" x2="18.36" y2="5.64"></line><line x1="4.93" y1="19.07" x2="9.17" y2="14.83"></line></svg>
+                                
+                              </span>
+                              <h3 class="text-primary dark:text-white text-[20px] xl:text-[25px] font-bold font-heebo mt-[20px] mb-[15px]">Creative Design</h3>
+                              <p class="text-[17px] text-[#636363] dark:text-slate-200">Promote your blog posts, case udie, and product ouncems nts with the the branded videos.</p>
+                              <a href="#" class="link-button text-[#ED5F38] before:bg-[#ED5F38] mt-[15px] hover:text-[#333] dark:hover:text-white">Read More</a>
+                            </div>
+                        </div>
+                        <!-- Single service end -->
+    
+                        <!-- Single service start -->
+                        <div class="shadow-lg hover:shadow-xl  dark:shadow-[0_0_20px_0_rgba(0,0,0,0.1)] dark:hover:shadow-[0_0_50px_0_rgba(0,0,0,0.2)] hover:translate-y-[-10px] transition duration-500">
+                            <div class="overflow-hidden px-[30px] xl:px-[40px] lg:pt-[50px] md:pt-[40px] pb-[40px] ">
+                              <span class="bg-[#007EFF] text-white w-[70px] h-[70px] lg:w-[93px] lg:h-[93px] flex items-center justify-center rounded-full service-shape before:bg-[#007EFF] before:opacity-[0.16]">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                              </span>
+                              <h3 class="text-primary dark:text-white text-[20px] xl:text-[25px] font-bold font-heebo mt-[20px] mb-[15px]">Project Consultancy</h3>
+                              <p class="text-[17px] text-[#636363] dark:text-slate-200">Promote your blog posts, case udie, and product ouncems nts with the the branded videos.</p>
+                              <a href="#" class="link-button text-[#007EFF] before:bg-[#007EFF] mt-[15px] hover:text-[#333] dark:hover:text-white">Read More</a>
+                            </div>
+                        </div>
+                        <!-- Single service end -->
+    
+    
+                        <!-- Single service start -->
+                        <div class="shadow-lg hover:shadow-xl  dark:shadow-[0_0_20px_0_rgba(0,0,0,0.1)] dark:hover:shadow-[0_0_50px_0_rgba(0,0,0,0.2)] hover:translate-y-[-10px] transition duration-500">
+                            <div class="overflow-hidden px-[30px] xl:px-[40px] lg:pt-[50px] md:pt-[40px] pb-[40px] ">
+                              <span class="bg-[#E6BC13] text-white w-[70px] h-[70px] lg:w-[93px] lg:h-[93px] flex items-center justify-center rounded-full service-shape before:bg-[#E6BC13] before:opacity-[0.22]">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-headphones"><path d="M3 18v-6a9 9 0 0 1 18 0v6"></path><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path></svg>
+                              </span>
+                              <h3 class="text-primary dark:text-white text-[20px] xl:text-[25px] font-bold font-heebo mt-[20px] mb-[15px]">24/7 Support</h3>
+                              <p class="text-[17px] text-[#636363] dark:text-slate-200">Promote your blog posts, case udie, and product ouncems nts with the the branded videos.</p>
+                              <a href="#" class="link-button text-[#E6BC13] before:bg-[#E6BC13] mt-[15px] hover:text-[#333] dark:hover:text-white">Read More</a>
+                            </div>
+                        </div>
+                        <!-- Single service end -->
+    
+                        
+    
+                        <!-- Single service start -->
+                        <div class="shadow-lg hover:shadow-xl  dark:shadow-[0_0_20px_0_rgba(0,0,0,0.1)] dark:hover:shadow-[0_0_50px_0_rgba(0,0,0,0.2)] hover:translate-y-[-10px] transition duration-500">
+                            <div class="overflow-hidden px-[30px] xl:px-[40px] lg:pt-[50px] md:pt-[40px] pb-[40px] ">
+                              <span class="bg-[#ED38D1] text-white w-[70px] h-[70px] lg:w-[93px] lg:h-[93px] flex items-center justify-center rounded-full service-shape before:bg-[#ED38D1] before:opacity-[0.16]">
+                                <svg width="40" height="40" stroke="currentColor" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M272 384c9.6-31.9 29.5-59.1 49.2-86.2l0 0c5.2-7.1 10.4-14.2 15.4-21.4c19.8-28.5 31.4-63 31.4-100.3C368 78.8 289.2 0 192 0S16 78.8 16 176c0 37.3 11.6 71.9 31.4 100.3c5 7.2 10.2 14.3 15.4 21.4l0 0c19.8 27.1 39.7 54.4 49.2 86.2H272zM192 512c44.2 0 80-35.8 80-80V416H112v16c0 44.2 35.8 80 80 80zM112 176c0 8.8-7.2 16-16 16s-16-7.2-16-16c0-61.9 50.1-112 112-112c8.8 0 16 7.2 16 16s-7.2 16-16 16c-44.2 0-80 35.8-80 80z"/></svg>
+                              </span>
+                              <h3 class="text-primary dark:text-white text-[20px] xl:text-[25px] font-bold font-heebo mt-[20px] mb-[15px]">Awesome Idea</h3>
+                              <p class="text-[17px] text-[#636363] dark:text-slate-200">Promote your blog posts, case udie, and product ouncems nts with the the branded videos.</p>
+                              <a href="#" class="link-button text-[#ED38D1] before:bg-[#ED38D1] mt-[15px] hover:text-[#333] dark:hover:text-white">Read More</a>
+                            </div>
+                        </div>
+                        <!-- Single service end -->
+    
+                        
+                          <!-- Single service start -->
+                          <div class="shadow-lg hover:shadow-xl  dark:shadow-[0_0_20px_0_rgba(0,0,0,0.1)] dark:hover:shadow-[0_0_50px_0_rgba(0,0,0,0.2)] hover:translate-y-[-10px] transition duration-500">
+                            <div class="overflow-hidden px-[30px] xl:px-[40px] lg:pt-[50px] md:pt-[40px] pb-[40px] ">
+                              <span class="bg-[#A348CD] text-white w-[70px] h-[70px] lg:w-[93px] lg:h-[93px] flex items-center justify-center rounded-full service-shape before:bg-[#A348CD] before:opacity-[0.16]">
+                                <svg width="40" height="40" stroke="currentColor" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M135.2 117.4L109.1 192H402.9l-26.1-74.6C372.3 104.6 360.2 96 346.6 96H165.4c-13.6 0-25.7 8.6-30.2 21.4zM39.6 196.8L74.8 96.3C88.3 57.8 124.6 32 165.4 32H346.6c40.8 0 77.1 25.8 90.6 64.3l35.2 100.5c23.2 9.6 39.6 32.5 39.6 59.2V400v48c0 17.7-14.3 32-32 32H448c-17.7 0-32-14.3-32-32V400H96v48c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32V400 256c0-26.7 16.4-49.6 39.6-59.2zM128 288c0-17.7-14.3-32-32-32s-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32zm288 32c17.7 0 32-14.3 32-32s-14.3-32-32-32s-32 14.3-32 32s14.3 32 32 32z"/></svg>
+                              </span>
+                              <h3 class="text-primary dark:text-white text-[20px] xl:text-[25px] font-bold font-heebo mt-[20px] mb-[15px]">Development Design</h3>
+                              <p class="text-[17px] text-[#636363] dark:text-slate-200">Promote your blog posts, case udie, and product ouncems nts with the the branded videos.</p>
+                              <a href="#" class="link-button text-[#A348CD] before:bg-[#A348CD] mt-[15px] hover:text-[#333] dark:hover:text-white">Read More</a>
+                            </div>
+                        </div>
+                        <!-- Single service end -->
+    
+                  </div>
+                  <!-- Services list end -->
+    
+                </div>
+    </section>
+    <section id="about" class="max-w-7xl mx-auto py-20">
+       <div class="flex flex-wrap">
+        <div class="lg:w-1/2 w-full lg:hidden inline">
+            <img src="https://themihub.com/html/morex-demo/morex/assets/images/about-me.png" class="mx-auto my-5 px-10" alt="">
+        </div>
+        <div class="lg:w-1/2 w-full px-10">
+            <span class="text-accent1 text-[20px] font-bold lg:text-[24px]  mb-[10px] lg:mb-[5px] text-orange-500">ABOUT ME</span>
+            <h2 class="text-[28px] lg:text-[48px] font-bold font-heebo leading-[36x] lg:leading-[58px] text-[#ff9f39] dark:text-white mb-2">I can design world for leading ui/ux</h2>
+            <span class="text-accent1 text-[20px] lg:text-[24px] font-medium mb-[10px] lg:mb-[5px] text-orange-500">PERSONAL INFOS:</span>
+            <div class="flex flex-wrap">
+                <div class="lg:w-72 px-2 w-auto my-5">
+        <p class="font-bold pt-1"><i class="fa-solid fa-record-vinyl text-orange-500 mr-2"></i>First Name: Maras</p>
+                    <p class="font-bold pt-1"><i class="fa-solid fa-record-vinyl text-orange-500 mr-2"></i>Address: Dubai</p>
+                    <p class="font-bold pt-1"><i class="fa-solid fa-record-vinyl text-orange-500 mr-2"></i>Age: 24 Years</p>
+                    <p class="font-bold pt-1"><i class="fa-solid fa-record-vinyl text-orange-500 mr-2"></i>Nationality: Tunisian</p>
+                    <p class="font-bold pt-1"><i class="fa-solid fa-record-vinyl text-orange-500 mr-2"></i>Freelance: Available</p>
+                </div>
+                <div class="lg:w-72 px-2 w-auto my-5">
+                    <p class="font-bold pt-1"><i class="fa-solid fa-record-vinyl text-orange-500 mr-2"></i>Last Name: Faron</p>
+                    <p class="font-bold pt-1"><i class="fa-solid fa-record-vinyl text-orange-500 mr-2"></i>Phone: +28921184010</p>
+                    <p class="font-bold pt-1"><i class="fa-solid fa-record-vinyl text-orange-500 mr-2"></i>Email: you@mail.com</p>
+                    <p class="font-bold pt-1"><i class="fa-solid fa-record-vinyl text-orange-500 mr-2"></i>Skype: Roben.Boris</p>
+                    <p class="font-bold pt-1"><i class="fa-solid fa-record-vinyl text-orange-500 mr-2"></i>Languages: French, English</p>
+                </div>
+                <div class="my-5 w-full">
+                    <a href="#pricing" class="w-36  p-4 border border-transparent hover:border-orange-600 text-white hover:text-orange-500 bg-orange-500 hover:bg-transparent rounded-full animate__animated animate__fadeInRight py-2 lg:flex px-10 transition-all duration-400 ease-in-out font-bold">Here Me
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="lg:w-1/2 w-full hidden lg:inline">
+            <img src="https://themihub.com/html/morex-demo/morex/assets/images/about-me.png" class="mx-auto w-[500px]" alt="">
+        </div>
+       </div>
+    </section>
+    <section class="lg:max-w-7xl mx-auto">
+       <div class="flex flex-wrap justify-center">
+        <div class="w-72 p-10 border border-slate-800">
+            <img src="https://themihub.com/html/morex-demo/morex/assets/images/logo/dark-log-1.png" alt="" class="mx-auto">
+        </div>
+        <div class="w-72 p-10 border border-slate-800">
+            <img src="https://themihub.com/html/morex-demo/morex/assets/images/logo/dark-log-2.png" alt="" class="mx-auto">
+        </div>
+        <div class="w-72 p-10 border border-slate-800">
+            <img src="https://themihub.com/html/morex-demo/morex/assets/images/logo/dark-log-3.png" alt="" class="mx-auto">
+        </div>
+        <div class="w-72 p-10 border border-slate-800">
+            <img src="https://themihub.com/html/morex-demo/morex/assets/images/logo/dark-log-4.png" alt="" class="mx-auto">
+        </div>
+        <div class="w-72 p-10 border border-slate-800">
+            <img src="https://themihub.com/html/morex-demo/morex/assets/images/logo/dark-log-5.png" alt="" class="mx-auto">
+        </div>
+        <div class="w-72 p-10 border border-slate-800">
+            <img src="https://themihub.com/html/morex-demo/morex/assets/images/logo/dark-log-6.png" alt="" class="mx-auto">
+        </div>
+        <div class="w-72 p-10 border border-slate-800">
+            <img src="https://themihub.com/html/morex-demo/morex/assets/images/logo/dark-log-7.png" alt="" class="mx-auto">
+        </div>
+        <div class="w-72 p-10 border border-slate-800">
+            <img src="https://themihub.com/html/morex-demo/morex/assets/images/logo/dark-log-8.png" alt="" class="mx-auto">
+        </div>
+       </div>
+    </section>
+    <section class="lg:max-w-7xl mx-auto py-20">
+       <div class="flex flex-wrap justify-center">
+        <div class="lg:w-1/2 w-full">
+            <p class="text-orange-500 text-2xl font-bold px-10">EXPERICNCE AND EDUCATION</p>
+            <h1 class="font-bold text-4xl text-white px-10">Resume of Experience and Education</h1>
+        </div>
+        <div class="lg:w-1/2 w-full">
+            <p class="text-lg self-center lg:max-w-[590px] px-10">Promote your blog posts, case udie, and product ouncems with the the branded videoscustomers coming back for services Makes best effort.</p>
+        </div>
+        <div class="flex flex-wrap">
+            <div class="lg:w-1/2 w-full px-10 py-10">
+                <div class=" border-l border-orange-500 w-full flex ">
+                    <!-- Image -->
+                    <div class="px-5">
+                        <i class="fa-brands fa-angrycreative py-3 text-5xl text-orange-500 rounded-full"></i>
+                    </div>
+                    <div class="px-2 py-2">
+                        <!-- Heading -->
+                        <!-- Description -->
+                        <h1 class="font-bold text-2xl">API DEVELOPER</h1>
+                        <p class="text-sm my-2">
+                            Promote your blog posts, case udie, and product ouncems nts with thehe branded videos.</p>
+                            <p class="font-bold text-orange-500"><i class="fa-solid fa-diamond mr-2"></i>2021</p>
+                    </div>
+                </div>
+                <div class=" border-l border-orange-500 w-full flex ">
+                    <!-- Image -->
+                    <div class="px-5">
+                        <i class="fa-brands fa-angrycreative py-3 text-5xl text-orange-500 rounded-full"></i>
+                    </div>
+                    <div class="px-2 py-2">
+                        <!-- Heading -->
+                        <!-- Description -->
+                        <h1 class="font-bold text-2xl">WEB DEVELOPER</h1>
+                        <p class="text-sm my-2">
+                            Promote your blog posts, case udie, and product ouncems nts with thehe branded videos.</p>
+                            <p class="font-bold text-orange-500"><i class="fa-solid fa-diamond mr-2"></i>2017</p>
+                    </div>
+                </div>
+                <div class=" border-l border-orange-500 w-full flex ">
+                    <!-- Image -->
+                    <div class="px-5">
+                        <i class="fa-brands fa-angrycreative py-3 text-5xl text-orange-500 rounded-full"></i>
+                    </div>
+                    <div class="px-2 py-2">
+                        <!-- Heading -->
+                        <!-- Description -->
+                        <h1 class="font-bold text-2xl">UI/UX DESIGNER</h1>
+                        <p class="text-sm my-2">
+                            Promote your blog posts, case udie, and product ouncems nts with thehe branded videos.</p>
+                            <p class="font-bold text-orange-500"><i class="fa-solid fa-diamond mr-2"></i>2014</p>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:w-1/2 w-full px-10 py-10">
+                <div class=" border-l border-orange-500 w-full flex ">
+                    <!-- Image -->
+                    <div class="px-5">
+                        <i class="fa-brands fa-angrycreative py-3 text-5xl text-orange-500 rounded-full"></i>
+                    </div>
+                    <div class="px-2 py-2">
+                        <!-- Heading -->
+                        <!-- Description -->
+                        <h1 class="font-bold text-2xl">Software Engineer</h1>
+                        <p class="text-sm my-2">
+                            Promote your blog posts, case udie, and product ouncems nts with thehe branded videos.</p>
+                            <p class="font-bold text-orange-500"><i class="fa-solid fa-diamond mr-2"></i>2020</p>
+                    </div>
+                </div>
+                <div class=" border-l border-orange-500 w-full flex ">
+                    <!-- Image -->
+                    <div class="px-5">
+                        <i class="fa-brands fa-angrycreative py-3 text-5xl text-orange-500 rounded-full"></i>
+                    </div>
+                    <div class="px-2 py-2">
+                        <!-- Heading -->
+                        <!-- Description -->
+                        <h1 class="font-bold text-2xl">Master's Degree</h1>
+                        <p class="text-sm my-2">
+                            Promote your blog posts, case udie, and product ouncems nts with thehe branded videos.</p>
+                            <p class="font-bold text-orange-500"><i class="fa-solid fa-diamond mr-2"></i>2018</p>
+                    </div>
+                </div>
+                <div class=" border-l border-orange-500 w-full flex ">
+                    <!-- Image -->
+                    <div class="px-5">
+                        <i class="fa-brands fa-angrycreative py-3 text-5xl text-orange-500 rounded-full"></i>
+                    </div>
+                    <div class="px-2 py-2">
+                        <!-- Heading -->
+                        <!-- Description -->
+                        <h1 class="font-bold text-2xl">Bachelor's Degree</h1>
+                        <p class="text-sm my-2">
+                            Promote your blog posts, case udie, and product ouncems nts with thehe branded videos.</p>
+                            <p class="font-bold text-orange-500"><i class="fa-solid fa-diamond mr-2"></i>2015</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+       </div>
+       <div class="flex flex-wrap relative mt-10">
+        <div class="flex flex-wrap justify-center">
+            <div class="lg:w-1/2 w-full">
+                <p class="text-orange-500 text-2xl font-bold px-10">EXPERICNCE AND EDUCATION</p>
+                <h1 class="font-bold text-4xl text-white px-10">Resume of Experience and Education</h1>
+            </div>
+            <div class="lg:w-1/2 w-full">
+                <p class="text-lg self-center lg:max-w-[590px] px-10">Promote your blog posts, case udie, and product ouncems with the the branded videoscustomers coming back for services Makes best effort.</p>
+            </div>
+        </div>
+        <div class="w-full lg:w-1/2 p-10">
+            <div class="relative mb-7">
+                <div class="flex justify-between mb-1">
+                    <span class="text-lg font-medium text-primary dark:text-white">Node.js</span>
+                    <span class="text-xs font-medium text-white absolute py-1.5 px-1.5 bottom-6 rounded-sm" style="left: 60%; color: #EE5F38;">60%</span>
+                </div>
+                <div class="w-full rounded-full h-2 dark:bg-gray-700 flex items-center">
+                    <div class="bg-accent1 h-full rounded-full" style="width: 62%; background-color: #EE5F38;"></div>
+                </div>
+            </div>
+            
+            <div class="relative mb-7">
+                <div class="flex justify-between mb-1">
+                    <span class="text-lg font-medium text-primary dark:text-white">JavaScript</span>
+                    <span class="text-xs font-medium text-white absolute py-1.5 px-1.5 bottom-6 rounded-sm" style="left: 75%; color: #EE5F38;">75%</span>
+                </div>
+                <div class="w-full rounded-full h-2 dark:bg-gray-700 flex items-center">
+                    <div class="bg-accent1 h-full rounded-full" style="width: 76%; background-color: #EE5F38;"></div>
+                </div>
+            </div>
+            
+            <div class="relative mb-7">
+                <div class="flex justify-between mb-1">
+                    <span class="text-lg font-medium text-primary dark:text-white">Web Design</span>
+                    <span class="text-xs font-medium text-white absolute py-1.5 px-1.5 bottom-6 rounded-sm" style="left: 90%; color: #EE5F38;">90%</span>
+                </div>
+                <div class="w-full rounded-full h-2 dark:bg-gray-700 flex items-center">
+                    <div class="bg-accent1 h-full rounded-full" style="width: 90%; background-color: #EE5F38;"></div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="w-full lg:w-1/2 p-10">
+            <div class="relative mb-7">
+                <div class="flex justify-between mb-1">
+                    <span class="text-lg font-medium text-primary dark:text-white">HTML</span>
+                    <span class="text-xs font-medium text-white absolute py-1.5 px-1.5 bottom-6 rounded-sm" style="left: 96%; color: #EE5F38;">100%</span>                </div>
+                <div class="w-full rounded-full h-2 dark:bg-gray-700 flex items-center">
+                    <div class="bg-accent1 h-full rounded-full" style="width: 100%; background-color: #EE5F38;"></div>
+                </div>
+            </div>
+            <div class="relative mb-7">
+                <div class="flex justify-between mb-1">
+                    <span class="text-lg font-medium text-primary dark:text-white">CSS</span>
+                    <span class="text-xs font-medium text-white absolute py-1.5 px-1.5 bottom-6 rounded-sm" style="left: 90%; color: #EE5F38;">90%</span>
+                </div>
+                <div class="w-full rounded-full h-2 dark:bg-gray-700 flex items-center">
+                    <div class="bg-accent1 h-full rounded-full" style="width: 90%; background-color: #EE5F38;"></div>
+                </div>
+            </div>
+            <div class="relative mb-7">
+                <div class="flex justify-between mb-1">
+                    <span class="text-lg font-medium text-primary dark:text-white">React.js</span>
+                    <span class="text-xs font-medium text-white absolute py-1.5 px-1.5 bottom-6 rounded-sm" style="left: 70%; color: #EE5F38;">70%</span>
+                </div>
+                <div class="w-full rounded-full h-2 dark:bg-gray-700 flex items-center">
+                    <div class="bg-accent1 h-full rounded-full" style="width: 70%; background-color: #EE5F38;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="port" class="py-20  lg:max-w-7xl mx-auto"> 
+        <div class="container">
+            <div class="flex flex-wrap justify-center">
+                <div class="lg:w-1/2 w-full">
+                    <p class="text-orange-500 text-2xl font-bold px-10">PORTFOLIO</p>
+                    <h1 class="font-bold text-4xl text-white px-10">Never compromise for portfolio quality</h1>
+                </div>
+                <div class="lg:w-1/2 w-full">
+                    <p class="text-lg self-center lg:max-w-[590px] px-10">Promote your blog posts, case udie, and product ouncems with the the branded videoscustomers coming back for services Makes best effort.</p>
+                </div>
+            </div>
+            <div class="flex flex-wrap my-5 justify-center font-bold">
+                <button id="all" class="mx-3 my-3 text-red-500 focus:outline-none">Show All</button>
+                <button id="web" class="mx-3 my-3 focus:outline-none">Web</button>
+                <button id="gp" class="mx-3 my-3 focus:outline-none">Graphics</button>
+                <button id="dev" class="mx-3 my-3 focus:outline-none">Developments</button>
+                <button id="mob" class="mx-3 my-3 focus:outline-none">mobile</button>
+            </div>
+            
+            <div class="justify-center">
+                <div id="allText" class="flex flex-wrap justify-center">
+                    <div class="w-80">
+                        <img src="https://themihub.com/html/morex-demo/morex/assets/images/portfolio/1.png" class="w-80 h-32 hover:h-52 my-2 object-cover rounded-xl hover:scale-95 duration-300" alt="">
+                        <img src="https://themihub.com/html/morex-demo/morex/assets/images/portfolio/2.png" class="w-80 h-32 hover:h-52 my-2 object-cover rounded-xl hover:scale-95 duration-300" alt="">
+                        <img src="https://themihub.com/html/morex-demo/morex/assets/images/portfolio/6.png" class="w-80 h-32 hover:h-52 my-2 object-cover rounded-xl hover:scale-95 duration-300" alt="">
+                    </div>
+                    <div class="w-80 justify-center">
+                        <img src="https://themihub.com/html/morex-demo/morex/assets/images/portfolio/3.png" class="w-80 lg:w-72 lg:mx-4 h-32 hover:h-72 object-cover rounded-xl hover:scale-95 duration-300 my-2" alt="">
+                        <img src="https://themihub.com/html/morex-demo/morex/assets/images/portfolio/7.png" class="w-80 lg:w-72 lg:mx-4 h-32 hover:h-72 object-cover rounded-xl hover:scale-95 duration-300 my-2" alt="">
+                        <img src="https://themihub.com/html/morex-demo/morex/assets/images/portfolio/8.png" class="w-80 lg:w-72 lg:mx-4 h-32 hover:h-72 object-cover rounded-xl hover:scale-95 duration-300 my-2" alt="">
+                    </div>
+                    <div class="w-80">
+                        <img src="https://themihub.com/html/morex-demo/morex/assets/images/portfolio/9.png" class="w-80 h-32 hover:h-52 my-2 object-cover rounded-xl hover:scale-95 duration-300" alt="">
+                        <img src="https://themihub.com/html/morex-demo/morex/assets/images/portfolio/4.png" class="w-80 h-32 hover:h-52 my-2 object-cover rounded-xl hover:scale-95 duration-300" alt="">
+                        <img src="https://themihub.com/html/morex-demo/morex/assets/images/portfolio/5.png" class="w-80 h-32 hover:h-52 my-2 object-cover rounded-xl hover:scale-95 duration-300" alt="">
+                    </div>
+                </div>
+                <div id="webText" class="hidden">
+                    <div class="flex flex-wrap">
+                        <img src="https://themihub.com/html/morex-demo/morex/assets/images/portfolio/1.png" class="w-80 h-52 my-2 mx-2 object-cover rounded-xl hover:scale-95 duration-300" alt="">
+                    <img src="https://themihub.com/html/morex-demo/morex/assets/images/portfolio/6.png" class="w-80 h-52 my-2 mx-2 object-cover rounded-xl hover:scale-95 duration-300" alt="">
+                    <img src="https://themihub.com/html/morex-demo/morex/assets/images/portfolio/7.png" class="w-80 h-52 my-2 mx-2 object-cover rounded-xl hover:scale-95 duration-300" alt="">
+                    <img src="https://themihub.com/html/morex-demo/morex/assets/images/portfolio/9.png" class="w-80 h-52 my-2 mx-2 object-cover rounded-xl hover:scale-95 duration-300" alt="">
+                    </div>
+                </div>
+                <div id="gpText" class="hidden">
+                    <div class="flex flex-wrap">
+                    <img src="https://themihub.com/html/morex-demo/morex/assets/images/portfolio/2.png" class="w-80 h-52 my-2 mx-2 object-cover rounded-xl hover:scale-95 duration-300" alt="">
+                    <img src="https://themihub.com/html/morex-demo/morex/assets/images/portfolio/5.png" class="w-80 h-52 my-2 mx-2 object-cover rounded-xl hover:scale-95 duration-300" alt="">
+                    <img src="https://themihub.com/html/morex-demo/morex/assets/images/portfolio/8.png" class="w-80 h-52 my-2 mx-2 object-cover rounded-xl hover:scale-95 duration-300" alt="">
+                    </div>
+                </div>
+                <div id="devText" class="hidden">
+                    <div class="flex flex-wrap">
+                    <img src="https://themihub.com/html/morex-demo/morex/assets/images/portfolio/3.png" class="w-80 h-52 my-2 mx-2 object-cover rounded-xl hover:scale-95 duration-300" alt="">
+                    <img src="https://themihub.com/html/morex-demo/morex/assets/images/portfolio/6.png" class="w-80 h-52 my-2 mx-2 object-cover rounded-xl hover:scale-95 duration-300" alt="">
+                    <img src="https://themihub.com/html/morex-demo/morex/assets/images/portfolio/8.png" class="w-80 h-52 my-2 mx-2 object-cover rounded-xl hover:scale-95 duration-300" alt="">
+                    </div>
+                </div>
+                <div id="mobText" class="hidden">
+                    <div class="flex flex-wrap">
+                    <img src="https://themihub.com/html/morex-demo/morex/assets/images/portfolio/4.png" class="w-80 h-52 my-2 mx-2 object-cover rounded-xl hover:scale-95 duration-300" alt="">
+                    <img src="https://themihub.com/html/morex-demo/morex/assets/images/portfolio/9.png" class="w-80 h-52 my-2 mx-2 object-cover rounded-xl hover:scale-95 duration-300" alt="">
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section id="#" class="py-10 "> 
+        <div class="container">
+            <div class="flex flex-wrap relative">
+                <h2 class="mx-auto text-center w-full font-bold text-2xl lg:text-2xl text-orange-500 bg-2">TESTIMONIALS</h2>
+                <h2 class="mx-auto text-center w-full font-bold text-2xl lg:text-5xl bg-2">We are people say me</h2>
+                <div class="w-full my-5 justify-center items-center flex flex-wrap">
+                    <div class="w-60 lg:w-[500px]  p-2 mx-2 rounded-xl transform transition-all duration-300">
+                        <div class="my-4 flex justify-center">
+                            <i class="fa-solid fa-star text-yellow-500 text-2xl"></i>
+                            <i class="fa-solid fa-star text-yellow-500 text-2xl"></i>
+                            <i class="fa-solid fa-star text-yellow-500 text-2xl"></i>
+                            <i class="fa-solid fa-star text-yellow-500 text-2xl"></i>
+                            <i class="fa-solid fa-star text-yellow-500 text-2xl"></i>
+                        </div>
+                        <p class="text-center">Loved the template design, documentation, customizability and the customer support from Marketify team! I am a noob in programming with very little knowledge about coding but the Marketify team helped me to launch my resume website successfully. Much recommended!
+                            </p>
+                        <div class="flex justify-center">
+                            <img src="https://th.bing.com/th/id/R.aa4589ed312ce64e215eabe951219da7?rik=o2jTYVccKRNodg&riu=http%3a%2f%2fwww.indramayujeh.com%2fwp-content%2fuploads%2f2020%2f05%2fWAWAN-1-1.jpeg&ehk=HLI4ztrLP%2fa1MA5reyrSWckYpiC5ElldEiCzQNCvpvQ%3d&risl=&pid=ImgRaw&r=0" alt="" class="w-14 m-4 rounded-full">
+                            <div class=" m-4">
+                                <p class="font-bold">Wawan</p>
+                                <p class="font-ptng text-xs">Designer Visualx.id</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="py-10 lg:max-w-7xl mx-auto"> 
+        <div class="container">
+            <div class="flex flex-wrap relative">
+                <div class="w-full flex flex-wrap my-10">
+                    <div class="lg:w-1/2 w-full self-center">
+                        <h2 class="mx-auto  w-full font-bold text-2xl lg:text-2xl text-orange-500 bg-2">Contact Me</h2>
+                        <h2 class="mx-auto  w-full font-bold text-2xl lg:text-5xl bg-2">Get I contact work</h2>
+                        <p class=" max-w-xl mb-5 mt-1">Promote your blog posts, case udie, and product ouncems with the the branded videoscustomers coming back for services Makes best effort.</p>
+                        <form action="#">
+                            <div class="grid grid-cols-2 gap-5">
+                              <input type="text" placeholder="Your Name" class="h-16 border bg-transparent border-gray-400 py-1 rounded-md ring-0 px-2">
+                              <input type="email" placeholder="Your Email address" class="h-16 border bg-transparent border-gray-400 py-1 rounded-md ring-0 px-2">
+                            </div>
+                            <div class="mt-5">
+                              <input type="text" placeholder="message here" class="border bg-transparent border-gray-400 py-1 px-2 h-28 rounded-md ring-0 w-full">
+                            </div>
+                            <div class="mt-5">
+                              <button class="w-52 rounded-full bg-orange-500 hover:bg-red-500 duration-300 py-3 text-center text-white">Send request</button>
+                            </div>
+                          </form>
+                    </div>
+                    <div class="lg:w-1/2 w-full px-20">
+                        <div class="w-52 lg:w-[450px] flex m-3 hover:scale-105 duration-300">
+                            <!-- Image -->
+                            <div class="px-3 self-center">
+                                <i class="fa-solid fa-phone py-3 bg-orange-500 p-4 text-5xl text-white rounded-full"></i>
+                            </div>
+                            <div class="px-2 py-2">
+                                <!-- Heading -->
+                                <!-- Description -->
+                                <h1 class="font-bold text-2xl ">Phone</h1>
+                                <p class="text-sm text-gray-600">
+                                    ++880254615566</p>
+                                <p class="text-sm text-gray-600">
+                                    +123 456 7890</p>
+                            </div>
+                        </div>
+                        <div class="w-52 lg:w-[450px] flex m-3 hover:scale-105 duration-300">
+                            <!-- Image -->
+                            <div class="px-3 self-center">
+                                <i class="fa-solid fa-envelope-open py-3 bg-orange-500 p-4 text-5xl text-white rounded-full"></i>
+                            </div>
+                            <div class="px-2 py-2">
+                                <!-- Heading -->
+                                <!-- Description -->
+                                <h1 class="font-bold text-2xl ">Email Us</h1>
+                                <p class="text-sm text-gray-600">
+                                    moraty@bara.com</p>
+                                <p class="text-sm text-gray-600">
+                                    rubel@eobi.com</p>
+                            </div>
+                        </div>
+                        <div class="w-52 lg:w-[450px] flex m-3 hover:scale-105 duration-300">
+                            <!-- Image -->
+                            <div class="px-5 self-center">
+                                <i class="fa-solid fa-location-dot py-3 bg-orange-500 p-4 text-5xl text-white rounded-full"></i>
+                            </div>
+                            <div class="px-2 py-2">
+                                <!-- Heading -->
+                                <!-- Description -->
+                                <h1 class="font-bold text-2xl ">Address</h1>
+                                <p class="text-sm text-gray-600">
+                                    20, 25 Dhaka,0123</p>
+                                <p class="text-sm text-gray-600">
+                                    Ratrba baraj,20</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="py-10 lg:max-w-7xl mx-auto"> 
+        <div class="container">
+            <iframe class="w-full rounded-xl" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d19056.005897173953!2d-6.259336!3d53.343243!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e9b76719607%3A0x9d13471d963893a7!2s1%20Grafton%20Street%2C%20Dublin%2C%20Ireland!5e0!3m2!1sen!2sus!4v1707122907467!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+    <section id="blog" class="py-20 "> 
+        <div class="container">
+            <div class="flex flex-wrap relative">
+                <h2 class="mx-auto text-center w-full font-bold text-2xl lg:text-2xl text-orange-500 bg-2">From My Blog</h2>
+                <h2 class="mx-auto text-center w-full font-bold text-2xl max-w-3xl lg:text-5xl bg-2">Our Recent Updates, Blog, Tips, Tricks & More</h2>
+            </div>
+        </div>
+        <div class="flex flex-wrap justify-center my-5">
+            <div class="w-full lg:w-[400px] mx-2">
+                <img src="https://themihub.com/html/morex-demo/morex/assets/images/blog/1.png" class="rounded-xl" alt="">
+                <div class="px-6">
+                    <div class="flex my-5">
+                        <p class="text-white p-2 rounded-sm bg-orange-500 mr-2">UI/UX Design </p>
+                    </div>
+                    <h1 class="text-2xl font-bold mb-2">Angular team welarges to trequests blog</h1>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page is when looking at its layout.</p>
+                </div>
+            </div>
+            <div class="w-full lg:w-[400px] mx-2">
+                <img src="https://themihub.com/html/morex-demo/morex/assets/images/blog/2.png" class="rounded-xl" alt="">
+                <div class="px-6">
+                    <div class="flex my-5">
+                        <p class="text-white p-2 rounded-sm bg-orange-500 mr-2">UI/UX Design </p>
+                    </div>
+                    <h1 class="text-2xl font-bold mb-2">Angular team welarges to trequests blog</h1>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page is when looking at its layout.</p>
+                </div>
+            </div>
+            <div class="w-full lg:w-[400px] mx-2">
+                <img src="https://themihub.com/html/morex-demo/morex/assets/images/blog/3.png" class="rounded-xl" alt="">
+                <div class="px-6">
+                    <div class="flex my-5">
+                        <p class="text-white p-2 rounded-sm bg-orange-500 mr-2">UI/UX Design </p>
+                    </div>
+                    <h1 class="text-2xl font-bold mb-2">Angular team welarges to trequests blog</h1>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page is when looking at its layout.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="py-[50px] bg-cover bg-no-repeat bg-center border-t ">
+        <div class="container lg:max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 only-md:grid-cols-2 lg:grid-cols-2">
+                <div class="flex">
+                  <p class="flex text-center items-center flex-wrap sm:justify-center  text-slate-200">Developed with <span class="px-[3px] text-paragraph  text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="text-paragraph" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                    </span>  by <span class=" px-[3px]"><a class="text-accent1 hover:font-bold text-orange-500" href="#">Morex</a></span>© 2023</p>
+                </div>
+                <div class="flex items-center justify-end gap-8 sm:justify-center sm:mt-[15px]">
+                    <a href="#" class="text-paragraph  text-slate-200 hover:text-accent1 font-medium text-[20px] sm:text-[16px]">Terms & Condition</a>
+                    <a href="#" class="text-paragraph  text-slate-200 hover:text-accent1 font-medium text-[20px] sm:text-[16px]"> Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+  
+      </footer>
+    <script src="script.js"></script>
+</body>
+</html>

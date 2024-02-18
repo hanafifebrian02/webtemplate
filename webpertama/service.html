@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Document Meta-->
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <!-- IE Compatibility Meta-->
+        <meta name="author" content="zytheme"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+        <meta name="description" content="Multi-purpose Business html5 landing page"/>
+        <!-- link cdn tailwindcss -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- link icon -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.96w-96 text-center max-w-xs 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+          </svg>
+          <!-- animasi refresh
+          <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        /> -->
+        
+        <!-- lilita one start -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+        <!-- lilita one stop -->
+        <!-- Oswold & Roboto start -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <!-- Oswold & Roboto stop -->
+        <!-- jost start -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <!-- jost stop -->
+        <!-- playfair start -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <!-- playfair stop -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fallow | Service</title>
+        <script>
+            tailwind.config = {
+                darkMode:"class",
+              theme: {
+                container:{
+                    center: true,
+                    padding: '20px',
+                },
+                extend: {
+                  colors: {
+                    birmud: '#6ad3e5',
+                    biru: '#00b0d3',
+                    gelap: '#0f172a',
+                    gelap1: '#1e293b',
+                    pdng: '#ffffff',
+                    ptng: '#ababab',
+                    birtu: '#1d4ed8',
+                    toska: '#333333',
+                    ijo: '#49b970',
+                  },
+                    backgroundImage: {
+                    // background gambar
+
+                    // example: 'pict': 'url("https://hanafifebriansyah.vercel.app/assets/profil/bg.png")',
+                    },
+                    fontFamily: {
+                        Lile:['Lilita One'],
+                        Oswald:['Oswald'],
+                        jos:['Jost'],
+                        play:['Playfair Display'],
+                    },
+                  screen:{
+                    '2xl' : '1400px',
+                  }
+                }
+              }
+            }
+        </script>
+        <style type="text/tailwindcss">
+            body,html {
+                scroll-behavior: smooth;
+                font-family: 'Roboto',sans-serif;
+                color: #64748b;
+
+            }
+            .nav-fixed{
+                @apply fixed mt-0 z-50 py-5 bg-white/50 dark:bg-black/50 text-black transition duration-200 ease-in-out;
+                backdrop-filter: blur(5px);
+                box-shadow: inset 0 -1px 0 0 rgba(0,0,0,0.1);
+            }
+        
+            .nav-fixed{
+                @apply lg:bg-white/30  lg:dark:bg-black/30 text-black lg:dark:text-slate-100 lg:text-center lg:backdrop-blur-sm lg:shadow-lg lg:p-1 lg:fixed lg:w-full  transition-all duration-500 ease-in-out lg:z-50;
+            }
+            .nav-fixed > div:nth-child(1){
+                @apply lg:mx-auto;
+            }
+            .nav-fixed > div:nth-child(3){
+                @apply lg:space-x-4;
+            }
+            .hamburger-line{
+                 @apply w-[30px] h-1 my-1 rounded-md block bg-toska;
+            }
+            .nav-line2{
+                 @apply bg-white/30 dark:bg-black/30 md:bg-transparent md:dark:bg-transparent shadow-2xl md:shadow-none lg:bg-transparent lg:dark:bg-transparent transition duration-200 ease-in-out;
+            }
+            .hamburger-active > span:nth-child(1){
+                 @apply  rotate-45 transition;
+            }
+            .hamburger-active > span:nth-child(2){
+                 @apply scale-0;
+            }
+            .hamburger-active > span:nth-child(3){
+                 @apply origin-bottom-left -rotate-45;
+            }
+            #hamburger{
+                @apply rounded-lg bg-slate-100 p-1;
+            }
+
+        </style>
+    </head>
+    <body class="bg-slate-50">        
+    <header class="bg-white lg:py-4 lg:rounded-xl  container py-4 lg:mt-10 absolute w-full font-semibold transition-all ease-in-out duration-500 flex items-center max-w-full mx-auto lg:max-w-7xl lg:mx-32 z-50 ">
+            <div class="container">
+                <div class="flex items-center justify-between relative">
+                    <div class="px-4">
+                     <img src="./assets/Logo.png" alt="Logo" class="w-44 text-center max-w-xs ">
+                    </div>
+                    <div class="flex item-center px-4">
+                        <button id="hamburger" name="hamburger" type="button" class="block right-4 lg:hidden  transition duration-200">
+                            <span class="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
+                            <span class="hamburger-line transition duration-300 ease-in-out"></span>
+                            <span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
+                        </button>
+                        
+                        <nav  id="nav-menu" class="hidden absolute mx-auto py-5 nav-line2 mt-1 shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:py-1 lg:block lg:relative lg:max-w-full lg:bg-transparent lg:shadow-none lg:rounded-none">
+                            <ul class="block lg:flex lg:text-lg items-center font-play"> 
+                                <li class="group ">
+                                    <a href="index.html" class="hover:text-blue-500 relative group animate__animated animate__fadeInRight py-2 mx-6  flex transition duration-400 ease-in-out">
+                                        <i class="sm:inline lg:hidden fas fa-home mr-2"></i>
+                                        <span class="lang-home">Home</span>
+                                    </a></li>
+                                <li class="group">
+                                    <a href="port.html" class=" hover:text-blue-500 animate__animated animate__fadeInRight py-2 mx-6   flex  transition duration-400 ease-in-out"><i class="sm:inline lg:hidden fas fa-info-circle mr-2"></i><span class="lang-about"> Portfolio</span></a></li>
+                                <li class="group">
+                                    <a href="service.html" class=" hover:text-blue-500 animate__animated animate__fadeInRight py-2 mx-6  flex  transition duration-400 ease-in-out"><i class="sm:inline lg:hidden fas fa-code mr-2"></i><span class="lang-portp">Service</span></a></li>
+                                    <li class="group">
+                                    <a href="blog.html" class=" hover:text-blue-500 animate__animated animate__fadeInRight py-2 mx-6  flex  transition duration-400 ease-in-out"><i class="sm:inline lg:hidden fas  fa-address-card mr-2"></i><span class="lang-contact">Blog
+                                    </span></a></li>                           
+                                    <a href="page.html" class=" hover:text-blue-500 animate__animated animate__fadeInRight py-2 mx-6  flex  transition duration-400 ease-in-out"><i class="sm:inline lg:hidden fas  fa-address-card mr-2"></i><span class="lang-contact">Pages
+                                    </span></a></li>                           
+                                    <a href="about.html" class=" hover:text-blue-500 animate__animated animate__fadeInRight py-2 mx-6  flex  transition duration-400 ease-in-out"><i class="sm:inline lg:hidden fas  fa-address-card mr-2"></i><span class="lang-contact">About Me
+                                    </span></a></li>                           
+                                    <a href="#kelas" class="hidden  p-4 border border-transparent hover:border-blue-400 text-white hover:text-blue-500 bg-blue-400 hover:bg-transparent rounded-xl animate__animated animate__fadeInRight py-2 mx-6  lg:flex px-10 transition-all duration-400 ease-in-out">Let’s Talk</a>
+                                </ul>
+                            </nav>
+                    </div>
+                </div>
+            </div>
+    </header>
+    <section id="home" class=" lg:max-w-7xl mx-auto"> 
+        <div class="container">
+            <div class="flex">
+                <div class="lg:flex lg:w-1/2 px-7 py-2 font-bold hidden">
+                    <p class="mr-2"><i class="fa-solid fa-envelope mr-2" style="color: #74C0FC;"></i>info@example.com</p>
+                    <p><i class="fa-solid fa-phone-volume mr-2" style="color: #74C0FC;"></i>+1-888-452-1505</p>
+                </div>
+                <div class="lg:flex justify-end lg:w-1/2 px-24 py-2 font-bold hidden">
+                    <i class="fa-brands fa-facebook mr-2 text-xl"></i>
+                    <i class="fa-brands fa-whatsapp mr-2 text-xl"></i>
+                    <i class="fa-brands fa-instagram mr-2 text-xl"></i>
+                    <i class="fa-brands fa-twitter mr-2 text-xl"></i>
+                </div>
+            </div>
+            <div class="py-40">
+                <p class="font-bold text-7xl text-center pb-3">Service</p>
+                <p class=" text-xl text-center"><a href="index.html" class="hover:text-blue-500 duration-300">Home</a> <i class="fa-solid fa-arrow-right"></i> Service</p>
+            </div>   
+        </div>
+    </section>
+    <section id="feature" class="lg:max-w-7xl mx-auto pt-14 pb-12"> 
+        <div class="container ">
+            <div class="flex flex-wrap">
+                <div class="w-full lg:w-1/2 text-left lg:max-w-xl mx-auto">
+                    <h1 class="text-3xl my-2 lg:text-6xl font-bold font-Oswald text-black">Expertise Service! Let’s check it out.</h1>
+                </div>
+                <div class="w-full lg:w-1/2 text-left max-w-md self-center mx-auto">
+                  <p class="px-2 text-lg">We put your ideas and thus your wishes in the form of a unique web project that inspires you and you customers. We’ve expert team to solve your problems.</p>
+                </div>
+            </div>
+            <div class="flex flex-wrap mx-auto mt-10 justify-center">
+                <div class="w-72 m-2 px-2 backdrop-blur-lg backdrop-brightness-105 shadow-2xl mt-2 rounded-xl hover:translate-y-8 hover:scale-105 duration-300 transition-all py-3 hover:bg-blue-500 text-blue-500 hover:text-white">
+                    <div class="px-6 py-8">
+                        <i class="fa-solid fa-layer-group text-6xl"></i>
+                        <h2 class="text-2xl py-4 font-semibold ">Website/Appdesign UX/UI Design</h2>
+                        <p class="text-md">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, laudantium?</p>
+                    </div>
+                </div> 
+                <div class="w-72 m-2 px-2 backdrop-blur-lg bg-blue-500 text-white backdrop-brightness-105 shadow-2xl mt-2 rounded-xl hover:translate-y-8 hover:scale-105 duration-300 transition-all py-3">
+                    <div class="px-6 py-8 ">
+                        <i class="fa-solid fa-earth-asia text-6xl "></i>
+                        <h2 class="text-2xl py-4 font-semibold ">Web Desing</h2>
+                        <p class="text-md">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, laudantium?</p>
+                    </div>
+                </div> 
+                <div class="w-72 m-2 px-2 backdrop-blur-lg backdrop-brightness-105 shadow-2xl mt-2 rounded-xl hover:translate-y-8 hover:scale-105 duration-300 transition-all py-3 hover:bg-blue-500 text-blue-500 hover:text-white">
+                    <div class="px-6 py-8">
+                        <i class="fa-solid fa-link text-6xl"></i>
+                        <h2 class="text-2xl py-4 font-semibold ">Brand Strategy & Art Directory</h2>
+                        <p class="text-md">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, laudantium?</p>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </section>
+    <section class="">
+        <div class="relative lg:p-20 p-5">
+         <div class="bg-white lg:mx-auto justify-center flex flex-wrap lg:w-[1100px] p-5 overflow-visible rounded-xl">
+             <div class="lg:w-96 self-center">
+                 <h1 class="font-bold text-4xl py-2 text-black">The Achievement my Project.</h1>
+                 <p class="text-md">There are many variations of passages of Ipsum available, majority have suffered.                </p>
+                 <p class="font-bold text-md pt-1"><i class="fa-solid fa-check text-blue-500 mr-2"></i>Lorem ipsum dolor sit amet.</p>
+                 <p class="font-bold text-md pt-1"><i class="fa-solid fa-check text-blue-500 mr-2"></i>Lorem ipsum dolor sit amet.</p>
+                 <p class="font-bold text-md pt-1"><i class="fa-solid fa-check text-blue-500 mr-2"></i>Lorem ipsum dolor sit amet.</p>
+                 <div class="my-5">
+                     <a href="#pricing" class="p-4 m-4 w-40 relative border border-transparent hover:border-blue-600 text-white hover:text-blue-500 bg-blue-500 hover:bg-transparent rounded-xl animate__animated animate__fadeInRight py-2 lg:flex px-10 transition-all duration-400 ease-in-out font-bold">Consultation</a>
+                 </div>
+             </div>
+             <div class="lg:w-[600px]">
+                 <div class="flex flex-wrap justify-center">
+                     <div class="self-center text-center my-4 py-5 lg:mx-4">
+                         <div class="py-3 mx-1 w-44 lg:w-52 h-44  px-2 rounded-lg shadow-lg border-2 border-blue-700 text-blue-600 hover:text-white hover:border-none hover:shadow-xl hover:shadow-blue-700 hover:bg-blue-600 duration-300">
+                             <img src="https://rubrikgrafis.com/wp-content/uploads/2022/04/Member_1.png" class="overflow-visible -mt-24 mx-auto" width="130px" alt="">
+                             <p class="mt-5 font-bold text-2xl">434k</p>
+                             <p class="mt-1 mb-6 text-xl">Happy Customers</p>
+                         </div>
+                     </div>
+                     <div class="self-center text-center my-4 lg:mx-4">
+                         <div class="py-3 mx-1 w-44 lg:w-52 h-44 px-2 rounded-lg shadow-lg border-2 border-blue-700 text-blue-600 hover:text-white hover:border-none hover:shadow-xl hover:shadow-blue-700 hover:bg-blue-600 duration-300">
+                             <img src="https://rubrikgrafis.com/wp-content/uploads/2022/04/Member_1.png" class="overflow-visible -mt-24 mx-auto" width="130px" alt="">
+                             <p class="mt-5 font-bold text-2xl">123+</p>
+                             <p class="mt-1 mb-6 text-xl">Co-Agent</p>
+                         </div>
+                     </div>
+                     <div class="self-center text-center my-4 lg:mx-4">
+                         <div class="py-3 mx-1 w-44 lg:w-52 h-44 px-2 rounded-lg shadow-lg border-2 border-blue-700 text-blue-600 hover:text-white hover:border-none hover:shadow-xl hover:shadow-blue-700 hover:bg-blue-600 duration-300">
+                             <img src="https://rubrikgrafis.com/wp-content/uploads/2022/04/Member_1.png" class="overflow-visible -mt-24 mx-auto" width="130px" alt="">
+                             <p class="mt-5 font-bold text-2xl">120</p>
+                             <p class="mt-1 mb-6 text-xl">Branches Around</p>
+                         </div>
+                     </div>
+                     <div class="self-center text-center my-4 lg:mx-4">
+                         <div class="py-3 mx-1 w-44 lg:w-52 h-44 px-2 rounded-lg shadow-lg border-2 border-blue-700 text-blue-600 hover:text-white hover:border-none hover:shadow-xl hover:shadow-blue-700 hover:bg-blue-600 duration-300">
+                             <img src="https://rubrikgrafis.com/wp-content/uploads/2022/04/Member_1.png" class="overflow-visible -mt-24 mx-auto" width="130px" alt="">
+                             <p class="mt-5 font-bold text-2xl">150k</p>
+                             <p class="mt-1 mb-6 text-xl">Built Hose</p>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+        </div>
+     </section>
+     <section class="lg:max-w-7xl lg:mx-auto">
+        <div class="container">
+            <div class="flex flex-wrap">
+                <div class="lg:w-1/2 w-full p-5">
+                    <h1 class="text-6xl font-bold">Have any <span class="text-blue-500">Thought</span> Find here.</h1>
+                    <div class="grid gap-3 py-8 text-lg leading-6 text-gray-800 ">
+                        <div class="space-y-3">
+                        <!-- 1 -->
+                        <div x-data="accordion(1)" class="relative transition-all duration-700 border rounded-xl hover:shadow-2xl">
+                            <div @click="handleClick()" class="w-full p-4 text-left cursor-pointer">
+                            <div class="flex items-center justify-between">
+                                <span class="tracking-wide">1. <span class="font-bold ml-4">Get an project overview</span></span>
+                                <span :class="handleRotate()" class="transition-transform duration-500 transform fill-current ">
+                                <svg class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                </svg>
+                                </span>
+                            </div>
+                            </div>
+                
+                            <div x-ref="tab" :style="handleToggle()" class="relative overflow-hidden transition-all duration-700 max-h-0">
+                            <div class="px-6 pb-4 text-gray-600">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna,elementum turpis.</p>
+                                <a href="#" class="text-blue-500">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                            </div>
+                        </div>
+                        <!-- End 1 -->
+                        <!-- 2 -->
+                        <div x-data="accordion(2)" class="relative transition-all duration-700 border rounded-xl hover:shadow-2xl">
+                            <div @click="handleClick()" class="w-full p-4 text-left cursor-pointer">
+                            <div class="flex items-center justify-between">
+                                <span class="tracking-wide">2. <span class="font-bold ml-4">Task monitoring at a glace</span></span>
+                                <span :class="handleRotate()" class="transition-transform duration-500 transform fill-current ">
+                                <svg class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                </svg>
+                                </span>
+                            </div>
+                            </div>
+                
+                            <div x-ref="tab" :style="handleToggle()" class="relative overflow-hidden transition-all duration-700 max-h-0">
+                            <div class="px-6 pb-4 text-gray-600">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna,elementum turpis.</p>
+                                <a href="#" class="text-blue-500">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                            </div>
+                        </div>
+                        <!-- End 2 -->
+                        <!-- 3 -->
+                        <div x-data="accordion(3)" class="relative transition-all duration-700 border rounded-xl hover:shadow-2xl">
+                            <div @click="handleClick()" class="w-full p-4 text-left cursor-pointer">
+                            <div class="flex items-center justify-between">
+                                <span class="tracking-wide">3. <span class="font-bold ml-4">Weekly Project</span></span>
+                                <span :class="handleRotate()" class="transition-transform duration-500 transform fill-current ">
+                                <svg class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                </svg>
+                                </span>
+                            </div>
+                            </div>
+                
+                            <div x-ref="tab" :style="handleToggle()" class="relative overflow-hidden transition-all duration-700 max-h-0">
+                            <div class="px-6 pb-4 text-gray-600">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna,elementum turpis.</p>
+                                <a href="#" class="text-blue-500">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                            </div>
+                        </div>
+                        <!-- End 1 -->
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 w-full p-5">
+                    <form action="https://formbold.com/s/FORM_ID" method="POST">
+                        <div class="-mx-3 flex flex-wrap">
+                          <div class="w-full px-3 sm:w-1/2">
+                            <div class="mb-5">
+                              <label
+                                for="fName"
+                                class="mb-3 block text-base font-medium text-[#07074D]"
+                              >
+                                First Name
+                              </label>
+                              <input
+                                type="text"
+                                name="fName"
+                                id="fName"
+                                placeholder="First Name"
+                                class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                              />
+                            </div>
+                          </div>
+                          <div class="w-full px-3 sm:w-1/2">
+                            <div class="mb-5">
+                              <label
+                                for="lName"
+                                class="mb-3 block text-base font-medium text-[#07074D]"
+                              >
+                                Last Name
+                              </label>
+                              <input
+                                type="text"
+                                name="lName"
+                                id="lName"
+                                placeholder="Last Name"
+                                class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                              />
+                            </div>
+                          </div>
+                        </div>
+
+                  
+                        <div class="-mx-3 flex flex-wrap">
+                          <div class="w-full px-3 sm:w-1/2">
+                            <div class="mb-5">
+                              <label
+                                for="email"
+                                class="mb-3 block text-base font-medium text-[#07074D]"
+                              >
+                                Email
+                              </label>
+                              <input
+                                type="email"
+                                name="email"
+                                id="email"
+                                placeholder="example@fallow.co.id"
+                                class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                              />
+                            </div>
+                          </div>
+                          <div class="w-full px-3 sm:w-1/2">
+                            <div class="mb-5">
+                              <label
+                                for="hp"
+                                class="mb-3 block text-base font-medium text-[#07074D]"
+                              >
+                                Telephone
+                              </label>
+                              <input
+                                type="text"
+                                name="hp"
+                                id="hp"
+                                placeholder="+62 843931232142"
+                                class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="mb-5">
+                            <label
+                              for="message"
+                              class="mb-3 block text-base font-medium text-[#07074D]"
+                            >
+                              Message
+                            </label>
+                            <input
+                              type="text"
+                              name="message"
+                              id="message"
+                              placeholder=""
+                              min="0"
+                              class="w-full h-20 appearance-none rounded-md border border-[#e0e0e0] bg-white py-1 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                            />
+                          </div>
+                        <div>
+                          <button
+                            class="hover:shadow-form rounded-md bg-[#6A64F1] py-3 px-8 text-center text-base font-semibold text-white outline-none"
+                          >
+                            Send Now!
+                          </button>
+                        </div>
+                      </form>
+                </div>
+            </div>
+        </div>
+     </section>
+     <section class="bg-[url(https://nextluxury.com/wp-content/uploads/desktop-desk-setup-ideas-rheus.pcsetups.jpg)] bg-center bg-cover">
+        <div class="bg-black/70 flex flex-wrap lg:p-20 py-10">
+            <div class="w-full lg:w-1/2 px-20 self-center">
+                <h1 class="font-bold text-2xl text-white lg:text-4xl">Hire me</h1>
+                <h1 class="font-bold text-2xl text-white lg:text-4xl">as a Product design</h1>
+                <h1 class="font-bold text-2xl text-white lg:text-4xl">Great skills elite.</h1>
+            </div>
+            <div class="w-full lg:w-1/2 px-20 self-center">
+                <p class="text-lg max-w-xs text-white">I am product designer, who are excited about unique ideas and help.</p>
+               <div class="mt-10">
+                <a href="#" class="bg-blue-500 p-4 rounded-xl text-white border border-transparent hover:text-blue-500 hover:bg-transparent hover:border-blue-500 duration-300">Download CV</a>
+               </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-blue-950 pb-12 pt-32">
+        <div class="flex flex-wrap lg:max-w-7xl lg:mx-auto justify-center">
+            <div class="w-full px-4 mb-12 text-slate-300 font-medium md:w-1/2 lg:w-1/4">
+                <img src="./assets/Logo.png" class="mb-5" alt="">
+                <p class="max-w-sm ">We work with a passion of taking challenges and creating new ones in advertising sector.</p>
+                <div class="flex">
+                    <i class="fa-brands text-white text-xl lg:mx-2 fa-instagram"></i>
+                    <i class="fa-brands text-white text-xl mx-2 fa-facebook"></i>
+                    <i class="fa-brands text-white text-xl mx-2 fa-whatsapp"></i>
+                    <i class="fa-brands text-white text-xl mx-2 fa-youtube"></i>
+                   </div>
+            </div>
+                <div class="w-full px-4 mb-12 text-slate-300 font-medium md:w-1/2 lg:w-1/4">
+                    <h3 class="font-semibold text-xl lang-link text-white mb-5">
+                        Links</h3>
+                    <ul>
+                        <li><a href="#" class="inline-block lang-home text-base hover:text-biru mb-3 transition duration-200 ease-in-out">Home</a></li>
+                        <li><a href="#" class="inline-block lang-about text-base hover:text-biru mb-3 transition duration-200 ease-in-out">Service</a></li>
+                        <li><a href="#" class="inline-block lang-portp text-base hover:text-biru mb-3 transition duration-200 ease-in-out">Blog
+                        </a></li>
+                        <li><a href="#" class="inline-block lang-contact text-base hover:text-biru mb-3 transition duration-200 ease-in-out">Contact US</a></li>
+                    </ul>
+                </div>
+            <div class="w-full px-4 mb-12 text-slate-300 font-medium md:w-1/2 lg:w-1/4">
+                <h3 class="font-semibold lang-madeW text-xl text-white mb-5">Services</h3>
+                <ul>
+                    <li><a href="#" class="inline-block text-base hover:text-biru mb-3 transition duration-200 ease-in-out">Contact & Faq</a></li>
+                    <li><a href="#" class="inline-block text-base hover:text-biru mb-3 transition duration-200 ease-in-out">Track Your Order</a></li>
+                    <li><a href="#" class="inline-block text-base hover:text-biru mb-3 transition duration-200 ease-in-out">Shipping</a></li>
+                    <li><a href="#" class="inline-block text-base hover:text-biru mb-3 transition duration-200 ease-in-out">Trade Program</a></li>
+                </ul>
+             </div>
+            <div class="w-full px-4 mb-12 text-slate-300 font-medium md:w-1/2 lg:w-1/4">
+                <h3 class="font-semibold lang-madeW text-xl text-white mb-5">Official info:</h3>
+                <p>
+                    <i class="fa-solid fa-map mr-2"></i>30 Commercial Road Fratton, Australia</p>
+                    <p><i class="fa-solid fa-phone mr-2"></i>1-888-452-1505</p>
+                    <p>Subscribe Newsletter</p>
+                    <div class="flex">
+                        <div class="mb-3 flex flex-wrap w-auto ring-1 text-blue-400 ring-transparent p-3 rounded-md focus:outline-none focus:ring-blue-500  focus:border-blue-600">
+                            <input type="text" id="no" name="email" placeholder="Enter your email" required class="w-32 p-3 focus:outline-none  rounded-xl bg-transparent text-white duration-300">
+                        </div>
+                        <div class=" mt-5">
+                            <a href="#" class="text-center text-sm p-3 mt-10 lg:mt-1 bg-blue-500 rounded-xl text-white shadow-sm hover:bg-white hover:text-blue-500 hover:shadow-lg hover:border hover:border-blue-500 duration-300 transition-all ease-in-out">SUBSCRIBE NOW</a>
+                        </div>
+                    </div>
+             </div>
+             </div>
+        <div class=" pt-10 border-t border-slate-700">
+            <div class="flex flex-wrap">
+                <div class=" w-full justify-start">
+                    <p class="font-medium text-xl text-slate-500 text-center">Copyright © 2023 – All Rights Reserved. Made by fallow.</p>
+                   </div>
+            </div>
+    
+         </div>
+    
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        // Faq
+        document.addEventListener("alpine:init", () => {
+        Alpine.store("accordion", {
+            tab: 0
+        });
+
+        Alpine.data("accordion", (idx) => ({
+            init() {
+            this.idx = idx;
+            },
+            idx: -1,
+            handleClick() {
+            this.$store.accordion.tab =
+                this.$store.accordion.tab === this.idx ? 0 : this.idx;
+            },
+            handleRotate() {
+            return this.$store.accordion.tab === this.idx ? "-rotate-180" : "";
+            },
+            handleToggle() {
+            return this.$store.accordion.tab === this.idx
+                ? `max-height: ${this.$refs.tab.scrollHeight}px`
+                : "";
+            }
+        }));
+        });
+        //  end faq
+
+    </script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+</body>
+</html>

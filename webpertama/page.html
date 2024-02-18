@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Document Meta-->
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <!-- IE Compatibility Meta-->
+        <meta name="author" content="zytheme"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+        <meta name="description" content="Multi-purpose Business html5 landing page"/>
+        <!-- link cdn tailwindcss -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- link icon -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.96w-96 text-center max-w-xs 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+          </svg>
+          <!-- animasi refresh
+          <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        /> -->
+        
+        <!-- lilita one start -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+        <!-- lilita one stop -->
+        <!-- Oswold & Roboto start -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <!-- Oswold & Roboto stop -->
+        <!-- jost start -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <!-- jost stop -->
+        <!-- playfair start -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <!-- playfair stop -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fallow | Page</title>
+        <script>
+            tailwind.config = {
+                darkMode:"class",
+              theme: {
+                container:{
+                    center: true,
+                    padding: '20px',
+                },
+                extend: {
+                  colors: {
+                    birmud: '#6ad3e5',
+                    biru: '#00b0d3',
+                    gelap: '#0f172a',
+                    gelap1: '#1e293b',
+                    pdng: '#ffffff',
+                    ptng: '#ababab',
+                    birtu: '#1d4ed8',
+                    toska: '#333333',
+                    ijo: '#49b970',
+                  },
+                    backgroundImage: {
+                    // background gambar
+
+                    // example: 'pict': 'url("https://hanafifebriansyah.vercel.app/assets/profil/bg.png")',
+                    },
+                    fontFamily: {
+                        Lile:['Lilita One'],
+                        Oswald:['Oswald'],
+                        jos:['Jost'],
+                        play:['Playfair Display'],
+                    },
+                  screen:{
+                    '2xl' : '1400px',
+                  }
+                }
+              }
+            }
+        </script>
+        <style type="text/tailwindcss">
+            body,html {
+                scroll-behavior: smooth;
+                font-family: 'Roboto',sans-serif;
+                color: #64748b;
+
+            }
+            .nav-fixed{
+                @apply fixed mt-0 z-50 py-5 bg-white/50 dark:bg-black/50 text-black transition duration-200 ease-in-out;
+                backdrop-filter: blur(5px);
+                box-shadow: inset 0 -1px 0 0 rgba(0,0,0,0.1);
+            }
+        
+            .nav-fixed{
+                @apply lg:bg-white/30  lg:dark:bg-black/30 text-black lg:dark:text-slate-100 lg:text-center lg:backdrop-blur-sm lg:shadow-lg lg:p-1 lg:fixed lg:w-full  transition-all duration-500 ease-in-out lg:z-50;
+            }
+            .nav-fixed > div:nth-child(1){
+                @apply lg:mx-auto;
+            }
+            .nav-fixed > div:nth-child(3){
+                @apply lg:space-x-4;
+            }
+            .hamburger-line{
+                 @apply w-[30px] h-1 my-1 rounded-md block bg-toska;
+            }
+            .nav-line2{
+                 @apply bg-white/30 dark:bg-black/30 md:bg-transparent md:dark:bg-transparent shadow-2xl md:shadow-none lg:bg-transparent lg:dark:bg-transparent transition duration-200 ease-in-out;
+            }
+            .hamburger-active > span:nth-child(1){
+                 @apply  rotate-45 transition;
+            }
+            .hamburger-active > span:nth-child(2){
+                 @apply scale-0;
+            }
+            .hamburger-active > span:nth-child(3){
+                 @apply origin-bottom-left -rotate-45;
+            }
+            #hamburger{
+                @apply rounded-lg bg-slate-100 p-1;
+            }
+
+        </style>
+    </head>
+    <body class="bg-slate-50">        
+    <header class="bg-white lg:py-4 lg:rounded-xl  container py-4 lg:mt-10 absolute w-full font-semibold transition-all ease-in-out duration-500 flex items-center max-w-full mx-auto lg:max-w-7xl lg:mx-32 z-50 ">
+            <div class="container">
+                <div class="flex items-center justify-between relative">
+                    <div class="px-4">
+                     <img src="./assets/Logo.png" alt="Logo" class="w-44 text-center max-w-xs ">
+                    </div>
+                    <div class="flex item-center px-4">
+                        <button id="hamburger" name="hamburger" type="button" class="block right-4 lg:hidden  transition duration-200">
+                            <span class="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
+                            <span class="hamburger-line transition duration-300 ease-in-out"></span>
+                            <span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
+                        </button>
+                        
+                        <nav  id="nav-menu" class="hidden absolute mx-auto py-5 nav-line2 mt-1 shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:py-1 lg:block lg:relative lg:max-w-full lg:bg-transparent lg:shadow-none lg:rounded-none">
+                            <ul class="block lg:flex lg:text-lg items-center font-play"> 
+                                <li class="group ">
+                                    <a href="index.html" class="hover:text-blue-500 relative group animate__animated animate__fadeInRight py-2 mx-6  flex transition duration-400 ease-in-out">
+                                        <i class="sm:inline lg:hidden fas fa-home mr-2"></i>
+                                        <span class="lang-home">Home</span>
+                                    </a></li>
+                                <li class="group">
+                                    <a href="port.html" class=" hover:text-blue-500 animate__animated animate__fadeInRight py-2 mx-6   flex  transition duration-400 ease-in-out"><i class="sm:inline lg:hidden fas fa-info-circle mr-2"></i><span class="lang-about"> Portfolio</span></a></li>
+                                <li class="group">
+                                    <a href="service.html" class=" hover:text-blue-500 animate__animated animate__fadeInRight py-2 mx-6  flex  transition duration-400 ease-in-out"><i class="sm:inline lg:hidden fas fa-code mr-2"></i><span class="lang-portp">Service</span></a></li>
+                                    <li class="group">
+                                    <a href="blog.html" class=" hover:text-blue-500 animate__animated animate__fadeInRight py-2 mx-6  flex  transition duration-400 ease-in-out"><i class="sm:inline lg:hidden fas  fa-address-card mr-2"></i><span class="lang-contact">Blog
+                                    </span></a></li>                           
+                                    <a href="page.html" class=" hover:text-blue-500 animate__animated animate__fadeInRight py-2 mx-6  flex  transition duration-400 ease-in-out"><i class="sm:inline lg:hidden fas  fa-address-card mr-2"></i><span class="lang-contact">Pages
+                                    </span></a></li>                           
+                                    <a href="about.html" class=" hover:text-blue-500 animate__animated animate__fadeInRight py-2 mx-6  flex  transition duration-400 ease-in-out"><i class="sm:inline lg:hidden fas  fa-address-card mr-2"></i><span class="lang-contact">About Me
+                                    </span></a></li>                           
+                                    <a href="#kelas" class="hidden  p-4 border border-transparent hover:border-blue-400 text-white hover:text-blue-500 bg-blue-400 hover:bg-transparent rounded-xl animate__animated animate__fadeInRight py-2 mx-6  lg:flex px-10 transition-all duration-400 ease-in-out">Let’s Talk</a>
+                                </ul>
+                            </nav>
+                    </div>
+                </div>
+            </div>
+    </header>
+    <section id="home" class=" lg:max-w-7xl mx-auto"> 
+        <div class="container">
+            <div class="flex">
+                <div class="lg:flex lg:w-1/2 px-7 py-2 font-bold hidden">
+                    <p class="mr-2"><i class="fa-solid fa-envelope mr-2" style="color: #74C0FC;"></i>info@example.com                </p>
+                    <p><i class="fa-solid fa-phone-volume mr-2" style="color: #74C0FC;"></i>+1-888-452-1505</p>
+                </div>
+                <div class="lg:flex justify-end lg:w-1/2 px-24 py-2 font-bold hidden">
+                    <i class="fa-brands fa-facebook mr-2 text-xl"></i>
+                    <i class="fa-brands fa-whatsapp mr-2 text-xl"></i>
+                    <i class="fa-brands fa-instagram mr-2 text-xl"></i>
+                    <i class="fa-brands fa-twitter mr-2 text-xl"></i>
+                </div>
+            </div>
+            <div class="py-40">
+                <p class="font-bold text-7xl text-center pb-3">Coming soon</p>
+                <p class=" text-xl text-center"><a href="index.html" class="hover:text-blue-500 duration-300">Home</a> <i class="fa-solid fa-arrow-right"></i> Page</p>
+            </div>   
+        </div>
+    </section>
+    <section>
+        <div class="w-full h-screen" style="background-image: url('https://vojislavd.com/ta-template-demo/assets/img/coming-soon.jpg');">
+            <div class="w-full h-screen bg-black bg-opacity-70">
+                <div class="w-full h-full flex flex-col items-start justify-center container mx-auto py-8 px-8 lg:px-4 xl:px-0">
+                    <div class="flex-1 flex flex-col items-start justify-center">
+                        <h1 class="text-6xl lg:text-7xl xl:text-8xl text-gray-200 tracking-wider font-bold font-serif mt-12 text-center md:text-left">We Are <span class="text-yellow-300">Coming</span> Soon</h1>
+                        
+                        <div class=" flex flex-col items-center mt-8 ml-2">
+                            <p class="text-gray-300 uppercase text-sm">Time left until lunching</p>
+                            <div class="flex items-center justify-center space-x-4 mt-4" x-data="timer(new Date().setDate(new Date().getDate() + 1))" x-init="init();">
+                                <div class="flex flex-col items-center px-4">
+                                    <span x-text="time().days" class="text-4xl lg:text-5xl text-gray-200">00</span>
+                                    <span class="text-gray-400 mt-2">Days</span>
+                                </div>
+                                <span class="w-[1px] h-24 bg-gray-400"></span>
+                                <div class="flex flex-col items-center px-4">
+                                    <span x-text="time().hours" class="text-4xl lg:text-5xl text-gray-200">23</span>
+                                    <span class="text-gray-400 mt-2">Hours</span>
+                                </div>
+                                <span class="w-[1px] h-24 bg-gray-400"></span>
+                                <div class="flex flex-col items-center px-4">
+                                    <span x-text="time().minutes" class="text-4xl lg:text-5xl text-gray-200">59</span>
+                                    <span class="text-gray-400 mt-2">Minutes</span>
+                                </div>
+                                <span class="w-[1px] h-24 bg-gray-400"></span>
+                                <div class="flex flex-col items-center px-4">
+                                    <span x-text="time().seconds" class="text-4xl lg:text-5xl text-gray-200">28</span>
+                                    <span class="text-gray-400 mt-2">Seconds</span>
+                                </div>
+                            </div>                      
+                        </div>
+                        <div class="flex flex-col items-center space-y-4 mt-16 px-6">
+                            <p class="text-gray-300 uppercase text-sm">Notify me when it's ready</p>
+                            <form class="w-full flex items-center">
+                                <input type="email" name="email" id="email" class="w-72 p-2 border-gray-300 focus:outline-none focus:ring-0 focus:border-gray-300 rounded-tl rounded-bl text-sm" placeholder="Email" autocomplete="off">
+                                <button class="bg-blue-600 py-2 px-6 text-gray-100 border border-blue-600 rounded-tr rounded-br text-sm">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="w-full flex items-center justify-center md:justify-end">
+                        <ul class="flex items-center space-x-4">
+                            <li>
+                                <a href="#" title="Facebook">
+                                    <svg class="w-8 h-8 hover:scale-110 transition duration-300" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 506.86 506.86"><defs><style>.cls-1{fill:#e2e8f0;}</style></defs><path class="cls-1" d="M506.86,253.43C506.86,113.46,393.39,0,253.43,0S0,113.46,0,253.43C0,379.92,92.68,484.77,213.83,503.78V326.69H149.48V253.43h64.35V197.6c0-63.52,37.84-98.6,95.72-98.6,27.73,0,56.73,5,56.73,5v62.36H334.33c-31.49,0-41.3,19.54-41.3,39.58v47.54h70.28l-11.23,73.26H293V503.78C414.18,484.77,506.86,379.92,506.86,253.43Z"></path><path class="cls-2" d="M352.08,326.69l11.23-73.26H293V205.89c0-20,9.81-39.58,41.3-39.58h31.95V104s-29-5-56.73-5c-57.88,0-95.72,35.08-95.72,98.6v55.83H149.48v73.26h64.35V503.78a256.11,256.11,0,0,0,79.2,0V326.69Z"></path></svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" title="Twitter">
+                                    <svg class="w-8 h-8 hover:scale-110 transition duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 333333 333333" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd"><path d="M166667 0c92048 0 166667 74619 166667 166667s-74619 166667-166667 166667S0 258715 0 166667 74619 0 166667 0zm90493 110539c-6654 2976-13822 4953-21307 5835 7669-4593 13533-11870 16333-20535-7168 4239-15133 7348-23574 9011-6787-7211-16426-11694-27105-11694-20504 0-37104 16610-37104 37101 0 2893 320 5722 949 8450-30852-1564-58204-16333-76513-38806-3285 5666-5022 12109-5022 18661v4c0 12866 6532 24246 16500 30882-6083-180-11804-1876-16828-4626v464c0 17993 12789 33007 29783 36400-3113 845-6400 1313-9786 1313-2398 0-4709-247-7007-665 4746 14736 18448 25478 34673 25791-12722 9967-28700 15902-46120 15902-3006 0-5935-184-8860-534 16466 10565 35972 16684 56928 16684 68271 0 105636-56577 105636-105632 0-1630-36-3209-104-4806 7251-5187 13538-11733 18514-19185l17-17-3 2z" fill="#e2e8f0"></path></svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" title="LinkedIn">
+                                    <svg class="w-8 h-8 hover:scale-110 transition duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 333333 333333" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd"><path d="M166667 0c92048 0 166667 74619 166667 166667s-74619 166667-166667 166667S0 258715 0 166667 74619 0 166667 0zm-18220 138885h28897v14814l418 1c4024-7220 13865-14814 28538-14814 30514-1 36157 18989 36157 43691v50320l-30136 1v-44607c0-10634-221-24322-15670-24322-15691 0-18096 11575-18096 23548v45382h-30109v-94013zm-20892-26114c0 8650-7020 15670-15670 15670s-15672-7020-15672-15670 7022-15670 15672-15670 15670 7020 15670 15670zm-31342 26114h31342v94013H96213v-94013z" fill="#e2e8f0"></path></svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-[url(https://nextluxury.com/wp-content/uploads/desktop-desk-setup-ideas-rheus.pcsetups.jpg)] bg-center bg-cover">
+        <div class="bg-black/70 flex flex-wrap lg:p-20 py-10">
+            <div class="w-full lg:w-1/2 px-20 self-center">
+                <h1 class="font-bold text-2xl text-white lg:text-4xl">Hire me</h1>
+                <h1 class="font-bold text-2xl text-white lg:text-4xl">as a Product design</h1>
+                <h1 class="font-bold text-2xl text-white lg:text-4xl">Great skills elite.</h1>
+            </div>
+            <div class="w-full lg:w-1/2 px-20 self-center">
+                <p class="text-lg max-w-xs text-white">I am product designer, who are excited about unique ideas and help.</p>
+               <div class="mt-10">
+                <a href="#" class="bg-blue-500 p-4 rounded-xl text-white border border-transparent hover:text-blue-500 hover:bg-transparent hover:border-blue-500 duration-300">Download CV</a>
+               </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-blue-950 pb-12 pt-32">
+        <div class="flex flex-wrap lg:max-w-7xl lg:mx-auto justify-center">
+            <div class="w-full px-4 mb-12 text-slate-300 font-medium md:w-1/2 lg:w-1/4">
+                <img src="./assets/Logo.png" class="mb-5" alt="">
+                <p class="max-w-sm ">We work with a passion of taking challenges and creating new ones in advertising sector.</p>
+                <div class="flex">
+                    <i class="fa-brands text-white text-xl lg:mx-2 fa-instagram"></i>
+                    <i class="fa-brands text-white text-xl mx-2 fa-facebook"></i>
+                    <i class="fa-brands text-white text-xl mx-2 fa-whatsapp"></i>
+                    <i class="fa-brands text-white text-xl mx-2 fa-youtube"></i>
+                   </div>
+            </div>
+                <div class="w-full px-4 mb-12 text-slate-300 font-medium md:w-1/2 lg:w-1/4">
+                    <h3 class="font-semibold text-xl lang-link text-white mb-5">
+                        Links</h3>
+                    <ul>
+                        <li><a href="#" class="inline-block lang-home text-base hover:text-biru mb-3 transition duration-200 ease-in-out">Home</a></li>
+                        <li><a href="#" class="inline-block lang-about text-base hover:text-biru mb-3 transition duration-200 ease-in-out">Service</a></li>
+                        <li><a href="#" class="inline-block lang-portp text-base hover:text-biru mb-3 transition duration-200 ease-in-out">Blog
+                        </a></li>
+                        <li><a href="#" class="inline-block lang-contact text-base hover:text-biru mb-3 transition duration-200 ease-in-out">Contact US</a></li>
+                    </ul>
+                </div>
+            <div class="w-full px-4 mb-12 text-slate-300 font-medium md:w-1/2 lg:w-1/4">
+                <h3 class="font-semibold lang-madeW text-xl text-white mb-5">Services</h3>
+                <ul>
+                    <li><a href="#" class="inline-block text-base hover:text-biru mb-3 transition duration-200 ease-in-out">Contact & Faq</a></li>
+                    <li><a href="#" class="inline-block text-base hover:text-biru mb-3 transition duration-200 ease-in-out">Track Your Order</a></li>
+                    <li><a href="#" class="inline-block text-base hover:text-biru mb-3 transition duration-200 ease-in-out">Shipping</a></li>
+                    <li><a href="#" class="inline-block text-base hover:text-biru mb-3 transition duration-200 ease-in-out">Trade Program</a></li>
+                </ul>
+             </div>
+            <div class="w-full px-4 mb-12 text-slate-300 font-medium md:w-1/2 lg:w-1/4">
+                <h3 class="font-semibold lang-madeW text-xl text-white mb-5">Official info:</h3>
+                <p>
+                    <i class="fa-solid fa-map mr-2"></i>30 Commercial Road Fratton, Australia</p>
+                    <p><i class="fa-solid fa-phone mr-2"></i>1-888-452-1505</p>
+                    <p>Subscribe Newsletter</p>
+                    <div class="flex">
+                        <div class="mb-3 flex flex-wrap w-auto ring-1 text-blue-400 ring-transparent p-3 rounded-md focus:outline-none focus:ring-blue-500  focus:border-blue-600">
+                            <input type="text" id="no" name="email" placeholder="Enter your email" required class="w-32 p-3 focus:outline-none  rounded-xl bg-transparent text-white duration-300">
+                        </div>
+                        <div class=" mt-5">
+                            <a href="#" class="text-center text-sm p-3 mt-10 lg:mt-1 bg-blue-500 rounded-xl text-white shadow-sm hover:bg-white hover:text-blue-500 hover:shadow-lg hover:border hover:border-blue-500 duration-300 transition-all ease-in-out">SUBSCRIBE NOW</a>
+                        </div>
+                    </div>
+             </div>
+             </div>
+        <div class=" pt-10 border-t border-slate-700">
+            <div class="flex flex-wrap">
+                <div class=" w-full justify-start">
+                    <p class="font-medium text-xl text-slate-500 text-center">Copyright © 2023 – All Rights Reserved. Made by fallow.</p>
+                   </div>
+            </div>
+    
+         </div>
+    
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

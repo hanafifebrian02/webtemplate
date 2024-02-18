@@ -1,0 +1,665 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Document Meta-->
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <!-- IE Compatibility Meta-->
+        <meta name="author" content="zytheme"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+        <meta name="description" content="Multi-purpose Business html5 landing page"/>
+        <!-- link cdn tailwindcss -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- link icon -->
+        <link href="https://html.quomodosoft.com/aball/aball/assets/images/favicon.ico" rel="icon"/>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.96w-96 text-center max-w-xs 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+          </svg>
+          <!-- animasi refresh
+          <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        /> -->
+        
+        <!-- lilita one start -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+        <!-- lilita one stop -->
+        <!-- Oswold & Roboto start -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <!-- Oswold & Roboto stop -->
+        <!-- jost start -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <!-- jost stop -->
+        <!-- playfair start -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <!-- playfair stop -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Aball</title>
+        <script>
+            tailwind.config = {
+                darkMode:"class",
+              theme: {
+                container:{
+                    center: true,
+                    padding: '20px',
+                },
+                extend: {
+                  colors: {
+                    birmud: '#6ad3e5',
+                    biru: '#00b0d3',
+                    gelap: '#0f172a',
+                    gelap1: '#1e293b',
+                    pdng: '#ffffff',
+                    ptng: '#ababab',
+                    birtu: '#1d4ed8',
+                    toska: '#333333',
+                    ijo: '#49b970',
+                  },
+                    backgroundImage: {
+                    // background gambar
+
+                    // example: 'pict': 'url("https://hanafifebriansyah.vercel.app/assets/profil/bg.png")',
+                    },
+                    fontFamily: {
+                        Lile:['Lilita One'],
+                        Oswald:['Oswald'],
+                        jos:['Jost'],
+                        play:['Playfair Display'],
+                    },
+                  screen:{
+                    '2xl' : '1400px',
+                  }
+                }
+              }
+            }
+        </script>
+        <style type="text/tailwindcss">
+            body,html {
+                scroll-behavior: smooth;
+                font-family: 'Roboto',sans-serif;
+                color: #64748b;
+
+            }
+            .nav-fixed{
+                @apply fixed mt-0 z-50 py-5 bg-white/50 dark:bg-black/50 text-black transition duration-200 ease-in-out;
+                backdrop-filter: blur(5px);
+                box-shadow: inset 0 -1px 0 0 rgba(0,0,0,0.1);
+            }
+        
+            .nav-fixed{
+                @apply lg:bg-white/30  lg:dark:bg-black/30 text-black lg:dark:text-slate-100 lg:text-center lg:backdrop-blur-sm lg:shadow-lg lg:p-1 lg:fixed lg:w-full  transition-all duration-500 ease-in-out lg:z-50;
+            }
+            .nav-fixed > div:nth-child(1){
+                @apply lg:mx-auto;
+            }
+            .nav-fixed > div:nth-child(3){
+                @apply lg:space-x-4;
+            }
+            .hamburger-line{
+                 @apply w-[30px] h-1 my-1 rounded-md block bg-white;
+            }
+            .hamburger-active > span:nth-child(1){
+                 @apply  rotate-45 transition;
+            }
+            .hamburger-active > span:nth-child(2){
+                 @apply scale-0;
+            }
+            .hamburger-active > span:nth-child(3){
+                 @apply -rotate-45;
+            }
+            #hamburger{
+                @apply rounded-lg p-1;
+            }
+
+        </style>
+    </head>
+    <body class=" text-black">        
+    <header class="bg-red-600 lg:py-5 lg:rounded-br-xl text-white container py-4 pt-10 absolute w-full font-semibold transition-all ease-in-out duration-500 flex items-center  max-w-full mx-auto lg:max-w-2xl z-50 ">
+            <div class="container">
+                <div class="flex items-center justify-between relative">
+                    <div class="flex item-center px-2">
+                        <button id="hamburger" name="hamburger" type="button" class="block right-4 transition duration-200">
+                            <span class="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
+                            <span class="hamburger-line transition duration-300 ease-in-out"></span>
+                            <span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
+                        </button>
+                        
+                        <nav  id="nav-menu" class="hidden absolute py-5 nav-line2 mt-1 shadow-lg rounded-lg w-full right-10 top-full lg:py-1 lg:max-w-7xl lg:rounded-xl bg-red-600">
+                            <ul class="block lg:text-lg  font-play"> 
+                                <li class="group ">
+                                    <a href="index.html" class="hover:text-blue-500 relative group animate__animated animate__fadeInRight py-2 mx-6  flex transition duration-400 ease-in-out">
+                                        <span class="lang-home">Home</span>
+                                    </a></li>
+                                <li class="group">
+                                    <a href="Testimoni.html" class=" hover:text-blue-500 animate__animated animate__fadeInRight py-2 mx-6   flex  transition duration-400 ease-in-out"><span class="lang-about"> About</span></a></li>
+                                <li class="group">
+                                    <a href="tentang.html" class=" hover:text-blue-500 animate__animated animate__fadeInRight py-2 mx-6  flex  transition duration-400 ease-in-out"><span class="lang-portp">Service</span></a></li>
+                                    <li class="group">
+                                    <a href="Login.html" class=" hover:text-blue-500 animate__animated animate__fadeInRight py-2 mx-6  flex  transition duration-400 ease-in-out"><span class="lang-contact">Page
+                                    </span></a></li>                           
+                                    <a href="Login.html" class=" hover:text-blue-500 animate__animated animate__fadeInRight py-2 mx-6  flex  transition duration-400 ease-in-out"><span class="lang-contact">Pricing
+                                    </span></a></li>                           
+                                    <a href="Login.html" class=" hover:text-blue-500 animate__animated animate__fadeInRight py-2 mx-6  flex  transition duration-400 ease-in-out"><span class="lang-contact">Contact
+                                    </span></a></li>                           
+                                </ul>
+                            </nav>
+                            <div class="self-center hidden lg:inline">
+                                <p class="text-lg px-10"><i class="fa-solid fa-phone mr-2"></i>+00 125 456 888
+                                </p>
+                            </div>
+                            <div class="self-center hidden lg:inline">
+                                <p class="text-lg pl-10"><i class="fa-solid fa-envelope mr-2"></i>contact@pharma.com
+                                </p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+    </header>
+    <section id="home" class="pt-32 bg-gradient-to-tr from-red-50 to-red-300 mx-auto "> 
+        <div class="container">
+            <div class="flex flex-wrap">
+                <div class="w-full lg:mt-0 lg:w-1/2 font-jos flex flex-wrap relative px-4 animate__animated animate__fadeInDown transition duration-300">
+                    <img src="https://html.quomodosoft.com/aball/aball/assets/images/hero-thumb.png" class="w-full mx-auto" alt="">
+                </div>
+                <div class="w-full lg:w-1/2 font-jos flex flex-wrap relative self-center px-4 animate__animated animate__fadeInDown transition duration-300">
+                    <h1 class="w-full font-bold font-Oswald text-3xl">HELLO</h1>
+                    <h1 class="w-full font-extrabold mb-2 mx-auto text-4xl lg:text-6xl">I am Benjamin Product Designer</h1>
+                    <p class="py-2 text-lg border-l-4 border-red-500 px-2">Sitting proudly atop is the two-storey penthouse. The nati master bedroom suite is phenomenally spacious makes the most unrivalled.</p>
+                    <div class="my-5 flex">
+                        <a href="#pricing" class="m-4 relative border border-transparent hover:border-red-600 text-white hover:text-red-500 bg-red-500 hover:bg-transparent rounded-xl animate__animated animate__fadeInRight py-4 lg:flex px-10 transition-all duration-400 ease-in-out font-bold"><i class="fa-solid fa-arrow-circle-down py-1 mr-2"></i>Download CV </a>
+                        <a href="#pricing" class="m-4 relative border border-transparent hover:border-blue-600 text-white hover:text-blue-500 bg-blue-500 hover:bg-transparent rounded-xl animate__animated animate__fadeInRight py-4 lg:flex px-10 transition-all duration-400 ease-in-out font-bold">Learn More <i class="fa-solid fa-arrow-right py-1 ml-2"></i></a>
+                    </div>
+                    <div class="relative">
+                        <div class="absolute mt-60 ml-36 lg:flex hidden">
+                            <a href=""><i class="fa-brands hover:text-red-700 duration-300 text-2xl fa-facebook mx-2"></i></a>
+                            <a href=""><i class="fa-brands hover:text-red-700 duration-300 text-2xl fa-instagram mx-2"></i></a>
+                            <a href=""><i class="fa-brands hover:text-red-700 duration-300 text-2xl fa-twitter mx-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="home" class="py-20 max-w-7xl mx-auto "> 
+        <div class="container">
+            <div class="flex flex-wrap">
+                <div class="lg:w-1/2 w-full">
+                    <p class="text-7xl font-bold text-center">4,9<span class="text-3xl">/5</span></p>
+                    <div class="flex justify-center my-2">
+                        <i class="fa-solid fa-star mx-1 text-yellow-600"></i>
+                        <i class="fa-solid fa-star mx-1 text-yellow-600"></i>
+                        <i class="fa-solid fa-star mx-1 text-yellow-600"></i>
+                        <i class="fa-solid fa-star mx-1 text-yellow-600"></i>
+                        <i class="fa-solid fa-star mx-1 text-yellow-600"></i>
+                    </div>
+                    <p class="text-xl font-bold text-center">About<span class="ml-2 text-red-500">Benjamin</span></p>
+                </div>
+                <div class="lg:w-1/2 w-full">
+                    <div class="flex flex-wrap justify-center">
+                        <div class="p-6 mx-6 my-1 bg-slate-200 rounded-lg">
+                            <img src="https://html.quomodosoft.com/aball/aball/assets/images/about-brand-1.png" class="mx-auto" alt="">
+                            <p class="text-center font-bold text-sm py-2">Top Rated</p>
+                            <div class="flex justify-center text-sm my-2">
+                                <i class="fa-solid fa-star px-[1px] text-yellow-600"></i>
+                                <i class="fa-solid fa-star px-[1px] text-yellow-600"></i>
+                                <i class="fa-solid fa-star px-[1px] text-yellow-600"></i>
+                                <i class="fa-solid fa-star px-[1px] text-yellow-600"></i>
+                                <i class="fa-solid fa-star px-[1px] text-yellow-600"></i>
+                            </div>
+                        </div>
+                        <div class="p-6 mx-6 my-1 bg-slate-200 rounded-lg">
+                            <img src="https://html.quomodosoft.com/aball/aball/assets/images/about-brand-2.png" class="mx-auto" alt="">
+                            <p class="text-center font-bold text-sm py-2">Top Rated</p>
+                            <div class="flex justify-center text-sm my-2">
+                                <i class="fa-solid fa-star px-[1px] text-yellow-600"></i>
+                                <i class="fa-solid fa-star px-[1px] text-yellow-600"></i>
+                                <i class="fa-solid fa-star px-[1px] text-yellow-600"></i>
+                                <i class="fa-solid fa-star px-[1px] text-yellow-600"></i>
+                                <i class="fa-solid fa-star px-[1px] text-yellow-600"></i>
+                            </div>
+                        </div>
+                        <div class="p-6 mx-6 my-1 bg-slate-200 rounded-lg">
+                            <img src="https://html.quomodosoft.com/aball/aball/assets/images/about-brand-3.png" class="mx-auto" alt="">
+                            <p class="text-center font-bold text-sm py-2">Top Rated</p>
+                            <div class="flex justify-center text-sm my-2">
+                                <i class="fa-solid fa-star px-[1px] text-yellow-600"></i>
+                                <i class="fa-solid fa-star px-[1px] text-yellow-600"></i>
+                                <i class="fa-solid fa-star px-[1px] text-yellow-600"></i>
+                                <i class="fa-solid fa-star px-[1px] text-yellow-600"></i>
+                                <i class="fa-solid fa-star px-[1px] text-yellow-600"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="home" class="max-w-7xl mx-auto py-20"> 
+        <div class="container">
+            <div class="flex flex-wrap">
+                <div class="w-full lg:mt-0 lg:w-1/2 font-jos flex flex-wrap relative px-4 animate__animated animate__fadeInDown transition duration-300">
+                    <img src="https://html.quomodosoft.com/aball/aball/assets/images/about-thumb.jpg" class=" mx-auto" alt="">
+                </div>
+                <div class="w-full lg:w-1/2 font-jos mt-5 flex flex-wrap relative self-center px-4 animate__animated animate__fadeInDown transition duration-300">
+                    <h1 class="w-full font-extrabold mb-2 mx-auto text-4xl lg:text-6xl">About Me</h1>
+                    <p class="py-2 text-lg">I help agencies & brands like Google, Volvo and others to turn their ideas into designs. Great designs and a healthy freelance relationship.<span class="text-red-500">Benjamin</span></p>
+                    <div class="flex my-2">
+                        <button id="func" class="mx-3 text-red-500 focus:outline-none">Skill</button>
+                        <button id="exp" class="mx-3 focus:outline-none">Experience</button>
+                        <button id="awards" class="mx-3 focus:outline-none">Awards</button>
+                        <button id="edu" class="mx-3 focus:outline-none">Education</button>
+                    </div>
+                    
+                    <div id="funcText" class="inline">
+                        <p class="text-xl my-2">I help agencies & brands like Google, Volvo and others to turn their ideas into designs.</p>
+                        <ul class="list-disc mx-4">
+                            <li>Graphic design template</li>
+                            <li>Motion ui design</li>
+                            <li>Theme template design</li>
+                            <li>User interface design</li>
+                            <li>User experience design</li>
+                        </ul>
+                    </div>
+                    <div id="expText" class="hidden">
+                        <p class="text-xl my-2">I have extensive experience in the field of design, working with various clients and projects.</p>
+                        <ul class="list-disc mx-4">
+                            <li>Project A</li>
+                            <li>Project B</li>
+                            <li>Project C</li>
+                            <li>Project D</li>
+                            <li>Project E</li>
+                        </ul>
+                    </div>
+                    <div id="awardsText" class="hidden">
+                        <p class="text-xl my-2">I have received several awards for my outstanding contributions to the design community.</p>
+                        <ul class="list-disc mx-4">
+                            <li>Design Award 1</li>
+                            <li>Design Award 2</li>
+                            <li>Design Award 3</li>
+                            <li>Design Award 4</li>
+                            <li>Design Award 5</li>
+                        </ul>
+                    </div>
+                    <div id="eduText" class="hidden">
+                        <p class="text-xl my-2">I have a strong educational background in design, holding degrees from prestigious institutions.</p>
+                        <ul class="list-disc mx-4">
+                            <li>Degree 1</li>
+                            <li>Degree 2</li>
+                            <li>Degree 3</li>
+                            <li>Degree 4</li>
+                            <li>Degree 5</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-20 bg-blue-600">
+        <div class="container">
+            <h1 class="text-6xl mb-2 font-bold text-white text-center">Our Services</h1>
+            <h1 class="text-xl mb-2 text-white text-center">I help agencies & brands like Google, Volvo and others to turn their ideas into designs.</h1>
+            <div class="flex flex-wrap justify-center lg:max-w-6xl lg:mx-auto">
+                <div class="p-6 my-2 mx-3 lg:mx-5 w-44 lg:w-52 lg:my-3 bg-slate-200 hover:text-white hover:bg-gradient-to-tr hover:from-blue-300 hover:to-slate-400 hover:scale-105 hover:shadow-xl duration-300 rounded-lg">
+                    <p class="text-center text-7xl"><i class="fa-solid fa-person-breastfeeding"></i></p>
+                    <p class="text-center font-bold text-lg lg:text-xl py-2">Get Hired</p>
+                </div>
+                <div class="p-6 my-2 mx-3 lg:mx-5 w-44 lg:w-52 lg:my-3 bg-slate-200 hover:text-white hover:bg-gradient-to-tr hover:from-blue-300 hover:to-slate-400 hover:scale-105 hover:shadow-xl duration-300 rounded-lg">
+                    <p class="text-center text-7xl"><i class="fa-solid fa-person-breastfeeding"></i></p>
+                    <p class="text-center font-bold text-lg lg:text-xl py-2">Territory Planning
+                    </p>
+                </div>
+                <div class="p-6 my-2 mx-3 lg:mx-5 w-44 lg:w-52 lg:my-3 bg-slate-200 hover:text-white hover:bg-gradient-to-tr hover:from-blue-300 hover:to-slate-400 hover:scale-105 hover:shadow-xl duration-300 rounded-lg">
+                    <p class="text-center text-7xl"><i class="fa-solid fa-person-breastfeeding"></i></p>
+                    <p class="text-center font-bold text-lg lg:text-xl py-2">Demand Generation</p>
+                </div>
+                <div class="p-6 my-2 mx-3 lg:mx-5 w-44 lg:w-52 lg:my-3 bg-slate-200 hover:text-white hover:bg-gradient-to-tr hover:from-blue-300 hover:to-slate-400 hover:scale-105 hover:shadow-xl duration-300 rounded-lg">
+                    <p class="text-center text-7xl"><i class="fa-solid fa-person-breastfeeding"></i></p>
+                    <p class="text-center font-bold text-lg lg:text-xl py-2">Revenue Generation</p>
+                </div>
+                <div class="p-6 my-2 mx-3 lg:mx-5 w-44 lg:w-52 lg:my-3 bg-slate-200 hover:text-white hover:bg-gradient-to-tr hover:from-blue-300 hover:to-slate-400 hover:scale-105 hover:shadow-xl duration-300 rounded-lg">
+                    <p class="text-center text-7xl"><i class="fa-solid fa-person-breastfeeding"></i></p>
+                    <p class="text-center font-bold text-lg lg:text-xl py-2">Sales Tools</p>
+                </div>
+                <div class="p-6 my-2 mx-3 lg:mx-5 w-44 lg:w-52 lg:my-3 bg-slate-200 hover:text-white hover:bg-gradient-to-tr hover:from-blue-300 hover:to-slate-400 hover:scale-105 hover:shadow-xl duration-300 rounded-lg">
+                    <p class="text-center text-7xl"><i class="fa-solid fa-person-breastfeeding"></i></p>
+                    <p class="text-center font-bold text-lg lg:text-xl py-2">Sales Coaches</p>
+                </div>
+                <div class="p-6 my-2 mx-3 lg:mx-5 w-44 lg:w-52 lg:my-3 bg-slate-200 hover:text-white hover:bg-gradient-to-tr hover:from-blue-300 hover:to-slate-400 hover:scale-105 hover:shadow-xl duration-300 rounded-lg">
+                    <p class="text-center text-7xl"><i class="fa-solid fa-person-breastfeeding"></i></p>
+                    <p class="text-center font-bold text-lg lg:text-xl py-2">Career Management
+                    </p>
+                </div>
+                <div class="p-6 my-2 mx-3 lg:mx-5 lg:w-52 lg:my-3 bg-slate-200 hover:text-white hover:bg-gradient-to-tr hover:from-blue-300 hover:to-slate-400 hover:scale-105 hover:shadow-xl duration-300 rounded-lg">
+                    <p class="text-center text-7xl"><i class="fa-solid fa-person-breastfeeding"></i></p>
+                    <p class="text-center font-bold text-xl py-2">Sales Rankings</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id=".." class="py-32 bg-pdng"> 
+        <div class="container ">
+                <div class="flex flex-wrap my-10 lg:max-w-7xl lg:mx-auto">
+                    <div class="w-full inline lg:hidden px-4 lg:w-1/2">
+                        <div class="relative mt-10 lg:mt-9 lg:right-0 animate__animated animate__fadeInRight transition duration-200">
+                            <img src="https://html.quomodosoft.com/aball/aball/assets/images/update-news-1.jpg" class="w-full mx-auto" alt="">
+                        </div>
+                    </div>
+                    <div class="w-full px-5 lg:px-20 self-center py-10 lg:w-1/2 animate__animated animate__fadeInDown transition duration-300">           
+                        <p class="animate__animated animate__fadeInLeft transition duration-200 font-normal text-red-500 text-xl mb-7 p-4 bg-slate-300 w-44 text-center rounded-xl lg:text-xl">iOS App Design</p>
+                        <h1 class="animate__animated animate__fadeInLeft transition duration-200 font-bold font-play text-xl mb-3 lg:text-4xl ">Wide with title two style layout helsepartner nord</h1>
+                        <p class="lang-journey animate__animated animate__fadeInLeft text-slate-500 transition duration-200 font-normal  mb-5 leading-relaxed max-w-lg lg:text-md text-ptng lg:py-2">From research and strategy to design and impletion, we partner with of the world’s most impactful companies to transform their brands and businesses.</p>
+                        <a href="#" class="font-play text-lg text-red-500 hover:text-blue-500 font-bold  duration-500 ease-in-out">VIEW CASE STUDY <i class="fa-solid fa-upload"></i></a>
+                    </div>
+                    <div class="w-full px-4 hidden lg:inline lg:w-1/2">
+                        <div class="relative mt-10 lg:mt-9 lg:right-0 animate__animated animate__fadeInRight transition duration-200">
+                            <img src="https://html.quomodosoft.com/aball/aball/assets/images/update-news-1.jpg" class="w-full mx-auto" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-wrap my-10 lg:max-w-7xl lg:mx-auto">
+                    <div class="w-full px-4 lg:w-1/2">
+                        <div class="relative mt-10 lg:mt-9 lg:right-0 animate__animated animate__fadeInRight transition duration-200">
+                            <img src="https://html.quomodosoft.com/aball/aball/assets/images/update-news-2.jpg" class="w-full mx-auto" alt="">
+                        </div>
+                    </div>
+                    <div class="w-full px-5 lg:px-20 self-center py-10 lg:w-1/2 animate__animated animate__fadeInDown transition duration-300">           
+                        <p class="animate__animated animate__fadeInLeft transition duration-200 font-normal text-red-500 text-xl mb-7 p-4 bg-slate-300 w-44 text-center rounded-xl lg:text-xl">iOS App Design</p>
+                        <h1 class="animate__animated animate__fadeInLeft transition duration-200 font-bold font-play text-xl mb-3 lg:text-4xl ">Wide with title two style layout helsepartner nord</h1>
+                        <p class="lang-journey animate__animated animate__fadeInLeft text-slate-500 transition duration-200 font-normal  mb-5 leading-relaxed max-w-lg lg:text-md text-ptng lg:py-2">From research and strategy to design and impletion, we partner with of the world’s most impactful companies to transform their brands and businesses.</p>
+                        <a href="#" class="font-play text-lg text-red-500 hover:text-blue-500 font-bold  duration-500 ease-in-out">VIEW CASE STUDY <i class="fa-solid fa-upload"></i></a>
+                    </div>
+                </div>
+                <div class="flex flex-wrap my-10 lg:max-w-7xl lg:mx-auto">
+                    <div class="w-full inline lg:hidden px-4 lg:w-1/2">
+                        <div class="relative mt-10 lg:mt-9 lg:right-0 animate__animated animate__fadeInRight transition duration-200">
+                            <img src="https://html.quomodosoft.com/aball/aball/assets/images/update-news-3.jpg" class="w-full mx-auto" alt="">
+                        </div>
+                    </div>
+                    <div class="w-full px-5 lg:px-20 self-center py-10 lg:w-1/2 animate__animated animate__fadeInDown transition duration-300">           
+                        <p class="animate__animated animate__fadeInLeft transition duration-200 font-normal text-red-500 text-xl mb-7 p-4 bg-slate-300 w-44 text-center rounded-xl lg:text-xl">iOS App Design</p>
+                        <h1 class="animate__animated animate__fadeInLeft transition duration-200 font-bold font-play text-xl mb-3 lg:text-4xl ">Wide with title two style layout helsepartner nord</h1>
+                        <p class="lang-journey animate__animated animate__fadeInLeft text-slate-500 transition duration-200 font-normal  mb-5 leading-relaxed max-w-lg lg:text-md text-ptng lg:py-2">From research and strategy to design and impletion, we partner with of the world’s most impactful companies to transform their brands and businesses.</p>
+                        <a href="#" class="font-play text-lg text-red-500 hover:text-blue-500 font-bold  duration-500 ease-in-out">VIEW CASE STUDY <i class="fa-solid fa-upload"></i></a>
+                    </div>
+                    <div class="w-full px-4 hidden lg:inline lg:w-1/2">
+                        <div class="relative mt-10 lg:mt-9 lg:right-0 animate__animated animate__fadeInRight transition duration-200">
+                            <img src="https://html.quomodosoft.com/aball/aball/assets/images/update-news-3.jpg" class="w-full mx-auto" alt="">
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+    <section id="home" class="py-10 bg-black text-white mx-auto "> 
+        <div class="container">
+            <div class="flex flex-wrap max-w-7xl mx-auto">
+                <div class="w-full lg:w-1/2 font-jos flex flex-wrap relative self-center px-4 animate__animated animate__fadeInDown transition duration-300">
+                    <h1 class="w-full font-extrabold mb-2 mx-auto text-4xl lg:text-6xl">What our clients say about our studio</h1>
+                    <p class="py-2 text-lg max-w-lg px-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. In eum debitis sapiente, suscipit et quidem asperiores pariatur voluptate, deserunt provident ratione ipsam saepe a laboriosam quas quod veritatis obcaecati reprehenderit reiciendis blanditiis? Molestiae praesentium quaerat voluptas vitae cumque, eum, recusandae, mollitia alias nulla dolores temporibus qui vel quam ipsam incidunt!.</p>
+                    <p class="pt-10 px-2 text-2xl font-bold w-full">Katja Wespal</p>
+                    <p class="pt-2 px-2 text-md w-full">Co-Founder & CEO,Seative Digital</p>
+                </div>
+                <div class="w-full lg:mt-0 lg:w-1/2 font-jos flex flex-wrap relative px-4 animate__animated animate__fadeInDown transition duration-300">
+                    <img src="https://html.quomodosoft.com/aball/aball/assets/images/testimonial-item-1.jpg" class="w-[400px] lg:inline hidden mx-auto" alt="">
+                    <img src="https://html.quomodosoft.com/aball/aball/assets/images/testimonial-item-2.jpg" class="w-[300px] shadow-2xl lg:inline hidden mt-28 ml-10 absolute mx-auto" alt="">
+                    <img src="https://html.quomodosoft.com/aball/aball/assets/images/testimonial-item-2.jpg" class="w-[400px] my-2 inline lg:hidden mx-auto" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-10">
+        <div class="container">
+            <div class="flex flex-wrap justify-center lg:max-w-6xl lg:mx-auto">
+                <div class="p-4 border-red-500 border hover:border-transparent text-red-500 hover:text-white hover:bg-red-600 my-2 mx-3 lg:mx-5 w-52 h-52 lg:my-3  hover:scale-105 hover:shadow-xl duration-300 rounded-lg">
+                    <p class="text-center text-7xl"><i class="fa-solid fa-champagne-glasses"></i></p>
+                    <p class="text-center font-bold text-2xl lg:text-5xl py-2">63</p>
+                    <p class="text-center text-lg lg:text-xl ">Get Hired</p>
+                </div>
+                <div class="p-4 border-red-500 border hover:border-transparent text-red-500 hover:text-white hover:bg-red-600 my-2 mx-3 lg:mx-5 w-52 h-52 lg:my-3  hover:scale-105 hover:shadow-xl duration-300 rounded-lg">
+                    <p class="text-center text-7xl"><i class="fa-solid fa-award"></i></p>
+                    <p class="text-center font-bold text-2xl lg:text-5xl py-2">27</p>
+                    <p class="text-center text-lg lg:text-xl ">Awards won</p>
+                </div>
+                    <div class="p-4 border-red-500 border hover:border-transparent text-red-500 hover:text-white hover:bg-red-600 my-2 mx-3 lg:mx-5 w-52 h-52 lg:my-3  hover:scale-105 hover:shadow-xl duration-300 rounded-lg">
+                        <p class="text-center text-7xl"><i class="fa-regular fa-file"></i></p>
+                        <p class="text-center font-bold text-2xl lg:text-5xl py-2">79</p>
+                        <p class="text-center text-lg lg:text-xl ">Project taken</p>
+                    </div>
+                    <div class="p-4 border-red-500 border hover:border-transparent text-red-500 hover:text-white hover:bg-red-600 my-2 mx-3 lg:mx-5 w-52 h-52 lg:my-3  hover:scale-105 hover:shadow-xl duration-300 rounded-lg">
+                        <p class="text-center text-7xl"><i class="fa-brands fa-twitter"></i></p>
+                        <p class="text-center font-bold text-2xl lg:text-5xl py-2">32K</p>
+                        <p class="text-center text-lg lg:text-xl ">Twitter followers</p>
+                    </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-10">
+        <div class="container">
+            <div class="flex flex-wrap justify-center lg:max-w-6xl lg:mx-auto">
+                <img src="https://html.quomodosoft.com/aball/aball/assets/images/brand/brand-item-1.png" class="mx-5 my-5" alt="">
+                <img src="https://html.quomodosoft.com/aball/aball/assets/images/brand/brand-item-2.png" class="mx-5 my-5" alt="">
+                <img src="https://html.quomodosoft.com/aball/aball/assets/images/brand/brand-item-3.png" class="mx-5 my-5" alt="">
+                <img src="https://html.quomodosoft.com/aball/aball/assets/images/brand/brand-item-4.png" class="mx-5 my-5" alt="">
+                <img src="https://html.quomodosoft.com/aball/aball/assets/images/brand/brand-item-5.png" class="mx-5 my-5" alt="">
+                <img src="https://html.quomodosoft.com/aball/aball/assets/images/brand/brand-item-1.png" class="mx-5 my-5" alt="">
+                <img src="https://html.quomodosoft.com/aball/aball/assets/images/brand/brand-item-4.png" class="mx-5 my-5" alt="">
+                <img src="https://html.quomodosoft.com/aball/aball/assets/images/brand/brand-item-2.png" class="mx-5 my-5" alt="">
+                <img src="https://html.quomodosoft.com/aball/aball/assets/images/brand/brand-item-5.png" class="mx-5 my-5" alt="">
+                <img src="https://html.quomodosoft.com/aball/aball/assets/images/brand/brand-item-3.png" class="mx-5 my-5" alt="">
+            </div>
+        </div>
+    </section>
+    <section class="bg-black text-white py-10">
+        <div class="container flex flex-wrap lg:max-w-7xl mx-auto">
+            <div class="w-full lg:w-1/2">
+                <h1 class="text-4xl font-bold">Simple pricing for advanced app UI, UX design.</h1>
+                <p class="py-10">Over 30% of app fail because they are designed by stakeholders for stakeholders through an “opinion-driven process”.</p>
+                <p class="pb-10">We begin each project with quantitative and qualitative research to remove guesswork and learn exactly what your users want. After all, we can’t help you accomplish your goals without helping.</p>
+                <div class="border-l-4 pl-2 border-blue-500">
+                    <p class="py-2"><i class="fa-regular fa-paper-plane mr-2"></i> hello@brandingname.com</p>
+                    <p class="py-2"><i class="fa-solid fa-phone mr-2"></i> +7 964 523 79 28</p>
+                </div>
+            </div>
+            <div class="w-full my-10 lg:w-1/2">
+                <div class="w-[500px] justify-center mx-auto self-center text-black bg-white p-10">
+                    <h1 class="text-4xl font-bold">Pricing</h1>
+                    <p class="py-5">Brand is a collective of young, up coming latral thinkers who would describe</p>
+                    <div class="flex my-1">
+                        <div class="w-96">
+                            <p class=""><i class="fa-solid fa-circle-check mr-2 text-blue-500"></i>UX Research</p>
+                        </div>
+                        <div class="w-10">
+                            <p class="">Free</p>
+                        </div>
+                    </div>
+                    <div class="flex my-1">
+                        <div class="w-96">
+                            <p class=""><i class="fa-solid fa-circle-check mr-2 text-blue-500"></i> Wireframe Design</p>
+                        </div>
+                        <div class="w-10">
+                            <p class="">Free</p>
+                        </div>
+                    </div>
+                    <div class="flex my-1">
+                        <div class="w-96">
+                            <p class=""><i class="fa-solid fa-circle-check mr-2 text-blue-500"></i>Prototype</p>
+                        </div>
+                        <div class="w-10">
+                            <p class="">$86</p>
+                        </div>
+                    </div>
+                    <div class="flex my-1">
+                        <div class="w-96">
+                            <p class=""><i class="fa-solid fa-circle-check mr-2 text-blue-500"></i>App Design (Per screen)</p>
+                        </div>
+                        <div class="w-10">
+                            <p class="">$70</p>
+                        </div>
+                    </div>
+                    <div class="flex my-1">
+                        <div class="w-96">
+                            <p class=""><i class="fa-solid fa-circle-check mr-2 text-blue-500"></i>Modal Screens (Per screen)
+                            </p>
+                        </div>
+                        <div class="w-10">
+                            <p class="">$50</p>
+                        </div>
+                    </div>
+                    <div class="flex my-1">
+                        <div class="w-96">
+                            <p class=""><i class="fa-solid fa-circle-check mr-2 text-blue-500"></i>Revisions (Per revisions)
+                            </p>
+                        </div>
+                        <div class="w-10">
+                            <p class="">$30</p>
+                        </div>
+                    </div>
+                    <div class="my-10">
+                        <a href="" class="w-full text-center px-36 py-5 bg-red-500 text-white hover:bg-blue-500 duration-300">Free Consultation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="feature" class="max-w-7xl mx-auto pt-14 pb-12"> 
+        <div class="container ">
+            <div class="flex flex-wrap">
+                <div class="w-full lg:w-1/2 text-left lg:max-w-xl mx-auto">
+                    <h1 class="text-3xl my-2 lg:text-6xl font-bold font-Oswald text-black">My Latest Article</h1>
+                </div>
+                <div class="w-full lg:w-1/2 text-left max-w-md self-center mx-auto">
+                  <p class="px-2 text-lg">From research and strategy to design and implementation, we partner with some of the world’s most impactful companies to transform their brands and businesses.</p>
+                </div>
+            </div>
+            <div class="flex flex-wrap mx-auto mt-10 justify-center">
+               <div class="w-full lg:w-[500px]">
+                <img src="https://html.quomodosoft.com/aball/aball/assets/images/article-thumb-1.png" alt="">
+                <div class="flex my-5">
+                    <p class="text-red-500 mr-2">TECHNOLOGY </p>
+                    <p>April 26, 2020 </p>
+                </div>
+                <h1 class="text-2xl font-bold">Unlocking Design for a New Generation (Theo Strauss, Stanford)</h1>
+                <p class="py-2">From research and strategy to and implementation, we partner with some of the world’s most impactful companies to transform brands and businesses.</p>
+               </div>
+               <div class="w-full lg:w-[600px] px-5">
+                <div class="w-full my-2">
+                    <div class="flex">
+                        <div class="lg:w-[300px] mr-2">
+                            <img src="https://html.quomodosoft.com/aball/aball/assets/images/article-thumb-2.png" alt="">
+                        </div>
+                        <div class="w-[600px]">
+                            <h1 class="text-lg font-bold">Miami woman deliver her powerful winds kept help from nuture…</h1>
+                            <p class="py-2">From research and strategy to design and implementation, we partner with some of the world’s.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full my-2">
+                    <div class="flex">
+                        <div class="lg:w-[300px] mr-2">
+                            <img src="https://html.quomodosoft.com/aball/aball/assets/images/article-thumb-3.png" alt="">
+                        </div>
+                        <div class="w-[600px]">
+                            <h1 class="text-lg font-bold">Miami woman deliver her powerful winds kept help from nuture…</h1>
+                            <p class="py-2">From research and strategy to design and implementation, we partner with some of the world’s.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full my-2">
+                    <div class="flex">
+                        <div class="lg:w-[300px] mr-2">
+                            <img src="https://html.quomodosoft.com/aball/aball/assets/images/article-thumb-4.png" alt="">
+                        </div>
+                        <div class="w-[600px]">
+                            <h1 class="text-lg font-bold">Miami woman deliver her powerful winds kept help from nuture…</h1>
+                            <p class="py-2">From research and strategy to design and implementation, we partner with some of the world’s.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-[url('./assets/bg.jpg')] bg-cover bg-center ">
+        <div class="bg-black/70 py-20">
+            <div class="container">
+                <div class="w-full px-10">
+                    <h1 class="text-5xl font-bold text-white max-w-xl">
+                        Ready to get started?
+                        Contact us!</h1>
+                        <div class="flex flex-col lg:flex-row lg:w-[600px] bg-white rounded-xl my-10 shadow-lg overflow-hidden">
+                            <div class="w-full py-16 px-12">
+                              <h2  class="text-3xl mb-4 font-bold">Get in Touch</h2>
+                              <p class="mb-4">
+                                Give us a call or drop by anytime, we endeavour to
+            answer all enquiries within 24 hours.
+                              </p>
+                              <form action="#">
+                                <div class="grid grid-cols-2 gap-5">
+                                  <input type="text" placeholder="Your Name" class="border border-gray-400 py-1 rounded-md ring-0 px-2">
+                                  <input type="email" placeholder="Email address" class="border border-gray-400 py-1 rounded-md ring-0 px-2">
+                                </div>
+                                <div class="grid pt-5 grid-cols-2 gap-5">
+                                  <input type="text" placeholder="Telephone" class="border border-gray-400 py-1 rounded-md ring-0 px-2">
+                                  <input type="email" placeholder="Location" class="border border-gray-400 py-1 rounded-md ring-0 px-2">
+                                </div>
+                                <div class="mt-5">
+                                  <input type="text" placeholder="message" class="border border-gray-400 py-1 px-2 h-20 rounded-md ring-0 w-full">
+                                </div>
+                                <div class="mt-5">
+                                  <input type="checkbox" class="border border-gray-400">
+                                  <span>
+                                    I agree to the<a href="#" class="text-red-500 hover:text-red-800 duration-300 font-semibold"> data protection</a>  regulations </a> 
+                                  </span>
+                                </div>
+                                <div class="mt-5">
+                                  <button class="w-full bg-red-500 hover:bg-blue-500 duration-300 py-3 text-center text-white">FREE CONSULTATION</button>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                </div>
+             
+            </div>
+          </div>
+          <script type="module" src="/main.js"></script>
+    </section>
+    <footer class="bg-slate-100 pt-24 pb-12">
+        <div class="container">
+            <div class="flex max-w-7xl mx-auto flex-wrap justify-center">
+                <div class="w-full px-4 mb-12 text-red-500 font-medium md:w-1/3">
+                    <img src="https://html.quomodosoft.com/aball/aball/assets/images/logo-3.png" alt="">
+                </div>
+                <div class="w-full px-10 mb-12 text-red-500 font-medium md:w-1/3">
+                    <h3 class="font-semibold text-md lang-link text-red-500 mb-5 border-b-2 border-red-500">Want to collaborate?</h3>
+                    <h3 class="font-semibold text-md lang-link text-red-500  ">Work with us</h3>
+                    <h3 class="font-semibold text-xl lang-link text-red-500 mb-10 ">Hello.business@brand.com</h3>
+                    <h3 class="font-semibold text-md lang-link text-red-500 mb-5 border-b-2 border-red-500">View on maps</h3>
+                    <h3 class="font-semibold text-md lang-link text-red-500  ">Corporate office</h3>
+                    <h3 class="font-semibold text-xl lang-link text-red-500 mb-5 ">Study Meeting 19, 4th floor DK-1455 Copenhagen</h3>
+                </div>
+                <div class="w-full px-10 mb-12 text-red-500 font-medium md:w-1/3">
+                    <h3 class="font-semibold text-md lang-link text-red-500 mb-5 border-b-2 border-red-500">What to say hi?</h3>
+                    <h3 class="font-semibold text-md lang-link text-red-500  ">General inquires</h3>
+                    <h3 class="font-semibold text-xl lang-link text-red-500 mb-10 ">Hello@brand.com</h3>
+                    <h3 class="font-semibold text-md lang-link text-red-500 mb-5 border-b-2 border-red-500">Join Our Social Community</h3>
+                    <h3 class="font-semibold text-md lang-link text-red-500  ">Follow us</h3>
+                    <div class="flex">
+                        <a href="#" class="text-2xl mx-2 text-red-500 hover:text-red-700 duration-300 ease-in-out transition-all"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="text-2xl mx-2 text-red-500 hover:text-red-700 duration-300 ease-in-out transition-all"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" class="text-2xl mx-2 text-red-500 hover:text-red-700 duration-300 ease-in-out transition-all"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+        </div>
+        </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,570 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Document Meta-->
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <!-- IE Compatibility Meta-->
+        <meta name="author" content="zytheme"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+        <meta name="description" content="Multi-purpose Business html5 landing page"/>
+        <!-- <link href="https://gitkreatif.com/wp-content/uploads/2021/03/cropped-Favicon-Git-Kreatif-32x32.png" rel="icon"/> -->
+        <!-- link cdn tailwindcss -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- link icon -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.96w-96 text-center max-w-xs 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+          </svg>
+          <!-- animasi refresh
+          <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        /> -->
+        
+        <!-- lilita one start -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+        <!-- lilita one stop -->
+        <!-- Oswold & Roboto start -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <!-- Oswold & Roboto stop -->
+        <!-- jost start -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <!-- jost stop -->
+        <!-- playfair start -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <!-- playfair stop -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dimze</title>
+        <script>
+            tailwind.config = {
+                darkMode:"class",
+              theme: {
+                container:{
+                    center: true,
+                    padding: '20px',
+                },
+                extend: {
+                  colors: {
+                    birmud: '#6ad3e5',
+                    biru: '#00b0d3',
+                    gelap: '#0f172a',
+                    gelap1: '#1e293b',
+                    pdng: '#ffffff',
+                    ptng: '#ababab',
+                    birtu: '#1d4ed8',
+                    toska: '#333333',
+                    ijo: '#49b970',
+                  },
+                    backgroundImage: {
+                    // background gambar
+
+                    // example: 'pict': 'url("https://hanafifebriansyah.vercel.app/assets/profil/bg.png")',
+                    },
+                    fontFamily: {
+                        Lile:['Lilita One'],
+                        Oswald:['Oswald'],
+                        jos:['Jost'],
+                        play:['Playfair Display'],
+                    },
+                  screen:{
+                    '2xl' : '1400px',
+                  }
+                }
+              }
+            }
+        </script>
+        <style type="text/tailwindcss">
+            body,html {
+                scroll-behavior: smooth;
+                font-family: 'Roboto',sans-serif;
+                color: #64748b;
+
+            }
+            .nav-fixed{
+                @apply fixed z-50 py-5 bg-white/50 dark:bg-black/50 text-black transition duration-200 ease-in-out;
+                backdrop-filter: blur(5px);
+                box-shadow: inset 0 -1px 0 0 rgba(0,0,0,0.1);
+            }
+        
+            .nav-fixed{
+                @apply lg:bg-white/30  lg:dark:bg-black/30 text-black lg:dark:text-slate-100 lg:text-center lg:backdrop-blur-sm lg:shadow-lg lg:p-1 lg:fixed lg:w-full  transition-all duration-500 ease-in-out lg:z-50;
+            }
+            .nav-fixed > div:nth-child(1){
+                @apply lg:mx-auto;
+            }
+            .nav-fixed > div:nth-child(3){
+                @apply lg:space-x-4;
+            }
+            .hamburger-line{
+                 @apply w-[30px] h-1 my-1 rounded-md block bg-toska;
+            }
+            .nav-line2{
+                 @apply bg-white/30 dark:bg-black/30 md:bg-transparent md:dark:bg-transparent shadow-2xl md:shadow-none lg:bg-transparent lg:dark:bg-transparent transition duration-200 ease-in-out;
+            }
+            .hamburger-active > span:nth-child(1){
+                 @apply  rotate-45 transition;
+            }
+            .hamburger-active > span:nth-child(2){
+                 @apply scale-0;
+            }
+            .hamburger-active > span:nth-child(3){
+                 @apply origin-bottom-left -rotate-45;
+            }
+            #hamburger{
+                @apply rounded-lg bg-slate-100 p-1;
+            }
+
+        </style>
+    </head>
+    <body>        
+    <header class="bg-transparent container pt-6 absolute w-full font-semibold transition-all ease-in-out duration-500 flex items-center max-w-full z-50 ">
+            <div class="container">
+                <div class="flex items-center justify-between relative">
+                    <div class="px-4">
+                     <img src="https://dizme.vercel.app/img/logo/logo.png" alt="karir anak" class="w-44 text-center max-w-xs ">
+                    </div>
+                    <div class="flex item-center px-4">
+                        <button id="hamburger" name="hamburger" type="button" class="block right-4 lg:hidden  transition duration-200">
+                            <span class="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
+                            <span class="hamburger-line transition duration-300 ease-in-out"></span>
+                            <span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
+                        </button>
+                        
+                        <nav  id="nav-menu" class="hidden absolute mx-auto py-5 nav-line2 mt-1 shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:py-1 lg:block lg:relative lg:max-w-full lg:bg-transparent lg:shadow-none lg:rounded-none">
+                            <ul class="block lg:flex lg:text-md items-center font-play"> 
+                                <li class="group ">
+                                    <a href="#home" class="hover:text-orange-500 relative group animate__animated animate__fadeInRight py-2 mx-4  flex transition duration-400 ease-in-out">
+                                        <i class="sm:inline lg:hidden fas fa-home mr-2"></i>
+                                        <span class="lang-home">beranda</span>
+                                    </a></li>
+                                <li class="group">
+                                    <a href="#about" class=" hover:text-orange-500 animate__animated animate__fadeInRight py-2 mx-4   flex  transition duration-400 ease-in-out"><i class="sm:inline lg:hidden fas fa-info-circle mr-2"></i><span class="lang-about"> About</span></a></li>
+                                <li class="group">
+                                    <a href="#port" class=" hover:text-orange-500 animate__animated animate__fadeInRight py-2 mx-4   flex  transition duration-400 ease-in-out"><i class="sm:inline lg:hidden fas fa-info-circle mr-2"></i><span class="lang-about"> Portfolio</span></a></li>
+                                <li class="group">
+                                    <a href="#service" class=" hover:text-orange-500 animate__animated animate__fadeInRight py-2 mx-4   flex  transition duration-400 ease-in-out"><i class="sm:inline lg:hidden fas fa-info-circle mr-2"></i><span class="lang-about"> Service</span></a></li>
+                                <li class="group">
+                                    <a href="#blog" class=" hover:text-orange-500 animate__animated animate__fadeInRight py-2 mx-4  flex  transition duration-400 ease-in-out"><i class="sm:inline lg:hidden fas fa-code mr-2"></i><span class="lang-portp">Blog</span></a></li>
+                                    <li class="group">
+                                    <a href="#contact" class=" hover:text-orange-500 animate__animated animate__fadeInRight py-2 mx-4  flex  transition duration-400 ease-in-out"><i class="sm:inline lg:hidden fas  fa-address-card mr-2"></i><span class="lang-contact">Contact
+                                    </span></a></li>                           
+                                    <a href="#download" class="hidden  p-4 border border-transparent hover:border-orange-400 text-white hover:text-orange-500 bg-orange-400 hover:bg-transparent rounded-full animate__animated animate__fadeInRight py-2 mx-4  lg:flex px-10 transition-all duration-400 ease-in-out">Download CV</a>
+                                </ul>
+                            </nav>
+                    </div>
+                </div>
+            </div>
+    </header>
+    <section id="home" class="pt-40  lg:max-w-7xl mx-auto"> 
+        <div class="container">
+            <div class="flex flex-wrap">
+                <div class="w-full lg:hidden lg:mt-0 mb-7 lg:w-1/2 font-jos flex flex-wrap relative self-center px-4 animate__animated animate__fadeInDown transition duration-300">
+                    <img src="https://dizme.vercel.app/img/slider/avatar.png" class="w-[500px] mx-auto" alt="">
+                </div>
+                <div class="w-full lg:w-1/2 font-jos flex flex-wrap relative self-center px-4 animate__animated animate__fadeInDown transition duration-300">
+                    <h1 class="w-full font-extrabold mb-2 mx-auto text-xl lg:text-2xl text-orange-500">Hello, I'm</h1>
+                    <h1 class="w-full font-extrabold mb-2 mx-auto text-4xl lg:text-5xl">James Smith</h1>
+                    <h1 class="w-full font-extrabold mb-2 mx-auto text-2xl lg:text-2xl">A <span class="text-green-500">Creative Designer</span> From <span class="text-blue-400">New York</span></h1>
+                    <p class="py-2">I'm creative designer based in New York, and I'm very passionate and dedicated to my work.</p>
+                    <div class="flex">
+                        <div class="my-5">
+                            <a href="#pricing" class="  p-4 border border-transparent hover:border-orange-600 text-white hover:text-orange-500 bg-orange-500 hover:bg-transparent rounded-xl animate__animated animate__fadeInRight py-2 lg:flex px-10 transition-all duration-400 ease-in-out font-bold">About Me
+                            </a>
+                        </div>
+                        <div class="m-2">
+                            <a href="#" class="text-2xl lg:ml-3"><i class="fa-brands fa-instagram self-center my-5 hover:text-orange-500 duration-300"></i></a>
+                            <a href="#" class="text-2xl lg:ml-3"><i class="fa-brands fa-twitter self-center my-5 hover:text-orange-500 duration-300"></i></a>
+                            <a href="#" class="text-2xl lg:ml-3"><i class="fa-brands fa-whatsapp self-center my-5 hover:text-orange-500 duration-300"></i></a>
+                            <a href="#" class="text-2xl lg:ml-3"><i class="fa-brands fa-facebook self-center my-5 hover:text-orange-500 duration-300"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full hidden lg:mt-0 mb-7 lg:w-1/2 font-jos lg:flex flex-wrap relative self-center px-4 animate__animated animate__fadeInDown transition duration-300">
+                    <img src="https://dizme.vercel.app/img/slider/avatar.png" class="w-[500px] mx-auto" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="#"  class="pt-36 pb-[9rem] text-black">
+        <div class="container lg:max-w-7xl mx-auto">
+            <div class="flex flex-wrap">
+                <div class="w-full px-4 mb-10 md:w-1/3 text-center">
+                    <i aria-hidden="true" class="w-14 h-14 mr-3 rounded-full p-2 text-3xl border border-ptng hover:border-biru hover:bg-biru hover:text-white transition duration-300 ease-in-out dark:text-slate-100 fas fa-pen-nib"></i>
+                    <h2  class="font-bold lang-journey1 text-gelap text-3xl mt-10 dark:text-slate-100 mb-5 mx-auto max-w-md lg:text-4xl ">Pixel Perfect</h2>
+                    <p class=" lang-birthplace text-md text-slate-500 dark:text-slate-200 max-w-sm mx-auto lg:text-md">Most common methods for designing websites that work well on desktop is responsive and adaptive design.​</p>
+                </div>
+                <div class="w-full px-4 mb-10 md:w-1/3 text-center">
+                    <i aria-hidden="true" class="w-14 h-14 mr-3 rounded-full p-2 text-3xl border border-ptng hover:border-biru hover:bg-biru hover:text-white transition duration-300 ease-in-out dark:text-slate-100 fas fa-medal"></i>
+                    <h2  class="font-bold lang-journey1 text-gelap text-3xl mt-10 dark:text-slate-100 mb-5 mx-auto max-w-md lg:text-4xl ">High Quality</h2>
+                    <p class=" lang-birthplace text-md text-slate-500 dark:text-slate-200 max-w-sm mx-auto lg:text-md">Most common methods for designing websites that work well on desktop is responsive and adaptive design.</p>
+                </div>
+                <div class="w-full px-4 mb-10 md:w-1/3 text-center">
+                    <i aria-hidden="true" class="w-14 h-14 mr-3 rounded-full p-2 text-3xl border border-ptng hover:border-biru hover:bg-biru hover:text-white transition duration-300 ease-in-out dark:text-slate-100 fas fa-star"></i>
+                    <h2  class="font-bold lang-journey1 text-gelap text-3xl mt-10 dark:text-slate-100 mb-5 mx-auto max-w-md lg:text-4xl ">Awesome Idea</h2>
+                    <p class=" lang-birthplace text-md text-slate-500 dark:text-slate-200 max-w-sm mx-auto lg:text-md">Most common methods for designing websites that work well on desktop is responsive and adaptive design.</p>
+                </div>
+    </section>
+    <section id="about" class="py-20  lg:max-w-7xl mx-auto"> 
+        <div class="container">
+            <div class="flex flex-wrap">
+                <div class="w-full lg:mt-0 mb-7 lg:w-1/2 font-jos flex flex-wrap relative self-center px-4 animate__animated animate__fadeInDown transition duration-300">
+                    <img src="https://dizme.vercel.app/img/about/1.jpg" class="w-[500px] mx-auto" alt="">
+                </div>
+                <div class="w-full lg:w-1/2 font-jos flex flex-wrap relative self-center px-4 animate__animated animate__fadeInDown transition duration-300">
+                    <h1 class="w-full font-extrabold mb-2 mx-auto text-xl lg:text-2xl text-orange-500">I'm a Designer</h1>
+                    <h1 class="w-full font-extrabold mb-2 mx-auto text-4xl lg:text-5xl">I Can Design Anything You Want</h1>
+                    <p class="py-2">Hello there! I'm a web designer, and I'm very passionate and dedicated to my work. With 20 years experience as a professional web developer, I have acquired the skills and knowledge necessary to make your project a success. I enjoy every step of the design process, from discussion and collaboration.</p>
+                    <div class="flex">
+                        <div class="my-5">
+                            <a href="#pricing" class="  p-4 border border-transparent hover:border-orange-600 text-white hover:text-orange-500 bg-orange-500 hover:bg-transparent rounded-xl animate__animated animate__fadeInRight py-2 lg:flex px-10 transition-all duration-400 ease-in-out font-bold">Hire Me
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="port" class="py-20  lg:max-w-7xl mx-auto"> 
+        <div class="container">
+            <div class="flex my-5 justify-center font-bold">
+                <button id="all" class="mx-3 text-red-500 focus:outline-none">All</button>
+                <button id="yt" class="mx-3 focus:outline-none">Youtube</button>
+                <button id="vimeo" class="mx-3 focus:outline-none">Vimeo</button>
+                <button id="sound" class="mx-3 focus:outline-none">Soundcloud</button>
+                <button id="pop" class="mx-3 focus:outline-none">Popup</button>
+                <button id="detail" class="mx-3 focus:outline-none">Detail</button>
+            </div>
+            
+            <div class="justify-center">
+                <div id="allText" class="flex flex-wrap justify-center">
+                    <div class="w-80">
+                        <img src="https://dizme.vercel.app/img/portfolio/1.jpg" class="w-80 h-52 my-2 object-cover rounded-xl hover:scale-95 duration-300" alt="">
+                        <img src="https://dizme.vercel.app/img/portfolio/2.jpg" class="w-80 h-52 my-2 object-cover rounded-xl hover:scale-95 duration-300" alt="">
+                    </div>
+                    <img src="https://dizme.vercel.app/img/portfolio/3.jpg" class="w-72 mx-2 object-cover rounded-xl hover:scale-95 duration-300 my-2" alt="">
+                    <div class="w-80">
+                        <img src="https://dizme.vercel.app/img/portfolio/4.jpg" class="w-80 h-52 my-2 object-cover rounded-xl hover:scale-95 duration-300" alt="">
+                        <img src="https://dizme.vercel.app/img/portfolio/5.jpg" class="w-80 h-52 my-2 object-cover rounded-xl hover:scale-95 duration-300" alt="">
+                    </div>
+                </div>
+                <div id="ytText" class="hidden">
+                    <img src="https://dizme.vercel.app/img/portfolio/1.jpg" class="w-72 h-96 my-2 object-cover rounded-xl hover:scale-95 duration-300" alt="">
+                </div>
+                <div id="vimeoText" class="hidden">
+                    <img src="https://dizme.vercel.app/img/portfolio/2.jpg" class="w-80 h-52 my-2 object-cover rounded-xl hover:scale-95 duration-300" alt="">
+                </div>
+                <div id="soundText" class="hidden">
+                    <img src="https://dizme.vercel.app/img/portfolio/3.jpg" class="w-72 h-96 my-2 object-cover rounded-xl hover:scale-95 duration-300" alt="">
+                </div>
+                <div id="popText" class="hidden">
+                    <div class="flex flex-wrap">
+                        <img src="https://dizme.vercel.app/img/portfolio/5.jpg" class="w-72 h-96 my-2 object-cover rounded-xl hover:scale-95 duration-300" alt="">
+                    <img src="https://dizme.vercel.app/img/portfolio/4.jpg" class="w-72 h-52 mx-2 my-2 object-cover rounded-xl hover:scale-95 duration-300" alt="">
+                    </div>
+                </div>
+                <div id="detailText" class="hidden">
+                    <img src="https://dizme.vercel.app/img/portfolio/6.jpg" class="w-72 h-96 my-2 object-cover rounded-xl hover:scale-95 duration-300" alt="">
+                </div>
+            </div>
+    </section>
+    <section id="#" class="pt-40  lg:max-w-7xl mx-auto"> 
+        <div class="container">
+            <div class="flex flex-wrap">
+                <div class="w-full lg:hidden lg:mt-0 mb-7 lg:w-1/2 font-jos flex flex-wrap relative self-center px-4 animate__animated animate__fadeInDown transition duration-300">
+                    <img src="https://dizme.vercel.app/img/skills/1.jpg" class="w-[500px] mx-auto" alt="">
+                </div>
+                <div class="w-full lg:w-1/2 font-jos flex flex-wrap relative self-center px-4 animate__animated animate__fadeInDown transition duration-300">
+                    <h1 class="w-full font-extrabold mb-2 mx-auto text-xl lg:text-2xl text-orange-500">Design is Life</h1>
+                    <h1 class="w-full font-extrabold mb-2 mx-auto text-4xl lg:text-4xl">I Develop Skills Regularly to Keep Me Update</h1>
+                    <p class="py-2">Most common methods for designing websites that work well on desktop is responsive and adaptive design.</p>
+                    <div class="h-[3.3rem] w-[400px] py-2 rounded-lg shadow-md">
+                        <div class="flex justify-between items-center mb-2">
+                            <div class="w-80 p-2 rounded-l-xl bg-orange-500">
+                                <p class="text-lg text-white font-semibold">Illustrator</p>
+
+                            </div>
+                            <p class="font-semibold text-orange-500 pr-2 pl-1">85%</p>
+                        </div>
+                    </div>
+                    <div class="h-[3.3rem] w-[400px] py-2 rounded-lg shadow-md">
+                        <div class="flex justify-between items-center mb-2">
+                            <div class="w-96 p-2 rounded-l-xl bg-purple-500">
+                                <p class="text-lg text-white font-semibold">Photoshop</p>
+
+                            </div>
+                            <p class="font-semibold text-purple-500 pr-2 pl-1">95%</p>
+                        </div>
+                    </div>
+                    <div class="h-[3.3rem] w-[400px] py-2 rounded-lg shadow-md">
+                        <div class="flex justify-between items-center mb-2">
+                            <div class="w-72 p-2 rounded-l-xl bg-green-500">
+                                <p class="text-lg text-white font-semibold">Figma</p>
+
+                            </div>
+                            <p class="font-semibold text-green-500 pr-2 pl-1">75%</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full hidden lg:mt-0 mb-7 lg:w-1/2 font-jos lg:flex flex-wrap relative self-center px-4 animate__animated animate__fadeInDown transition duration-300">
+                    <img src="https://dizme.vercel.app/img/skills/1.jpg" class="w-[500px] mx-auto" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="service" class="pt-40  lg:max-w-7xl mx-auto"> 
+        <div class="py-20 lg:max-w-7xl mx-auto">
+            <h1 class="text-center text-orange-500">SERVICE</h1>
+            <h1 class="text-center font-bold text-4xl">What I Do for Clients</h1>
+            <p class="text-center max-w-xl mx-auto mb-10">Most common methods for designing websites that work well on desktop is responsive and adaptive design</p>
+            <div class="flex flex-wrap justify-center">
+                <div class="w-52 border border-orange-500 p-4 rounded-xl lg:w-[450px] flex m-3 hover:scale-105 duration-300">
+                    <!-- Image -->
+                    <div class="px-5 self-center">
+                        <i class="fa-brands fa-angrycreative py-3 text-5xl text-orange-500 rounded-full"></i>
+                    </div>
+                    <div class="px-2 py-2">
+                        <!-- Heading -->
+                        <!-- Description -->
+                        <h1 class="font-bold text-2xl text-black">Creative Design</h1>
+                        <h1 class="font-bold my-2 text-md text-blcenterue-500">Starts From <span class="text-orange-500">$99</span></h1>
+                        <p class="text-sm text-gray-600">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit mollitia ipsum rerum explicabo eum sequi aliquid itaque sapiente, architecto porro?</p>
+                    </div>
+                </div>
+                <div class="w-52 border border-orange-500 p-4 rounded-xl lg:w-[450px] flex m-3 hover:scale-105 duration-300">
+                    <!-- Image -->
+                    <div class="px-5 self-center">
+                        <i class="fa-brands fa-slack py-3 text-5xl text-orange-500 rounded-full"></i>
+                    </div>
+                    <div class="px-2 py-2">
+                        <!-- Heading -->
+                        <!-- Description -->
+                        <h1 class="font-bold text-2xl text-black">Graphic Design</h1>
+                        <h1 class="font-bold my-2 text-md text-blcenterue-500">Starts From <span class="text-orange-500">$199</span></h1>
+                        <p class="text-sm text-gray-600">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit mollitia ipsum rerum explicabo eum sequi aliquid itaque sapiente, architecto porro?</p>
+                    </div>
+                </div>
+                <div class="w-52 border border-orange-500 p-4 rounded-xl lg:w-[450px] flex m-3 hover:scale-105 duration-300">
+                    <!-- Image -->
+                    <div class="px-5 self-center">
+                        <i class="fa-brands fa-codepen py-3 text-5xl text-orange-500 rounded-full"></i>
+                    </div>
+                    <div class="px-2 py-2">
+                        <!-- Heading -->
+                        <!-- Description -->
+                        <h1 class="font-bold text-2xl text-black">UI/UX Design</h1>
+                        <h1 class="font-bold my-2 text-md text-blcenterue-500">Starts From <span class="text-orange-500">$299</span></h1>
+                        <p class="text-sm text-gray-600">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit mollitia ipsum rerum explicabo eum sequi aliquid itaque sapiente, architecto porro?</p>
+                    </div>
+                </div>
+                <div class="w-52 border border-orange-500 p-4 rounded-xl lg:w-[450px] flex m-3 hover:scale-105 duration-300">
+                    <!-- Image -->
+                    <div class="px-5 self-center">
+                        <i class="fa-regular fa-window-restore py-3 text-5xl text-orange-500 rounded-full"></i>
+                    </div>
+                    <div class="px-2 py-2">
+                        <!-- Heading -->
+                        <!-- Description -->
+                        <h1 class="font-bold text-2xl text-black">Web Design</h1>
+                        <h1 class="font-bold my-2 text-md text-blcenterue-500">Starts From <span class="text-orange-500">$399</span></h1>
+                        <p class="text-sm text-gray-600">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit mollitia ipsum rerum explicabo eum sequi aliquid itaque sapiente, architecto porro?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="#" class="py-10 "> 
+        <div class="container">
+            <div class="flex flex-wrap relative">
+                <h2 class="mx-auto text-center w-full font-bold text-2xl lg:text-2xl text-orange-500 bg-2">Testimonials</h2>
+                <h2 class="mx-auto text-center w-full font-bold text-2xl lg:text-5xl bg-2">What My Clients Say</h2>
+                <p class="text-center max-w-xl mx-auto my-1">Most common methods for designing websites that work well on desktop is responsive and adaptive design</p>
+                <div class="w-full my-5 justify-center items-center flex flex-wrap">
+                    <div class="w-60 lg:w-[500px]  p-2 mx-2 rounded-xl transform transition-all hover:-translate-y-2 duration-300">
+                        <p class="text-center">Loved the template design, documentation, customizability and the customer support from Marketify team! I am a noob in programming with very little knowledge about coding but the Marketify team helped me to launch my resume website successfully. Much recommended!
+                            </p>
+                        <div class="flex justify-center">
+                            <img src="https://th.bing.com/th/id/R.aa4589ed312ce64e215eabe951219da7?rik=o2jTYVccKRNodg&riu=http%3a%2f%2fwww.indramayujeh.com%2fwp-content%2fuploads%2f2020%2f05%2fWAWAN-1-1.jpeg&ehk=HLI4ztrLP%2fa1MA5reyrSWckYpiC5ElldEiCzQNCvpvQ%3d&risl=&pid=ImgRaw&r=0" alt="" class="w-14 m-4 rounded-full">
+                            <div class=" m-4">
+                                <p class="font-bold">Wawan</p>
+                                <p class="font-ptng text-xs">Designer Visualx.id</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="#" class="py-10  lg:max-w-7xl mx-auto"> 
+      <div class="container">
+        <div class="flex flex-wrap justify-center max-w-5xl mx-auto">
+            <img src="https://dizme.vercel.app/img/partners/dark/1.png" class="w-44 my-2 mx-4" alt="">
+            <img src="https://dizme.vercel.app/img/partners/dark/2.png" class="w-44 my-2 mx-4" alt="">
+            <img src="https://dizme.vercel.app/img/partners/dark/3.png" class="w-44 my-2 mx-4" alt="">
+            <img src="https://dizme.vercel.app/img/partners/dark/4.png" class="w-44 my-2 mx-4" alt="">
+            <img src="https://dizme.vercel.app/img/partners/dark/5.png" class="w-44 my-2 mx-4" alt="">
+            <img src="https://dizme.vercel.app/img/partners/dark/6.png" class="w-44 my-2 mx-4" alt="">
+            <img src="https://dizme.vercel.app/img/partners/dark/7.png" class="w-44 my-2 mx-4" alt="">
+            <img src="https://dizme.vercel.app/img/partners/dark/8.png" class="w-44 my-2 mx-4" alt="">
+        </div>
+      </div>
+    </section>
+    <section id="blog" class="py-10 "> 
+        <div class="container">
+            <div class="flex flex-wrap relative">
+                <h2 class="mx-auto text-center w-full font-bold text-2xl lg:text-2xl text-orange-500 bg-2">From My Blog</h2>
+                <h2 class="mx-auto text-center w-full font-bold text-2xl max-w-3xl lg:text-5xl bg-2">Our Recent Updates, Blog, Tips, Tricks & More</h2>
+            </div>
+            <div class="flex flex-wrap justify-center my-5">
+                <div class="w-full lg:w-[400px] mx-2">
+                    <img src="https://html.quomodosoft.com/aball/aball/assets/images/article-thumb-1.png" class="rounded-xl" alt="">
+                    <div class="flex my-5">
+                        <p class="text-red-500 mr-2 w-[800px]">Web Development </p>
+                        <p class="w-32">23 Dec</p>
+                    </div>
+                    <h1 class="text-2xl font-bold">Unlocking Design for a New Generation (Theo Strauss, Stanford)</h1>
+                </div>
+                <div class="w-full lg:w-[400px] mx-2">
+                    <img src="https://html.quomodosoft.com/aball/aball/assets/images/article-thumb-1.png" class="rounded-xl" alt="">
+                    <div class="flex my-5">
+                        <p class="text-red-500 mr-2 w-[800px]">Web Development </p>
+                        <p class="w-32">23 Dec</p>
+                    </div>
+                    <h1 class="text-2xl font-bold">Unlocking Design for a New Generation (Theo Strauss, Stanford)</h1>
+                </div>
+                <div class="w-full lg:w-[400px] mx-2">
+                    <img src="https://html.quomodosoft.com/aball/aball/assets/images/article-thumb-1.png" class="rounded-xl" alt="">
+                    <div class="flex my-5">
+                        <p class="text-red-500 mr-2 w-[800px]">Web Development </p>
+                        <p class="w-32">23 Dec</p>
+                    </div>
+                    <h1 class="text-2xl font-bold">Unlocking Design for a New Generation (Theo Strauss, Stanford)</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="#" class="py-10 lg:max-w-7xl mx-auto"> 
+        <div class="container">
+            <div class="flex flex-wrap border max-w-5xl mx-auto bg-orange-500 border-transparent text-white shadow-xl duration-300 transition-all ease-in-out p-10 rounded-xl">
+                <div class="lg:w-1/2 w-full">
+                    <p class="font-bold text-lg">Subscribe Now</p>
+                    <h1 class="font-bold text-5xl">Get My Newsletter</h1>
+                    <p class="font-bold text-md">Get latest news, updates, tips and trics in your inbox</p>
+                </div>
+                <div class="lg:w-1/2 w-full">
+                    <div class="flex pt-5">
+                        <div class="mb-3 flex flex-wrap w-auto ring-1 text-orange-400 ring-transparent p-3 rounded-md focus:outline-none focus:ring-orange-500  focus:border-orange-600">
+                            <input type="text" id="no" name="email" placeholder="Enter your email" required class="w-52 p-3 focus:outline-none  rounded-l-xl bg-white text-white duration-300">
+                            <input type="submit" value="Send Now" class="bg-red-500 rounded-r-xl p-3 text-white">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="py-10 lg:max-w-7xl mx-auto"> 
+        <div class="container">
+            <div class="flex flex-wrap relative">
+                <h2 class="mx-auto text-center w-full font-bold text-2xl lg:text-2xl text-orange-500 bg-2">Contact Me</h2>
+                <h2 class="mx-auto text-center w-full font-bold text-2xl lg:text-5xl bg-2">I Want To Hear From You</h2>
+                <p class="text-center max-w-xl mx-auto mt-1">Please fill out the form on this section to contact with me. Or call between 9:00 a.m. and 8:00 p.m. ET, Monday through Friday</p>
+                <div class="w-full flex flex-wrap my-10">
+                    <div class="lg:w-1/2 w-full">
+                        <div class="w-52 lg:w-[450px] flex m-3 hover:scale-105 duration-300">
+                            <!-- Image -->
+                            <div class="px-5 self-center">
+                                <i class="fa-solid fa-location-dot py-3 bg-orange-500 p-4 text-5xl text-white rounded-full"></i>
+                            </div>
+                            <div class="px-2 py-2">
+                                <!-- Heading -->
+                                <!-- Description -->
+                                <h1 class="font-bold text-2xl text-black">Address</h1>
+                                <p class="text-sm text-gray-600">
+                                   20, Somewhere in world</p>
+                            </div>
+                        </div>
+                        <div class="w-52 lg:w-[450px] flex m-3 hover:scale-105 duration-300">
+                            <!-- Image -->
+                            <div class="px-5 self-center">
+                                <i class="fa-solid fa-envelope-open py-3 bg-orange-500 p-4 text-5xl text-white rounded-full"></i>
+                            </div>
+                            <div class="px-2 py-2">
+                                <!-- Heading -->
+                                <!-- Description -->
+                                <h1 class="font-bold text-2xl text-black">Email</h1>
+                                <p class="text-sm text-gray-600">
+                                    hello@dizme.com</p>
+                            </div>
+                        </div>
+                        <div class="w-52 lg:w-[450px] flex m-3 hover:scale-105 duration-300">
+                            <!-- Image -->
+                            <div class="px-5 self-center">
+                                <i class="fa-solid fa-phone py-3 bg-orange-500 p-4 text-5xl text-white rounded-full"></i>
+                            </div>
+                            <div class="px-2 py-2">
+                                <!-- Heading -->
+                                <!-- Description -->
+                                <h1 class="font-bold text-2xl text-black">Phone</h1>
+                                <p class="text-sm text-gray-600">
+                                    +123 456 7890</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2 w-full">
+                        <form action="#">
+                            <div class="grid grid-cols-2 gap-5">
+                              <input type="text" placeholder="Your Name" class="border border-gray-400 py-1 rounded-md ring-0 px-2">
+                              <input type="email" placeholder="Email address" class="border border-gray-400 py-1 rounded-md ring-0 px-2">
+                            </div>
+                            <div class="grid pt-5 grid-cols-2 gap-5">
+                              <input type="text" placeholder="Phone" class="border border-gray-400 py-1 rounded-md ring-0 px-2">
+                              <input type="email" placeholder="Subject" class="border border-gray-400 py-1 rounded-md ring-0 px-2">
+                            </div>
+                            <div class="mt-5">
+                              <input type="text" placeholder="message here" class="border border-gray-400 py-1 px-2 h-20 rounded-md ring-0 w-full">
+                            </div>
+                            <div class="mt-5">
+                              <button class="w-52 rounded-full bg-orange-500 hover:bg-red-500 duration-300 py-3 text-center text-white">Submit Now</button>
+                            </div>
+                          </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="#" class="py-10 lg:max-w-7xl mx-auto"> 
+        <div class="container">
+            <iframe class="w-full rounded-xl" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48320.39666380446!2d-73.965441!3d40.805449!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2f63c75af2d65%3A0xf45542f6cb090cc9!2s2880%20Broadway%2C%20New%20York%2C%20NY%2010025!5e0!3m2!1sen!2sus!4v1706948390981!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+    <footer class="bg-slate-800">
+        <div class="w-full pt-10 border-t border-slate-700">
+            <div class="flex flex-wrap p-5">
+                <div class="lg:w-1/2 w-full">
+                    <p class="font-medium text-sm text-slate-500 text-center">Developed with love by Codeefly © 2024</p>
+                </div>
+                <div class="lg:w-1/2 w-full flex lg:pl-52">
+                    <a href="#" class="font-medium mx-2 text-sm text-orange-500 hover:text-white duration-300 text-center">Terms & Condition</a>
+                    <a href="#" class="font-medium mx-2 text-sm text-orange-500 hover:text-white duration-300 text-center">Privacy Policy</a>
+                </div>
+            </div>
+         </div>
+
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

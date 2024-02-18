@@ -1,0 +1,24 @@
+                                       <!-- Floating Language Selector Button -->
+                                       <div class=" right-8 bottom-8">
+                                        <a class="text-base text-gelap sm:text-base lg:text-[25px] py-2 mx-8 dark:text-slate-100 animate__animated animate__fadeInRight flex group-hover:lg:text-biru group-hover:lg:bg-transparent group-hover:sm:text-white group-hover:sm:bg-biru group-hover:sm:px-4 group-hover:sm:mx-4 group-hover:sm:rounded-lg transition duration-100 ease-in-out">
+                                            <button id="languageSelectorButton">
+                                              <i class="fas fa-language mr-2"></i>
+                                              <span class="sm:inline lang-ubah lg:hidden">Ubah bahasa</span>
+                                            </button>
+                                        </a>
+                                   </div>
+                               <div id="languageModal"
+                               class="fixed z-30 top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center invisible">
+                               <div class="bg-white dark:bg-gelap text-black dark:text-white  p-8 rounded-lg max-w-md">
+                                 <h2 class="text-2xl lang-language font-bold mb-4">Pilih Bahasa</h2>
+                                 <ul class="flex flex-wrap w-full justify-center">
+                                   <li  class="mb-3 hover:bg-biru hover:text-white rounded-2xl transition-all duration-300 ease-in-out p-4"><a href="#" class="lang-title" onclick="changeLanguage('id')">Indonesia</a></li>
+                                   <li  class="mb-3 hover:bg-biru hover:text-white rounded-2xl transition-all duration-300 ease-in-out p-4"><a href="#" class="lang-title1" onclick="changeLanguage('en')">English</a></li>
+                                   <li  class="mb-3 hover:bg-biru hover:text-white rounded-2xl transition-all duration-300 ease-in-out p-4"><a href="#" class="lang-title2" onclick="changeLanguage('es')">Spanyol</a></li>
+                                   <li  class="mb-3 hover:bg-biru hover:text-white rounded-2xl transition-all duration-300 ease-in-out p-4"><a href="#" class="lang-title3" onclick="changeLanguage('ar')">Arab</a></li>
+                                   <li  class="mb-3 hover:bg-biru hover:text-white rounded-2xl transition-all duration-300 ease-in-out p-4"><a href="#" class="lang-title4" onclick="changeLanguage('ja')">Jepang</a></li>
+                                   <li  class="mb-3 hover:bg-biru hover:text-white rounded-2xl transition-all duration-300 ease-in-out p-4"><a href="#" class="lang-title5" onclick="changeLanguage('ko')">Korea</a></li>
+                                 </ul>
+                                 <button id="closeModalButton" class="mt-10  mx-40 lang-close bg-biru hover:bg-birtu hover:text-white transition-all duration-300 ease-in-out  px-4 py-2 rounded-md">Tutup</button>
+                               </div>
+                             </div>
