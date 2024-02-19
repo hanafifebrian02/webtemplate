@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Document Meta-->
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <!-- IE Compatibility Meta-->
+        <meta name="author" content="zytheme"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+        <meta name="description" content="Multi-purpose Business html5 landing page"/>
+        <link href="https://themedox.com/demo/nilos/assets/images/favicons/favicon-16x16.png" rel="icon"/>
+        <!-- link cdn tailwindcss -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- link icon -->
+        <!-- <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      /> -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.96w-96 text-center max-w-xs 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+          </svg>
+          <!-- animasi refresh
+          <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        /> -->
+        
+        <!-- lilita one start -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+        <!-- lilita one stop -->
+        <!-- Oswold & Roboto start -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <!-- Oswold & Roboto stop -->
+        <!-- jost start -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <!-- jost stop -->
+        <!-- playfair start -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <!-- playfair stop -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link
+          crossorigin="anonymous"
+          href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.css"
+          rel="stylesheet"
+        />
+        <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/ripple.js"></script>
+          <!-- stylesheet -->
+
+    </head>
+        <title>Nilos </title>
+        <script>
+            tailwind.config = {
+              theme: {
+                container:{
+                    center: true,
+                    padding: '20px',
+                },
+                extend: {
+                  colors: {
+                    birmud: '#6ad3e5',
+                    biru: '#00b0d3',
+                    gelap: '#0f172a',
+                    gelap1: '#1e293b',
+                    pdng: '#ffffff',
+                    ptng: '#ababab',
+                    birtu: '#1d4ed8',
+                    toska: '#333333',
+                    ijo: '#49b970',
+                  },
+                    backgroundImage: {
+                    // background gambar
+
+                    // example: 'pict': 'url("https://hanafifebriansyah.vercel.app/assets/profil/bg.png")',
+                    },
+                    fontFamily: {
+                        Lile:['Lilita One'],
+                        Oswald:['Oswald'],
+                        jos:['Jost'],
+                        play:['Playfair Display'],
+                        monreg:['monreg'],
+                        monul:['monul']
+                    },
+                  screen:{
+                    '2xl' : '1400px',
+                  }
+                }
+              }
+            }
+        </script>
+        <style type="text/tailwindcss">
+            @font-face {
+                font-family: monreg;
+                src: url('/assets/font/MonumentExtended-Regular.otf');
+            }
+            @font-face {
+                font-family: monul;
+                src: url('/assets/font/MonumentExtended-Ultrabold.otf');
+            }
+            @keyframes marquee {
+                0% {
+                    transform: translateX(100%);
+                }
+                100% {
+                    transform: translateX(-100%);
+                }
+            }
+            .marquee {
+                animation: marquee 15s linear infinite;
+            } 
+            body,html {
+                scroll-behavior: smooth;
+                font-family: 'Roboto',sans-serif;
+
+            }
+            .swiper-pagination {
+              bottom: 0;
+              position: relative;
+            }
+
+            .swiper-container {
+              overflow: hidden;
+            }
+            .swiper-pagination-bullet{
+              background-color:rgb(27, 211, 14);
+            }
+            .swiper-pagination-bullet-active{
+              background-color:rgb(27, 211, 14);
+            }
+            .nav-fixed{
+                @apply fixed z-50 py-5 bg-white/50 dark:bg-black/50  transition duration-200 ease-in-out;
+                backdrop-filter: blur(5px);
+                box-shadow: inset 0 -1px 0 0 rgba(0,0,0,0.1);
+            }
+        
+            .nav-fixed{
+                @apply lg:bg-white/30  lg:dark:bg-black/30  lg:dark:text-slate-100 lg:text-center lg:backdrop-blur-sm lg:shadow-lg lg:p-1 lg:fixed lg:w-full  transition-all duration-500 ease-in-out lg:z-50;
+            }
+            .nav-fixed > div:nth-child(1){
+                @apply lg:mx-auto;
+            }
+            .nav-fixed > div:nth-child(3){
+                @apply lg:space-x-4;
+            }
+            .hamburger-line{
+                 @apply w-[30px] h-1 my-1 rounded-md block bg-toska;
+            }
+            .nav-line2{
+                 @apply bg-white/30 dark:bg-black/30 md:bg-transparent md:dark:bg-transparent shadow-2xl md:shadow-none lg:bg-transparent lg:dark:bg-transparent transition duration-200 ease-in-out;
+            }
+            .hamburger-active > span:nth-child(1){
+                 @apply  rotate-45 transition;
+            }
+            .hamburger-active > span:nth-child(2){
+                 @apply scale-0;
+            }
+            .hamburger-active > span:nth-child(3){
+                 @apply origin-bottom-left -rotate-45;
+            }
+            #hamburger{
+                @apply rounded-lg bg-slate-100 p-1;
+            }
+
+        </style>
+    </head>
+    <body class="">        
+    <header class="bg-transparent container pt-6 absolute w-full font-semibold transition-all ease-in-out duration-500 flex items-center max-w-full z-50 ">
+            <div class="container">
+                <div class="flex items-center justify-between relative">
+                    <div class="px-4">
+                     <img src="https://themedox.com/demo/nilos/assets/images/resources/logo-1.png" alt="karir anak" class="w-44 text-center max-w-xs ">
+                    </div>
+                    <div class="flex item-center px-4">
+                        <button id="hamburger" name="hamburger" type="button" class="block right-4 lg:hidden transition duration-200">
+                            <svg id="icon" class="h-6 w-6 text-gray-400 cursor-pointer hover:text-blue-400" width="256px" height="256px" viewBox="0 0 24.00 24.00" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#000000" stroke-width="1.872">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path d="M5 8H13.75M5 12H19M10.25 16L19 16" stroke="#464455" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </g>
+                            </svg>
+                        </button>                        
+                        <nav  id="nav-menu" class="hidden absolute mx-auto py-5 nav-line2 mt-1 shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:py-1 lg:block lg:relative lg:max-w-full lg:bg-transparent lg:shadow-none lg:rounded-none">
+                            <ul class="block lg:flex lg:text-md items-center font-monreg"> 
+                                <li class="group ">
+                                    <a href="index.html" class="hover:text-blue-500 relative group animate__animated animate__fadeInRight py-2 mx-4  flex transition duration-400 ease-in-out">
+                                        <i class="sm:inline lg:hidden fas fa-home mr-2"></i>
+                                        <span class="lang-home">HOME</span>
+                                    </a></li>
+                                <li class="group">
+                                    <a href="about.html" class=" hover:text-blue-500 animate__animated animate__fadeInRight py-2 mx-4   flex  transition duration-400 ease-in-out"><i class="sm:inline lg:hidden fas fa-info-circle mr-2"></i><span class="lang-about"> ABOUT</span></a></li>
+                                    <li class="group">
+                                    <a href="page.html" class=" hover:text-blue-500 animate__animated animate__fadeInRight py-2 mx-4   flex  transition duration-400 ease-in-out"><i class="sm:inline lg:hidden fas fa-info-circle mr-2"></i><span class="lang-about"> PAGE</span></a></li>
+                                <li class="group">
+                                    <a href="#news" class=" hover:text-blue-500 animate__animated animate__fadeInRight py-2 mx-4   flex  transition duration-400 ease-in-out"><i class="sm:inline lg:hidden fas fa-info-circle mr-2"></i><span class="lang-about"> NEWS</span></a></li>
+                                <li class="group">
+                                    <a href="#Contact" class=" hover:text-blue-500 animate__animated animate__fadeInRight py-2 mx-4  flex  transition duration-400 ease-in-out"><i class="sm:inline lg:hidden fas fa-code mr-2"></i><span class="lang-portp">CONTACT</span></a></li>
+                                </ul>
+                            </nav>
+                    </div>
+                </div>
+            </div>
+    </header>
+    <section id="home" class=" bg-center bg-cover" style="background-image: url(https://themedox.com/demo/nilos/assets/images/shapes/page-header-shape.png);"> 
+        <div class="container  lg:max-w-7xl mx-auto">
+            <div class="py-40">
+                <p class="font-bold text-7xl text-center pb-3">Get In Touch</p>
+                <p class=" text-xl text-center"><a href="index.html" class="hover:text-blue-500 duration-300">Home</a> <i class="fa-solid fa-arrow-right"></i> Contacts</p>
+            </div>   
+        </div>
+    </section>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6603.552039549855!2d-118.797223!3d34.152072!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80e82469c2162619%3A0xba03efb7998eef6d!2sCostco%20Wholesale!5e0!3m2!1sbn!2sbd!4v1708336033888!5m2!1sbn!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-full"></iframe>
+    <section class="py-20">
+        <div class="container">
+            <div class="flex flex-wrap">
+                <div class="lg:w-1/2 w-full">
+                    <p class="text-slate-500 pb-2">OFFICE BRANCH</p>
+                    <h1 class="text-4xl lg:text-6xl font-bold">Let’s discuss about an project!</h1>
+                    <div class="flex py-5">
+                        <div class="w-1/2">
+                            <p class="rounded-l-full rounded-r-full bg-black text-white w-32 px-3 py-2 text-center font-bold">New York</p>
+                            <p class="p-3"><i class="fa-solid fa-envelope mr-2"></i>info@webmail.com</p>
+                            <p class="p-3"><i class="fa-solid fa-phone mr-2"></i>+888 777 666 00</p>
+                            <p class="p-3"><i class="fa-solid fa-location-dot mr-2"></i>14/A, Booston Tower, NYC</p>
+                        </div>
+                        <div class="w-1/2">
+                            <p class="rounded-l-full rounded-r-full bg-blue-500 text-white w-32 px-3 py-2 text-center font-bold">Uganda</p>
+                            <p class="p-3"><i class="fa-solid fa-envelope mr-2"></i>info@webmail.com</p>
+                            <p class="p-3"><i class="fa-solid fa-phone mr-2"></i>+888 777 666 00</p>
+                            <p class="p-3"><i class="fa-solid fa-location-dot mr-2"></i>14/A, Helson House, UGA</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 w-full self-center">
+                    <form action="https://formbold.com/s/FORM_ID" method="POST">
+                        <div class="-mx-3 flex flex-wrap">
+                          <div class="w-full px-3 sm:w-1/2">
+                            <div class="mb-5">
+                              <input
+                                type="text"
+                                name="fName"
+                                id="fName"
+                                placeholder="Full Name"
+                                class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                              />
+                            </div>
+                          </div>
+                          <div class="w-full px-3 sm:w-1/2">
+                            <div class="mb-5">
+                              <input
+                                type="email"
+                                name="example@hnzfbrnsyh.my.id"
+                                id="email"
+                                placeholder="Last Name"
+                                class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="mb-5">
+                          <textarea
+                            type="number"
+                            name="guest"
+                            id="guest"
+                            placeholder="Message"
+                            min="0"
+                            class="w-full appearance-none rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"></textarea>
+                        </div>
+                        <div>
+                          <button
+                            class="hover:shadow-form rounded-md bg-[#6A64F1] py-3 px-8 text-center text-base font-semibold text-white outline-none"
+                          >
+                            Submit
+                          </button>
+                        </div>
+                      </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-slate-950 pt-20 pb-5">
+        <div class="container max-w-7xl mx-auto justify-center">
+            <img src="https://themedox.com/demo/nilos/assets/images/resources/logo-2.png" class="mx-auto" alt="">
+            <p class="text-white max-w-lg mx-auto text-center my-2">Nilo was born in San Francisco, California and grew up in a wealthy family. He
+                developed an early interest in music & photography.</p>
+            <div class="flex flex-wrap justify-center my-3">
+                <a href="#"><i class="fa-brands fa-facebook px-3 py-2 mx-2 border rounded-full text-2xl hover:border-transparent hover:bg-blue-500 hover:text-white transition-all ease-in-out duration-300 text-white"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram px-3 py-2 mx-2 border rounded-full text-2xl hover:border-transparent hover:bg-blue-500 hover:text-white transition-all ease-in-out duration-300 text-white"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter px-3 py-2 mx-2 border rounded-full text-2xl hover:border-transparent hover:bg-blue-500 hover:text-white transition-all ease-in-out duration-300 text-white"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin px-3 py-2 mx-2 border rounded-full text-2xl hover:border-transparent hover:bg-blue-500 hover:text-white transition-all ease-in-out duration-300 text-white"></i></a>
+            </div>
+            <div class="lg:border-y flex flex-wrap py-10">
+                <div class="lg:w-1/2 w-full flex">
+                    <a href="#" class="mx-3 text-white text-lg">FAQ</a>
+                    <a href="#" class="mx-3 text-white text-lg">Careers</a>
+                    <a href="#" class="mx-3 text-white text-lg">Contact</a>
+                </div>
+                <div class="lg:w-1/2 w-full text-end">
+                    <p class="text-white text-xl">WhatsApp: <span class="font-bold">+999 888 777 00</span></p>
+                </div>
+            </div>
+            <div class="text-center pt-5">
+                <p class="text-white">Copyright & Design By <a href="#" class="font-bold hover:text-slate-300">@NilosDesign </a>- 2023 </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

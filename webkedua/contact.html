@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Document Meta-->
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <!-- IE Compatibility Meta-->
+        <meta name="author" content="zytheme"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+        <meta name="description" content="Multi-purpose Business html5 landing page"/>
+        <!-- link cdn tailwindcss -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- link icon -->
+        <link href="https://html.quomodosoft.com/aball/aball/assets/images/favicon.ico" rel="icon"/>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.96w-96 text-center max-w-xs 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+          </svg>
+          <!-- animasi refresh
+          <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        /> -->
+        
+        <!-- lilita one start -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+        <!-- lilita one stop -->
+        <!-- Oswold & Roboto start -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <!-- Oswold & Roboto stop -->
+        <!-- jost start -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <!-- jost stop -->
+        <!-- playfair start -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <!-- playfair stop -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Aball</title>
+        <script>
+            tailwind.config = {
+                darkMode:"class",
+              theme: {
+                container:{
+                    center: true,
+                    padding: '20px',
+                },
+                extend: {
+                  colors: {
+                    birmud: '#6ad3e5',
+                    biru: '#00b0d3',
+                    gelap: '#0f172a',
+                    gelap1: '#1e293b',
+                    pdng: '#ffffff',
+                    ptng: '#ababab',
+                    birtu: '#1d4ed8',
+                    toska: '#333333',
+                    ijo: '#49b970',
+                  },
+                    backgroundImage: {
+                    // background gambar
+
+                    // example: 'pict': 'url("https://hanafifebriansyah.vercel.app/assets/profil/bg.png")',
+                    },
+                    fontFamily: {
+                        Lile:['Lilita One'],
+                        Oswald:['Oswald'],
+                        jos:['Jost'],
+                        play:['Playfair Display'],
+                    },
+                  screen:{
+                    '2xl' : '1400px',
+                  }
+                }
+              }
+            }
+        </script>
+        <style type="text/tailwindcss">
+            body,html {
+                scroll-behavior: smooth;
+                font-family: 'Roboto',sans-serif;
+                color: #64748b;
+
+            }
+            .nav-fixed{
+                @apply fixed mt-0 z-50 py-5 bg-white/50 dark:bg-black/50 text-black transition duration-200 ease-in-out;
+                backdrop-filter: blur(5px);
+                box-shadow: inset 0 -1px 0 0 rgba(0,0,0,0.1);
+            }
+        
+            .nav-fixed{
+                @apply lg:bg-white/30  lg:dark:bg-black/30 text-black lg:dark:text-slate-100 lg:text-center lg:backdrop-blur-sm lg:shadow-lg lg:p-1 lg:fixed lg:w-full  transition-all duration-500 ease-in-out lg:z-50;
+            }
+            .nav-fixed > div:nth-child(1){
+                @apply lg:mx-auto;
+            }
+            .nav-fixed > div:nth-child(3){
+                @apply lg:space-x-4;
+            }
+            .hamburger-line{
+                 @apply w-[30px] h-1 my-1 rounded-md block bg-white;
+            }
+            .hamburger-active > span:nth-child(1){
+                 @apply  rotate-45 transition;
+            }
+            .hamburger-active > span:nth-child(2){
+                 @apply scale-0;
+            }
+            .hamburger-active > span:nth-child(3){
+                 @apply -rotate-45;
+            }
+            #hamburger{
+                @apply rounded-lg p-1;
+            }
+
+        </style>
+    </head>
+    <body class=" text-black">        
+        <header class="bg-red-600 lg:py-5 lg:rounded-br-xl text-white container py-4 pt-10 absolute w-full font-semibold transition-all ease-in-out duration-500 flex items-center  max-w-full mx-auto lg:max-w-2xl z-50 ">
+            <div class="container">
+                <div class="flex items-center justify-between relative">
+                    <div class="flex item-center px-2">
+                        <button id="hamburger" name="hamburger" type="button" class="block right-4 transition duration-200">
+                            <span class="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
+                            <span class="hamburger-line transition duration-300 ease-in-out"></span>
+                            <span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
+                        </button>
+                        
+                        <nav  id="nav-menu" class="hidden absolute py-5 nav-line2 mt-1 shadow-lg rounded-lg w-full right-10 top-full lg:py-1 lg:max-w-7xl lg:rounded-xl bg-red-600">
+                            <ul class="block lg:text-lg  font-play"> 
+                                <li class="group ">
+                                    <a href="index.html" class="hover:text-white relative group animate__animated animate__fadeInRight py-2 mx-6  flex transition duration-400 ease-in-out">
+                                        <span class="lang-home">Home</span>
+                                    </a></li>
+                                <li class="group">
+                                    <a href="about.html" class=" hover:text-white animate__animated animate__fadeInRight py-2 mx-6   flex  transition duration-400 ease-in-out"><span class="lang-about"> About</span></a></li>
+                                <li class="group">
+                                    <a href="service.html" class=" hover:text-white animate__animated animate__fadeInRight py-2 mx-6  flex  transition duration-400 ease-in-out"><span class="lang-portp">Service</span></a></li>
+                                    <li class="group">
+                                    <a href="portfolio.html" class=" hover:text-white animate__animated animate__fadeInRight py-2 mx-6  flex  transition duration-400 ease-in-out"><span class="lang-contact">Pages
+                                    </span></a></li>                           
+                                    <a href="pricing.html" class=" hover:text-white animate__animated animate__fadeInRight py-2 mx-6  flex  transition duration-400 ease-in-out"><span class="lang-contact">Pricing
+                                    </span></a></li>                           
+                                    <a href="contact.html" class=" hover:text-white animate__animated animate__fadeInRight py-2 mx-6  flex  transition duration-400 ease-in-out"><span class="lang-contact">Contact
+                                    </span></a></li>                           
+                                </ul>
+                            </nav>
+                            <div class="self-center hidden lg:inline">
+                                <p class="text-lg px-10"><i class="fa-solid fa-phone mr-2"></i>+00 125 456 888
+                                </p>
+                            </div>
+                            <div class="self-center hidden lg:inline">
+                                <p class="text-lg pl-10"><i class="fa-solid fa-envelope mr-2"></i>contact@pharma.com
+                                </p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+    </header>
+    <section id="home" class="text-white bg-center bg-cover" style="background-image: url(https://html.quomodosoft.com/aball/aball/assets/images/page-bg.jpg);"> 
+        <div class="container  lg:max-w-7xl mx-auto">
+            <div class="py-40">
+                <p class="font-bold text-7xl text-center pb-3">Pricing</p>
+                <p class=" text-xl text-center"><a href="index.html" class="hover:text-red-500 duration-300">Home</a> <i class="fa-solid fa-arrow-right"></i> Pricing</p>
+            </div>   
+        </div>
+    </section>
+    <section class="bg-[url('./assets/bg.jpg')] bg-cover bg-center ">
+        <div class="bg-black/70 py-20">
+            <div class="container">
+                <div class="w-full px-10 justify-center">
+                        <div class="mx-auto lg:w-[800px] bg-white rounded-xl my-10 shadow-lg overflow-hidden">
+                            <div class="w-full py-16 px-12">
+                              <h2  class="text-4xl mb-4 font-bold">Get in Touch</h2>
+                              <p class="mb-4">
+                                Give us a call or drop by anytime, we endeavour to
+            answer all enquiries within 24 hours.
+                              </p>
+                              <form action="#">
+                                <div class="grid grid-cols-2 gap-5">
+                                  <input type="text" placeholder="Your Name" class="border border-gray-400 py-1  ring-0 px-2 h-14">
+                                  <input type="email" placeholder="Email address" class="border border-gray-400 py-1  ring-0 px-2 h-14">
+                                </div>
+                                <div class="grid pt-5 grid-cols-2 gap-5">
+                                  <input type="text" placeholder="Telephone" class="border border-gray-400 py-1  ring-0 px-2 h-14">
+                                  <input type="email" placeholder="Location" class="border border-gray-400 py-1  ring-0 px-2 h-14">
+                                </div>
+                                <div class="mt-5">
+                                  <input type="text" placeholder="message" class="border border-gray-400 py-1 px-2 h-20  ring-0 w-full">
+                                </div>
+                                <div class="mt-5">
+                                  <input type="checkbox" class="border border-gray-400">
+                                  <span>
+                                    I agree to the<a href="#" class="text-red-500 hover:text-red-800 duration-300 font-semibold"> data protection</a>  regulations </a> 
+                                  </span>
+                                </div>
+                                <div class="mt-5">
+                                  <button class="w-full bg-red-500 hover:bg-blue-500 duration-300 py-3 text-center text-white">FREE CONSULTATION</button>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                </div>
+             
+            </div>
+          </div>
+          <script type="module" src="/main.js"></script>
+    </section>
+    <div class="contact-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14612.962398285066!2d90.45967325!3d23.703100600000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1595237498018!5m2!1sen!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" class="w-full"></iframe>
+    </div>
+    <section class="py-20 bg-red-500">
+        <div class="flex items-center justify-center flex-wrap max-w-7xl mx-auto">
+            <div class="lg:w-1/2 w-full">
+                <h1 class="text-white font-bold text-5xl pb-2">Love Eating? Like offer?</h1>
+                <p class="text-white italic">Since ancient times, wine has been perceive part of our culture and a symbol of good life role of wine has centuries.</p>
+            </div>
+            <div class="lg:w-1/2 w-full justify-center self-center">
+                <div x-data="{ showModal: true, email: '' }" class="w-72 mx-auto">
+                    <!-- Button to open the modal -->
+                    <button @click="showModal = true" class="w-full px-4 py-2 text-sm font-medium text-white bg-yellow-500 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-yellow-500 hover:bg-yellow-800  duration-300"> Subscribe to aball</button>
+                    <!-- Background overlay -->
+                    <div x-show="showModal" class="fixed inset-0 transition-opacity" aria-hidden="true" @click="showModal = false">
+                      <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+                    </div>
+                    <!-- Modal -->
+                    <div x-show="showModal" x-transition:enter="transition ease-out duration-300 transform" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="transition ease-in duration-200 transform" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" class="fixed z-50 inset-0 overflow-y-auto" x-cloak>
+                      <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+                        <!-- Modal panel -->
+                        <div class="w-full inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+                          <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                            <!-- Modal content -->
+                            <div class="sm:flex sm:items-start">
+                              <div class="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-yellow-100 sm:mx-0 sm:h-10 sm:w-10">
+                                <!-- Icon for newsletter -->
+                                <svg width="64px" height="64px" viewBox="0 0 24 24" class="h-6 w-6 text-yellow-600" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#FF0000" stroke-width="0.36"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="style=doutone"> <g id="email"> <path id="vector (Stroke)" fill-rule="evenodd" clip-rule="evenodd" d="M3.88534 5.2371C3.20538 5.86848 2.75 6.89295 2.75 8.5V15.5C2.75 17.107 3.20538 18.1315 3.88534 18.7629C4.57535 19.4036 5.61497 19.75 7 19.75H17C18.385 19.75 19.4246 19.4036 20.1147 18.7629C20.7946 18.1315 21.25 17.107 21.25 15.5V8.5C21.25 6.89295 20.7946 5.86848 20.1147 5.2371C19.4246 4.59637 18.385 4.25 17 4.25H7C5.61497 4.25 4.57535 4.59637 3.88534 5.2371ZM2.86466 4.1379C3.92465 3.15363 5.38503 2.75 7 2.75H17C18.615 2.75 20.0754 3.15363 21.1353 4.1379C22.2054 5.13152 22.75 6.60705 22.75 8.5V15.5C22.75 17.393 22.2054 18.8685 21.1353 19.8621C20.0754 20.8464 18.615 21.25 17 21.25H7C5.38503 21.25 3.92465 20.8464 2.86466 19.8621C1.79462 18.8685 1.25 17.393 1.25 15.5V8.5C1.25 6.60705 1.79462 5.13152 2.86466 4.1379Z" fill="#FF0000"></path> <path id="vector (Stroke)_2" fill-rule="evenodd" clip-rule="evenodd" d="M19.3633 7.31026C19.6166 7.63802 19.5562 8.10904 19.2285 8.3623L13.6814 12.6486C12.691 13.4138 11.3089 13.4138 10.3185 12.6486L4.77144 8.3623C4.44367 8.10904 4.38328 7.63802 4.63655 7.31026C4.88982 6.98249 5.36083 6.9221 5.6886 7.17537L11.2356 11.4616C11.6858 11.8095 12.3141 11.8095 12.7642 11.4616L18.3113 7.17537C18.6391 6.9221 19.1101 6.98249 19.3633 7.31026Z" fill="#FF0000"></path> </g> </g> </g></svg>
+                              </div>
+                              <div class="w-full mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+                                <h3 class="text-lg leading-6 font-medium text-gray-900" id="modal-headline"> Aball</h3>
+                                <div class="mt-2">
+                                  <p class="text-sm text-gray-500"> Subscribe</p>
+                                  <!-- Email input -->
+                                  <input type="email" x-model="email" class="mt-2 p-2 border border-gray-300 rounded-md w-full focus:outline-none focus:ring focus:border-yellow-500" placeholder="name@example.com">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                            <!-- Subscribe button -->
+                            <button @click="subscribeToNewsletter" type="button" class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-yellow-500 text-base font-medium text-white hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 sm:ml-3 sm:w-auto sm:text-sm  duration-300"> Subscribe </button>
+                            <!-- Cancel button -->
+                            <button @click="showModal = false" type="button" class="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-200 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"> Cancel </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+          </div>
+          <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2"></script>
+          <script src="script.js"></script>
+    </section>
+    <footer class="bg-slate-100 pt-24 pb-12">
+        <div class="container">
+            <div class="flex max-w-7xl mx-auto flex-wrap justify-center">
+                <div class="w-full px-4 mb-12 text-red-500 font-medium md:w-1/3">
+                    <img src="https://html.quomodosoft.com/aball/aball/assets/images/logo-3.png" alt="">
+                </div>
+                <div class="w-full px-10 mb-12 text-red-500 font-medium md:w-1/3">
+                    <h3 class="font-semibold text-md lang-link text-red-500 mb-5 border-b-2 border-red-500">Want to collaborate?</h3>
+                    <h3 class="font-semibold text-md lang-link text-red-500  ">Work with us</h3>
+                    <h3 class="font-semibold text-xl lang-link text-red-500 mb-10 ">Hello.business@brand.com</h3>
+                    <h3 class="font-semibold text-md lang-link text-red-500 mb-5 border-b-2 border-red-500">View on maps</h3>
+                    <h3 class="font-semibold text-md lang-link text-red-500  ">Corporate office</h3>
+                    <h3 class="font-semibold text-xl lang-link text-red-500 mb-5 ">Study Meeting 19, 4th floor DK-1455 Copenhagen</h3>
+                </div>
+                <div class="w-full px-10 mb-12 text-red-500 font-medium md:w-1/3">
+                    <h3 class="font-semibold text-md lang-link text-red-500 mb-5 border-b-2 border-red-500">What to say hi?</h3>
+                    <h3 class="font-semibold text-md lang-link text-red-500  ">General inquires</h3>
+                    <h3 class="font-semibold text-xl lang-link text-red-500 mb-10 ">Hello@brand.com</h3>
+                    <h3 class="font-semibold text-md lang-link text-red-500 mb-5 border-b-2 border-red-500">Join Our Social Community</h3>
+                    <h3 class="font-semibold text-md lang-link text-red-500  ">Follow us</h3>
+                    <div class="flex">
+                        <a href="#" class="text-2xl mx-2 text-red-500 hover:text-red-700 duration-300 ease-in-out transition-all"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="text-2xl mx-2 text-red-500 hover:text-red-700 duration-300 ease-in-out transition-all"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" class="text-2xl mx-2 text-red-500 hover:text-red-700 duration-300 ease-in-out transition-all"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+        </div>
+        </footer>
+    <script src="script.js"></script>
+</body>
+</html>

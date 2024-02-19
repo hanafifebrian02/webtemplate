@@ -49,6 +49,7 @@ handleEvents('am', 'aboutMeText');
 handleEvents('ex', 'ResText');
 handleEvents('ed', 'porText');
 handleEvents('sk', 'serText');
+handleEvents('ml', 'uText');
 
 const buttons = document.querySelectorAll('.flex button');
 const textSections = document.querySelectorAll('[id$="Text"]');
@@ -67,14 +68,14 @@ buttons[randomButtonIndex].click();
 buttons.forEach((button, index) => {
     button.addEventListener('click', function() {
         // Remove previous red button color
-        const buttons = document.querySelector('.bg-green-600','.text-white','.border-transparent');
+        const buttons = document.querySelector('.bg-blue-600','.text-white','.border-transparent');
         if (buttons) {
-            buttons.classList.remove('bg-green-600','text-white','border-transparent');
-            buttons.classList.add('text-green-500','border-green-500');
+            buttons.classList.remove('bg-blue-600','text-white','border-transparent');
+            buttons.classList.add('text-blue-500','border-blue-500');
         }
 
         // Add red color to the clicked button
-        button.classList.add('bg-green-600','text-white','border-transparent');
+        button.classList.add('bg-blue-600','text-white','border-transparent');
 
         // Hide all text sections
         textSections.forEach(section => section.classList.add('hidden'));

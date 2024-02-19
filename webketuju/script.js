@@ -1,3 +1,13 @@
+// navbar fixed
+window.onscroll = function(){
+    const header = document.querySelector('header');
+    const fixedNav = header.offsetTop;
+    if(window.pageYOffset > fixedNav){
+        header.classList.add('nav-fixed');
+    }else{
+        header.classList.remove('nav-fixed');
+    }
+}
 const icon = document.getElementById('icon');
 document.getElementById('hamburger').addEventListener('click', function() {
     // Cek apakah SVG saat ini adalah SVG hamburger atau SVG Shutterstock

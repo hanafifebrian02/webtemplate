@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Document Meta-->
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <!-- IE Compatibility Meta-->
+        <meta name="author" content="zytheme"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+        <meta name="description" content="Multi-purpose Business html5 landing page"/>
+        <!-- link cdn tailwindcss -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- link icon -->
+        <link href="https://html.quomodosoft.com/aball/aball/assets/images/favicon.ico" rel="icon"/>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.96w-96 text-center max-w-xs 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+          </svg>
+          <!-- animasi refresh
+          <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        /> -->
+        
+        <!-- lilita one start -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+        <!-- lilita one stop -->
+        <!-- Oswold & Roboto start -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <!-- Oswold & Roboto stop -->
+        <!-- jost start -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <!-- jost stop -->
+        <!-- playfair start -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <!-- playfair stop -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Aball</title>
+        <script>
+            tailwind.config = {
+                darkMode:"class",
+              theme: {
+                container:{
+                    center: true,
+                    padding: '20px',
+                },
+                extend: {
+                  colors: {
+                    birmud: '#6ad3e5',
+                    biru: '#00b0d3',
+                    gelap: '#0f172a',
+                    gelap1: '#1e293b',
+                    pdng: '#ffffff',
+                    ptng: '#ababab',
+                    birtu: '#1d4ed8',
+                    toska: '#333333',
+                    ijo: '#49b970',
+                  },
+                    backgroundImage: {
+                    // background gambar
+
+                    // example: 'pict': 'url("https://hanafifebriansyah.vercel.app/assets/profil/bg.png")',
+                    },
+                    fontFamily: {
+                        Lile:['Lilita One'],
+                        Oswald:['Oswald'],
+                        jos:['Jost'],
+                        play:['Playfair Display'],
+                    },
+                  screen:{
+                    '2xl' : '1400px',
+                  }
+                }
+              }
+            }
+        </script>
+        <style type="text/tailwindcss">
+            body,html {
+                scroll-behavior: smooth;
+                font-family: 'Roboto',sans-serif;
+                color: #64748b;
+
+            }
+            .nav-fixed{
+                @apply fixed mt-0 z-50 py-5 bg-white/50 dark:bg-black/50 text-black transition duration-200 ease-in-out;
+                backdrop-filter: blur(5px);
+                box-shadow: inset 0 -1px 0 0 rgba(0,0,0,0.1);
+            }
+        
+            .nav-fixed{
+                @apply lg:bg-white/30  lg:dark:bg-black/30 text-black lg:dark:text-slate-100 lg:text-center lg:backdrop-blur-sm lg:shadow-lg lg:p-1 lg:fixed lg:w-full  transition-all duration-500 ease-in-out lg:z-50;
+            }
+            .nav-fixed > div:nth-child(1){
+                @apply lg:mx-auto;
+            }
+            .nav-fixed > div:nth-child(3){
+                @apply lg:space-x-4;
+            }
+            .hamburger-line{
+                 @apply w-[30px] h-1 my-1 rounded-md block bg-white;
+            }
+            .hamburger-active > span:nth-child(1){
+                 @apply  rotate-45 transition;
+            }
+            .hamburger-active > span:nth-child(2){
+                 @apply scale-0;
+            }
+            .hamburger-active > span:nth-child(3){
+                 @apply -rotate-45;
+            }
+            #hamburger{
+                @apply rounded-lg p-1;
+            }
+
+        </style>
+    </head>
+    <body class=" text-black">        
+        <header class="bg-red-600 lg:py-5 lg:rounded-br-xl text-white container py-4 pt-10 absolute w-full font-semibold transition-all ease-in-out duration-500 flex items-center  max-w-full mx-auto lg:max-w-2xl z-50 ">
+            <div class="container">
+                <div class="flex items-center justify-between relative">
+                    <div class="flex item-center px-2">
+                        <button id="hamburger" name="hamburger" type="button" class="block right-4 transition duration-200">
+                            <span class="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
+                            <span class="hamburger-line transition duration-300 ease-in-out"></span>
+                            <span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
+                        </button>
+                        
+                        <nav  id="nav-menu" class="hidden absolute py-5 nav-line2 mt-1 shadow-lg rounded-lg w-full right-10 top-full lg:py-1 lg:max-w-7xl lg:rounded-xl bg-red-600">
+                            <ul class="block lg:text-lg  font-play"> 
+                                <li class="group ">
+                                    <a href="index.html" class="hover:text-white relative group animate__animated animate__fadeInRight py-2 mx-6  flex transition duration-400 ease-in-out">
+                                        <span class="lang-home">Home</span>
+                                    </a></li>
+                                <li class="group">
+                                    <a href="about.html" class=" hover:text-white animate__animated animate__fadeInRight py-2 mx-6   flex  transition duration-400 ease-in-out"><span class="lang-about"> About</span></a></li>
+                                <li class="group">
+                                    <a href="service.html" class=" hover:text-white animate__animated animate__fadeInRight py-2 mx-6  flex  transition duration-400 ease-in-out"><span class="lang-portp">Service</span></a></li>
+                                    <li class="group">
+                                    <a href="portfolio.html" class=" hover:text-white animate__animated animate__fadeInRight py-2 mx-6  flex  transition duration-400 ease-in-out"><span class="lang-contact">Pages
+                                    </span></a></li>                           
+                                    <a href="pricing.html" class=" hover:text-white animate__animated animate__fadeInRight py-2 mx-6  flex  transition duration-400 ease-in-out"><span class="lang-contact">Pricing
+                                    </span></a></li>                           
+                                    <a href="contact.html" class=" hover:text-white animate__animated animate__fadeInRight py-2 mx-6  flex  transition duration-400 ease-in-out"><span class="lang-contact">Contact
+                                    </span></a></li>                           
+                                </ul>
+                            </nav>
+                            <div class="self-center hidden lg:inline">
+                                <p class="text-lg px-10"><i class="fa-solid fa-phone mr-2"></i>+00 125 456 888
+                                </p>
+                            </div>
+                            <div class="self-center hidden lg:inline">
+                                <p class="text-lg pl-10"><i class="fa-solid fa-envelope mr-2"></i>contact@pharma.com
+                                </p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+    </header>
+    <section id="home" class="text-white bg-center bg-cover" style="background-image: url(https://html.quomodosoft.com/aball/aball/assets/images/page-bg.jpg);"> 
+        <div class="container  lg:max-w-7xl mx-auto">
+            <div class="py-40">
+                <p class="font-bold text-7xl text-center pb-3">Service</p>
+                <p class=" text-xl text-center"><a href="index.html" class="hover:text-red-500 duration-300">Home</a> <i class="fa-solid fa-arrow-right"></i> Service</p>
+            </div>   
+        </div>
+    </section>
+    <section class="py-20">
+        <div class="container mx-auto lg:max-w-7xl">
+            <div class="flex flex-wrap justify-center px-20">
+                <div class="rounded-xl bg-slate-300 lg:w-80 w-full mx-auto lg:mx-5 my-3 p-5 shadow-xl">
+                    <p class="font-bold text-3xl ">Producs Design</p>
+                    <ul class="my-5 mx-5">
+                        <li class="list-disc py-1">Graphic Design Template</li>
+                        <li class="list-disc py-1">Graphic Design Template</li>
+                        <li class="list-disc py-1">Graphic Design Template</li>
+                        <li class="list-disc py-1">Graphic Design Template</li>
+                        <li class="list-disc py-1">Graphic Design Template</li>
+                        <li class="list-disc py-1">Graphic Design Template</li>
+                        <li class="list-disc py-1">Graphic Design Template</li>
+                    </ul>
+                </div>
+                <div class="rounded-xl bg-slate-300 lg:w-80 w-full mx-auto lg:mx-5 my-3 shadow-xl">
+                    <img src="https://html.quomodosoft.com/aball/aball/assets/images/services-item-2.png" class="object-cover object-center" alt="">
+                </div>
+                <div class="rounded-xl bg-slate-300 lg:w-80 w-full mx-auto lg:mx-5 my-3 p-5 shadow-xl">
+                    <p class="font-bold text-3xl ">Producs Design</p>
+                    <ul class="my-5 mx-5">
+                        <li class="list-disc py-1">Graphic Design Template</li>
+                        <li class="list-disc py-1">Graphic Design Template</li>
+                        <li class="list-disc py-1">Graphic Design Template</li>
+                        <li class="list-disc py-1">Graphic Design Template</li>
+                        <li class="list-disc py-1">Graphic Design Template</li>
+                        <li class="list-disc py-1">Graphic Design Template</li>
+                        <li class="list-disc py-1">Graphic Design Template</li>
+                    </ul>
+                </div>
+                <div class="rounded-xl bg-slate-300 lg:w-80 w-full mx-auto lg:mx-5 my-3 shadow-xl">
+                    <img src="https://html.quomodosoft.com/aball/aball/assets/images/services-item-3.png" class="object-cover object-center" alt="">
+                </div>
+                <div class="rounded-xl bg-slate-300 lg:w-80 w-full mx-auto lg:mx-5 my-3 p-5 shadow-xl">
+                    <p class="font-bold text-3xl ">Producs Design</p>
+                    <ul class="my-5 mx-5">
+                        <li class="list-disc py-1">Graphic Design Template</li>
+                        <li class="list-disc py-1">Graphic Design Template</li>
+                        <li class="list-disc py-1">Graphic Design Template</li>
+                        <li class="list-disc py-1">Graphic Design Template</li>
+                        <li class="list-disc py-1">Graphic Design Template</li>
+                        <li class="list-disc py-1">Graphic Design Template</li>
+                        <li class="list-disc py-1">Graphic Design Template</li>
+                    </ul>
+                </div>
+                <div class="rounded-xl bg-slate-300 lg:w-80 w-full mx-auto lg:mx-5 my-3 shadow-xl">
+                    <img src="https://html.quomodosoft.com/aball/aball/assets/images/services-item-1.png" class="object-cover object-center" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-20">
+        <div class="container mx-auto lg:max-w-7xl ">
+            <div class="mb-5">
+                <h1 class="text-6xl font-bold text-center">Our Project</h1>
+                <p class="text-center max-w-sm mx-auto">Our focus is on delivering you the absolute best support guiding you through training and providing.</p>
+            </div>
+            <div class="flex flex-wrap justify-center">
+                <div class="m-2 lg:w-auto w-full" >
+                    <img src="https://html.quomodosoft.com/aball/aball/assets/images/portfolio/portfolio-style-1.png" alt="" class="w-full">
+                </div>
+                <div class="m-2 lg:w-auto w-full">
+                    <img src="https://html.quomodosoft.com/aball/aball/assets/images/portfolio/portfolio-style-2.png" alt="" class="w-full">
+                </div>
+                <div class="m-2 lg:w-auto w-full">
+                    <img src="https://html.quomodosoft.com/aball/aball/assets/images/portfolio/portfolio-style-3.png" alt="" class="w-full">
+                </div>
+                <div class="m-2 lg:w-auto w-full">
+                    <img src="https://html.quomodosoft.com/aball/aball/assets/images/portfolio/portfolio-style-6.png" alt="" class="w-full">
+                </div>
+                <div class="m-2 lg:w-auto w-full">
+                    <img src="https://html.quomodosoft.com/aball/aball/assets/images/portfolio/portfolio-style-7.png" alt="" class="w-full">
+                </div>
+                <div class="m-2 lg:w-auto w-full lg:overflow-visible lg:-my-72 lg:ml-6">
+                    <img src="https://html.quomodosoft.com/aball/aball/assets/images/portfolio/portfolio-style-4.png" alt="" class="w-full">
+                </div>
+                <div class="m-2 lg:w-auto w-full">
+                    <img src="https://html.quomodosoft.com/aball/aball/assets/images/portfolio/portfolio-style-5.png" alt="" class="w-full">
+                </div>
+                <div class="m-2 lg:w-auto w-full lg:overflow-visible lg:-my-72 lg:ml-2">
+                    <img src="https://html.quomodosoft.com/aball/aball/assets/images/portfolio/portfolio-style-8.png" alt="" class="w-full">
+                </div>
+                <div class="m-2 lg:w-auto w-full">
+                    <img src="https://html.quomodosoft.com/aball/aball/assets/images/portfolio/portfolio-style-9.png" alt="" class="w-full">
+                </div>
+                <div class="m-2 lg:w-auto w-full lg:overflow-visible lg:-my-72 lg:ml-3">
+                    <img src="https://html.quomodosoft.com/aball/aball/assets/images/portfolio/portfolio-style-10.png" alt="" class="w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mx-auto lg:max-w-7xl justify-center py-20">
+        <div class="container">
+            <div class="mb-5">
+                <h1 class="text-6xl font-bold text-center">Our Team</h1>
+                <p class="text-center max-w-sm mx-auto">Our focus is on delivering you the absolute best support guiding you through training and providing.</p>
+            </div>
+            <div class="flex flex-wrap justify-center px-20">
+                <div class="flex flex-col w-56 mx-5 my-2 items-center p-8 transition-colors duration-200 transform cursor-pointer group hover:bg-red-600 rounded-xl">
+                    <img class="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="">
+                    
+                    <h1 class="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white">arthur melo</h1>
+                    
+                    <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">design director</p>
+                    
+                    <div class="flex mt-3 -mx-2">
+                        <a href="#" class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white" aria-label="Reddit">
+                            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C21.9939 17.5203 17.5203 21.9939 12 22ZM6.807 10.543C6.20862 10.5433 5.67102 10.9088 5.45054 11.465C5.23006 12.0213 5.37133 12.6558 5.807 13.066C5.92217 13.1751 6.05463 13.2643 6.199 13.33C6.18644 13.4761 6.18644 13.6229 6.199 13.769C6.199 16.009 8.814 17.831 12.028 17.831C15.242 17.831 17.858 16.009 17.858 13.769C17.8696 13.6229 17.8696 13.4761 17.858 13.33C18.4649 13.0351 18.786 12.3585 18.6305 11.7019C18.475 11.0453 17.8847 10.5844 17.21 10.593H17.157C16.7988 10.6062 16.458 10.7512 16.2 11C15.0625 10.2265 13.7252 9.79927 12.35 9.77L13 6.65L15.138 7.1C15.1931 7.60706 15.621 7.99141 16.131 7.992C16.1674 7.99196 16.2038 7.98995 16.24 7.986C16.7702 7.93278 17.1655 7.47314 17.1389 6.94094C17.1122 6.40873 16.6729 5.991 16.14 5.991C16.1022 5.99191 16.0645 5.99491 16.027 6C15.71 6.03367 15.4281 6.21641 15.268 6.492L12.82 6C12.7983 5.99535 12.7762 5.993 12.754 5.993C12.6094 5.99472 12.4851 6.09583 12.454 6.237L11.706 9.71C10.3138 9.7297 8.95795 10.157 7.806 10.939C7.53601 10.6839 7.17843 10.5422 6.807 10.543ZM12.18 16.524C12.124 16.524 12.067 16.524 12.011 16.524C11.955 16.524 11.898 16.524 11.842 16.524C11.0121 16.5208 10.2054 16.2497 9.542 15.751C9.49626 15.6958 9.47445 15.6246 9.4814 15.5533C9.48834 15.482 9.52348 15.4163 9.579 15.371C9.62737 15.3318 9.68771 15.3102 9.75 15.31C9.81233 15.31 9.87275 15.3315 9.921 15.371C10.4816 15.7818 11.159 16.0022 11.854 16C11.9027 16 11.9513 16 12 16C12.059 16 12.119 16 12.178 16C12.864 16.0011 13.5329 15.7863 14.09 15.386C14.1427 15.3322 14.2147 15.302 14.29 15.302C14.3653 15.302 14.4373 15.3322 14.49 15.386C14.5985 15.4981 14.5962 15.6767 14.485 15.786V15.746C13.8213 16.2481 13.0123 16.5208 12.18 16.523V16.524ZM14.307 14.08H14.291L14.299 14.041C13.8591 14.011 13.4994 13.6789 13.4343 13.2429C13.3691 12.8068 13.6162 12.3842 14.028 12.2269C14.4399 12.0697 14.9058 12.2202 15.1478 12.5887C15.3899 12.9572 15.3429 13.4445 15.035 13.76C14.856 13.9554 14.6059 14.0707 14.341 14.08H14.306H14.307ZM9.67 14C9.11772 14 8.67 13.5523 8.67 13C8.67 12.4477 9.11772 12 9.67 12C10.2223 12 10.67 12.4477 10.67 13C10.67 13.5523 10.2223 14 9.67 14Z">
+                                </path>
+                            </svg>
+                        </a>
+
+                        <a href="#" class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+                            aria-label="Facebook">
+                            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M2.00195 12.002C2.00312 16.9214 5.58036 21.1101 10.439 21.881V14.892H7.90195V12.002H10.442V9.80204C10.3284 8.75958 10.6845 7.72064 11.4136 6.96698C12.1427 6.21332 13.1693 5.82306 14.215 5.90204C14.9655 5.91417 15.7141 5.98101 16.455 6.10205V8.56104H15.191C14.7558 8.50405 14.3183 8.64777 14.0017 8.95171C13.6851 9.25566 13.5237 9.68693 13.563 10.124V12.002H16.334L15.891 14.893H13.563V21.881C18.8174 21.0506 22.502 16.2518 21.9475 10.9611C21.3929 5.67041 16.7932 1.73997 11.4808 2.01722C6.16831 2.29447 2.0028 6.68235 2.00195 12.002Z">
+                                </path>
+                            </svg>
+                        </a>
+
+                        <a href="#" class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white" aria-label="Github">
+                            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12.026 2C7.13295 1.99937 2.96183 5.54799 2.17842 10.3779C1.395 15.2079 4.23061 19.893 8.87302 21.439C9.37302 21.529 9.55202 21.222 9.55202 20.958C9.55202 20.721 9.54402 20.093 9.54102 19.258C6.76602 19.858 6.18002 17.92 6.18002 17.92C5.99733 17.317 5.60459 16.7993 5.07302 16.461C4.17302 15.842 5.14202 15.856 5.14202 15.856C5.78269 15.9438 6.34657 16.3235 6.66902 16.884C6.94195 17.3803 7.40177 17.747 7.94632 17.9026C8.49087 18.0583 9.07503 17.99 9.56902 17.713C9.61544 17.207 9.84055 16.7341 10.204 16.379C7.99002 16.128 5.66202 15.272 5.66202 11.449C5.64973 10.4602 6.01691 9.5043 6.68802 8.778C6.38437 7.91731 6.42013 6.97325 6.78802 6.138C6.78802 6.138 7.62502 5.869 9.53002 7.159C11.1639 6.71101 12.8882 6.71101 14.522 7.159C16.428 5.868 17.264 6.138 17.264 6.138C17.6336 6.97286 17.6694 7.91757 17.364 8.778C18.0376 9.50423 18.4045 10.4626 18.388 11.453C18.388 15.286 16.058 16.128 13.836 16.375C14.3153 16.8651 14.5612 17.5373 14.511 18.221C14.511 19.555 14.499 20.631 14.499 20.958C14.499 21.225 14.677 21.535 15.186 21.437C19.8265 19.8884 22.6591 15.203 21.874 10.3743C21.089 5.54565 16.9181 1.99888 12.026 2Z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex flex-col w-56 mx-5 my-2 items-center p-8 transition-colors duration-200 transform cursor-pointer group hover:bg-red-600 rounded-xl">
+                    <img class="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="">
+                    
+                    <h1 class="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white">arthur melo</h1>
+                    
+                    <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">design director</p>
+                    
+                    <div class="flex mt-3 -mx-2">
+                        <a href="#" class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white" aria-label="Reddit">
+                            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C21.9939 17.5203 17.5203 21.9939 12 22ZM6.807 10.543C6.20862 10.5433 5.67102 10.9088 5.45054 11.465C5.23006 12.0213 5.37133 12.6558 5.807 13.066C5.92217 13.1751 6.05463 13.2643 6.199 13.33C6.18644 13.4761 6.18644 13.6229 6.199 13.769C6.199 16.009 8.814 17.831 12.028 17.831C15.242 17.831 17.858 16.009 17.858 13.769C17.8696 13.6229 17.8696 13.4761 17.858 13.33C18.4649 13.0351 18.786 12.3585 18.6305 11.7019C18.475 11.0453 17.8847 10.5844 17.21 10.593H17.157C16.7988 10.6062 16.458 10.7512 16.2 11C15.0625 10.2265 13.7252 9.79927 12.35 9.77L13 6.65L15.138 7.1C15.1931 7.60706 15.621 7.99141 16.131 7.992C16.1674 7.99196 16.2038 7.98995 16.24 7.986C16.7702 7.93278 17.1655 7.47314 17.1389 6.94094C17.1122 6.40873 16.6729 5.991 16.14 5.991C16.1022 5.99191 16.0645 5.99491 16.027 6C15.71 6.03367 15.4281 6.21641 15.268 6.492L12.82 6C12.7983 5.99535 12.7762 5.993 12.754 5.993C12.6094 5.99472 12.4851 6.09583 12.454 6.237L11.706 9.71C10.3138 9.7297 8.95795 10.157 7.806 10.939C7.53601 10.6839 7.17843 10.5422 6.807 10.543ZM12.18 16.524C12.124 16.524 12.067 16.524 12.011 16.524C11.955 16.524 11.898 16.524 11.842 16.524C11.0121 16.5208 10.2054 16.2497 9.542 15.751C9.49626 15.6958 9.47445 15.6246 9.4814 15.5533C9.48834 15.482 9.52348 15.4163 9.579 15.371C9.62737 15.3318 9.68771 15.3102 9.75 15.31C9.81233 15.31 9.87275 15.3315 9.921 15.371C10.4816 15.7818 11.159 16.0022 11.854 16C11.9027 16 11.9513 16 12 16C12.059 16 12.119 16 12.178 16C12.864 16.0011 13.5329 15.7863 14.09 15.386C14.1427 15.3322 14.2147 15.302 14.29 15.302C14.3653 15.302 14.4373 15.3322 14.49 15.386C14.5985 15.4981 14.5962 15.6767 14.485 15.786V15.746C13.8213 16.2481 13.0123 16.5208 12.18 16.523V16.524ZM14.307 14.08H14.291L14.299 14.041C13.8591 14.011 13.4994 13.6789 13.4343 13.2429C13.3691 12.8068 13.6162 12.3842 14.028 12.2269C14.4399 12.0697 14.9058 12.2202 15.1478 12.5887C15.3899 12.9572 15.3429 13.4445 15.035 13.76C14.856 13.9554 14.6059 14.0707 14.341 14.08H14.306H14.307ZM9.67 14C9.11772 14 8.67 13.5523 8.67 13C8.67 12.4477 9.11772 12 9.67 12C10.2223 12 10.67 12.4477 10.67 13C10.67 13.5523 10.2223 14 9.67 14Z">
+                                </path>
+                            </svg>
+                        </a>
+
+                        <a href="#" class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+                            aria-label="Facebook">
+                            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M2.00195 12.002C2.00312 16.9214 5.58036 21.1101 10.439 21.881V14.892H7.90195V12.002H10.442V9.80204C10.3284 8.75958 10.6845 7.72064 11.4136 6.96698C12.1427 6.21332 13.1693 5.82306 14.215 5.90204C14.9655 5.91417 15.7141 5.98101 16.455 6.10205V8.56104H15.191C14.7558 8.50405 14.3183 8.64777 14.0017 8.95171C13.6851 9.25566 13.5237 9.68693 13.563 10.124V12.002H16.334L15.891 14.893H13.563V21.881C18.8174 21.0506 22.502 16.2518 21.9475 10.9611C21.3929 5.67041 16.7932 1.73997 11.4808 2.01722C6.16831 2.29447 2.0028 6.68235 2.00195 12.002Z">
+                                </path>
+                            </svg>
+                        </a>
+
+                        <a href="#" class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white" aria-label="Github">
+                            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12.026 2C7.13295 1.99937 2.96183 5.54799 2.17842 10.3779C1.395 15.2079 4.23061 19.893 8.87302 21.439C9.37302 21.529 9.55202 21.222 9.55202 20.958C9.55202 20.721 9.54402 20.093 9.54102 19.258C6.76602 19.858 6.18002 17.92 6.18002 17.92C5.99733 17.317 5.60459 16.7993 5.07302 16.461C4.17302 15.842 5.14202 15.856 5.14202 15.856C5.78269 15.9438 6.34657 16.3235 6.66902 16.884C6.94195 17.3803 7.40177 17.747 7.94632 17.9026C8.49087 18.0583 9.07503 17.99 9.56902 17.713C9.61544 17.207 9.84055 16.7341 10.204 16.379C7.99002 16.128 5.66202 15.272 5.66202 11.449C5.64973 10.4602 6.01691 9.5043 6.68802 8.778C6.38437 7.91731 6.42013 6.97325 6.78802 6.138C6.78802 6.138 7.62502 5.869 9.53002 7.159C11.1639 6.71101 12.8882 6.71101 14.522 7.159C16.428 5.868 17.264 6.138 17.264 6.138C17.6336 6.97286 17.6694 7.91757 17.364 8.778C18.0376 9.50423 18.4045 10.4626 18.388 11.453C18.388 15.286 16.058 16.128 13.836 16.375C14.3153 16.8651 14.5612 17.5373 14.511 18.221C14.511 19.555 14.499 20.631 14.499 20.958C14.499 21.225 14.677 21.535 15.186 21.437C19.8265 19.8884 22.6591 15.203 21.874 10.3743C21.089 5.54565 16.9181 1.99888 12.026 2Z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex flex-col w-56 mx-5 my-2 items-center p-8 transition-colors duration-200 transform cursor-pointer group hover:bg-red-600 rounded-xl">
+                    <img class="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="">
+                    
+                    <h1 class="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white">arthur melo</h1>
+                    
+                    <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">design director</p>
+                    
+                    <div class="flex mt-3 -mx-2">
+                        <a href="#" class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white" aria-label="Reddit">
+                            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C21.9939 17.5203 17.5203 21.9939 12 22ZM6.807 10.543C6.20862 10.5433 5.67102 10.9088 5.45054 11.465C5.23006 12.0213 5.37133 12.6558 5.807 13.066C5.92217 13.1751 6.05463 13.2643 6.199 13.33C6.18644 13.4761 6.18644 13.6229 6.199 13.769C6.199 16.009 8.814 17.831 12.028 17.831C15.242 17.831 17.858 16.009 17.858 13.769C17.8696 13.6229 17.8696 13.4761 17.858 13.33C18.4649 13.0351 18.786 12.3585 18.6305 11.7019C18.475 11.0453 17.8847 10.5844 17.21 10.593H17.157C16.7988 10.6062 16.458 10.7512 16.2 11C15.0625 10.2265 13.7252 9.79927 12.35 9.77L13 6.65L15.138 7.1C15.1931 7.60706 15.621 7.99141 16.131 7.992C16.1674 7.99196 16.2038 7.98995 16.24 7.986C16.7702 7.93278 17.1655 7.47314 17.1389 6.94094C17.1122 6.40873 16.6729 5.991 16.14 5.991C16.1022 5.99191 16.0645 5.99491 16.027 6C15.71 6.03367 15.4281 6.21641 15.268 6.492L12.82 6C12.7983 5.99535 12.7762 5.993 12.754 5.993C12.6094 5.99472 12.4851 6.09583 12.454 6.237L11.706 9.71C10.3138 9.7297 8.95795 10.157 7.806 10.939C7.53601 10.6839 7.17843 10.5422 6.807 10.543ZM12.18 16.524C12.124 16.524 12.067 16.524 12.011 16.524C11.955 16.524 11.898 16.524 11.842 16.524C11.0121 16.5208 10.2054 16.2497 9.542 15.751C9.49626 15.6958 9.47445 15.6246 9.4814 15.5533C9.48834 15.482 9.52348 15.4163 9.579 15.371C9.62737 15.3318 9.68771 15.3102 9.75 15.31C9.81233 15.31 9.87275 15.3315 9.921 15.371C10.4816 15.7818 11.159 16.0022 11.854 16C11.9027 16 11.9513 16 12 16C12.059 16 12.119 16 12.178 16C12.864 16.0011 13.5329 15.7863 14.09 15.386C14.1427 15.3322 14.2147 15.302 14.29 15.302C14.3653 15.302 14.4373 15.3322 14.49 15.386C14.5985 15.4981 14.5962 15.6767 14.485 15.786V15.746C13.8213 16.2481 13.0123 16.5208 12.18 16.523V16.524ZM14.307 14.08H14.291L14.299 14.041C13.8591 14.011 13.4994 13.6789 13.4343 13.2429C13.3691 12.8068 13.6162 12.3842 14.028 12.2269C14.4399 12.0697 14.9058 12.2202 15.1478 12.5887C15.3899 12.9572 15.3429 13.4445 15.035 13.76C14.856 13.9554 14.6059 14.0707 14.341 14.08H14.306H14.307ZM9.67 14C9.11772 14 8.67 13.5523 8.67 13C8.67 12.4477 9.11772 12 9.67 12C10.2223 12 10.67 12.4477 10.67 13C10.67 13.5523 10.2223 14 9.67 14Z">
+                                </path>
+                            </svg>
+                        </a>
+
+                        <a href="#" class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+                            aria-label="Facebook">
+                            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M2.00195 12.002C2.00312 16.9214 5.58036 21.1101 10.439 21.881V14.892H7.90195V12.002H10.442V9.80204C10.3284 8.75958 10.6845 7.72064 11.4136 6.96698C12.1427 6.21332 13.1693 5.82306 14.215 5.90204C14.9655 5.91417 15.7141 5.98101 16.455 6.10205V8.56104H15.191C14.7558 8.50405 14.3183 8.64777 14.0017 8.95171C13.6851 9.25566 13.5237 9.68693 13.563 10.124V12.002H16.334L15.891 14.893H13.563V21.881C18.8174 21.0506 22.502 16.2518 21.9475 10.9611C21.3929 5.67041 16.7932 1.73997 11.4808 2.01722C6.16831 2.29447 2.0028 6.68235 2.00195 12.002Z">
+                                </path>
+                            </svg>
+                        </a>
+
+                        <a href="#" class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white" aria-label="Github">
+                            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12.026 2C7.13295 1.99937 2.96183 5.54799 2.17842 10.3779C1.395 15.2079 4.23061 19.893 8.87302 21.439C9.37302 21.529 9.55202 21.222 9.55202 20.958C9.55202 20.721 9.54402 20.093 9.54102 19.258C6.76602 19.858 6.18002 17.92 6.18002 17.92C5.99733 17.317 5.60459 16.7993 5.07302 16.461C4.17302 15.842 5.14202 15.856 5.14202 15.856C5.78269 15.9438 6.34657 16.3235 6.66902 16.884C6.94195 17.3803 7.40177 17.747 7.94632 17.9026C8.49087 18.0583 9.07503 17.99 9.56902 17.713C9.61544 17.207 9.84055 16.7341 10.204 16.379C7.99002 16.128 5.66202 15.272 5.66202 11.449C5.64973 10.4602 6.01691 9.5043 6.68802 8.778C6.38437 7.91731 6.42013 6.97325 6.78802 6.138C6.78802 6.138 7.62502 5.869 9.53002 7.159C11.1639 6.71101 12.8882 6.71101 14.522 7.159C16.428 5.868 17.264 6.138 17.264 6.138C17.6336 6.97286 17.6694 7.91757 17.364 8.778C18.0376 9.50423 18.4045 10.4626 18.388 11.453C18.388 15.286 16.058 16.128 13.836 16.375C14.3153 16.8651 14.5612 17.5373 14.511 18.221C14.511 19.555 14.499 20.631 14.499 20.958C14.499 21.225 14.677 21.535 15.186 21.437C19.8265 19.8884 22.6591 15.203 21.874 10.3743C21.089 5.54565 16.9181 1.99888 12.026 2Z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex flex-col w-56 mx-5 my-2 items-center p-8 transition-colors duration-200 transform cursor-pointer group hover:bg-red-600 rounded-xl">
+                    <img class="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="">
+                    
+                    <h1 class="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white">arthur melo</h1>
+                    
+                    <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">design director</p>
+                    
+                    <div class="flex mt-3 -mx-2">
+                        <a href="#" class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white" aria-label="Reddit">
+                            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C21.9939 17.5203 17.5203 21.9939 12 22ZM6.807 10.543C6.20862 10.5433 5.67102 10.9088 5.45054 11.465C5.23006 12.0213 5.37133 12.6558 5.807 13.066C5.92217 13.1751 6.05463 13.2643 6.199 13.33C6.18644 13.4761 6.18644 13.6229 6.199 13.769C6.199 16.009 8.814 17.831 12.028 17.831C15.242 17.831 17.858 16.009 17.858 13.769C17.8696 13.6229 17.8696 13.4761 17.858 13.33C18.4649 13.0351 18.786 12.3585 18.6305 11.7019C18.475 11.0453 17.8847 10.5844 17.21 10.593H17.157C16.7988 10.6062 16.458 10.7512 16.2 11C15.0625 10.2265 13.7252 9.79927 12.35 9.77L13 6.65L15.138 7.1C15.1931 7.60706 15.621 7.99141 16.131 7.992C16.1674 7.99196 16.2038 7.98995 16.24 7.986C16.7702 7.93278 17.1655 7.47314 17.1389 6.94094C17.1122 6.40873 16.6729 5.991 16.14 5.991C16.1022 5.99191 16.0645 5.99491 16.027 6C15.71 6.03367 15.4281 6.21641 15.268 6.492L12.82 6C12.7983 5.99535 12.7762 5.993 12.754 5.993C12.6094 5.99472 12.4851 6.09583 12.454 6.237L11.706 9.71C10.3138 9.7297 8.95795 10.157 7.806 10.939C7.53601 10.6839 7.17843 10.5422 6.807 10.543ZM12.18 16.524C12.124 16.524 12.067 16.524 12.011 16.524C11.955 16.524 11.898 16.524 11.842 16.524C11.0121 16.5208 10.2054 16.2497 9.542 15.751C9.49626 15.6958 9.47445 15.6246 9.4814 15.5533C9.48834 15.482 9.52348 15.4163 9.579 15.371C9.62737 15.3318 9.68771 15.3102 9.75 15.31C9.81233 15.31 9.87275 15.3315 9.921 15.371C10.4816 15.7818 11.159 16.0022 11.854 16C11.9027 16 11.9513 16 12 16C12.059 16 12.119 16 12.178 16C12.864 16.0011 13.5329 15.7863 14.09 15.386C14.1427 15.3322 14.2147 15.302 14.29 15.302C14.3653 15.302 14.4373 15.3322 14.49 15.386C14.5985 15.4981 14.5962 15.6767 14.485 15.786V15.746C13.8213 16.2481 13.0123 16.5208 12.18 16.523V16.524ZM14.307 14.08H14.291L14.299 14.041C13.8591 14.011 13.4994 13.6789 13.4343 13.2429C13.3691 12.8068 13.6162 12.3842 14.028 12.2269C14.4399 12.0697 14.9058 12.2202 15.1478 12.5887C15.3899 12.9572 15.3429 13.4445 15.035 13.76C14.856 13.9554 14.6059 14.0707 14.341 14.08H14.306H14.307ZM9.67 14C9.11772 14 8.67 13.5523 8.67 13C8.67 12.4477 9.11772 12 9.67 12C10.2223 12 10.67 12.4477 10.67 13C10.67 13.5523 10.2223 14 9.67 14Z">
+                                </path>
+                            </svg>
+                        </a>
+
+                        <a href="#" class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+                            aria-label="Facebook">
+                            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M2.00195 12.002C2.00312 16.9214 5.58036 21.1101 10.439 21.881V14.892H7.90195V12.002H10.442V9.80204C10.3284 8.75958 10.6845 7.72064 11.4136 6.96698C12.1427 6.21332 13.1693 5.82306 14.215 5.90204C14.9655 5.91417 15.7141 5.98101 16.455 6.10205V8.56104H15.191C14.7558 8.50405 14.3183 8.64777 14.0017 8.95171C13.6851 9.25566 13.5237 9.68693 13.563 10.124V12.002H16.334L15.891 14.893H13.563V21.881C18.8174 21.0506 22.502 16.2518 21.9475 10.9611C21.3929 5.67041 16.7932 1.73997 11.4808 2.01722C6.16831 2.29447 2.0028 6.68235 2.00195 12.002Z">
+                                </path>
+                            </svg>
+                        </a>
+
+                        <a href="#" class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white" aria-label="Github">
+                            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12.026 2C7.13295 1.99937 2.96183 5.54799 2.17842 10.3779C1.395 15.2079 4.23061 19.893 8.87302 21.439C9.37302 21.529 9.55202 21.222 9.55202 20.958C9.55202 20.721 9.54402 20.093 9.54102 19.258C6.76602 19.858 6.18002 17.92 6.18002 17.92C5.99733 17.317 5.60459 16.7993 5.07302 16.461C4.17302 15.842 5.14202 15.856 5.14202 15.856C5.78269 15.9438 6.34657 16.3235 6.66902 16.884C6.94195 17.3803 7.40177 17.747 7.94632 17.9026C8.49087 18.0583 9.07503 17.99 9.56902 17.713C9.61544 17.207 9.84055 16.7341 10.204 16.379C7.99002 16.128 5.66202 15.272 5.66202 11.449C5.64973 10.4602 6.01691 9.5043 6.68802 8.778C6.38437 7.91731 6.42013 6.97325 6.78802 6.138C6.78802 6.138 7.62502 5.869 9.53002 7.159C11.1639 6.71101 12.8882 6.71101 14.522 7.159C16.428 5.868 17.264 6.138 17.264 6.138C17.6336 6.97286 17.6694 7.91757 17.364 8.778C18.0376 9.50423 18.4045 10.4626 18.388 11.453C18.388 15.286 16.058 16.128 13.836 16.375C14.3153 16.8651 14.5612 17.5373 14.511 18.221C14.511 19.555 14.499 20.631 14.499 20.958C14.499 21.225 14.677 21.535 15.186 21.437C19.8265 19.8884 22.6591 15.203 21.874 10.3743C21.089 5.54565 16.9181 1.99888 12.026 2Z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section
+   class="
+   bg-white
+   py-20
+   relative
+   z-20
+   overflow-hidden
+   mx-auto
+   max-w-7xl
+   "
+   >
+   <div class="container">
+      <div class="flex flex-wrap">
+         <div class="w-full px-4">
+            <div class="text-center mx-auto mb-[60px] lg:mb-20 max-w-[510px]">
+               <h2
+                  class="
+                  font-bold
+                  text-3xl
+                  sm:text-4xl
+                  md:text-[40px]
+                  mb-4
+                  "
+                  >
+                  Our Pricing Plan
+               </h2>
+               <p class="text-base text-body-color">
+                  There are many variations of passages of Lorem Ipsum available
+                  but the majority have suffered alteration in some form.
+               </p>
+            </div>
+         </div>
+         <div class="flex flex-wrap justify-center">
+            <div class="w-full md:w-1/2 px-4">
+               <div
+                  class="
+                  bg-white
+                  rounded-xl
+                  relative
+                  z-10
+                  overflow-hidden
+                  border border-red-500 border-opacity-20
+                  shadow-pricing
+                  py-10
+                  px-8
+                  sm:p-12
+                  lg:py-10 lg:px-6
+                  xl:p-12
+                  mb-10
+                  "
+                  >
+                  <span class="text-red-500 font-semibold text-lg block mb-4">
+                    Startup
+                  </span>
+                  <p>Brand is a collective of young, up-and-coming lateral thinkers who would describe</p>
+                  <ul class="my-5">
+                     <li class="text-base text-body-color leading-loose mb-1 list-disc">
+                        1 User
+                     </li>
+                     <li class="text-base text-body-color leading-loose mb-1 list-disc">
+                        All UI components
+                     </li>
+                     <li class="text-base text-body-color leading-loose mb-1 list-disc">
+                        Lifetime access
+                     </li>
+                     <li class="text-base text-body-color leading-loose mb-1 list-disc">
+                        Free updates
+                     </li>
+                     <li class="text-base text-body-color leading-loose mb-1 list-disc">
+                        Use on 1 (one) project
+                     </li>
+                     <li class="text-base text-body-color leading-loose mb-1 list-disc">
+                        3 Months support
+                     </li>
+                  </ul>
+                  <a
+                     href="javascript:void(0)"
+                     class="
+                     w-full
+                     block
+                     text-base
+                     font-semibold
+                     text-red-500
+                     bg-transparent
+                     border border-[#D4DEFF]
+                     rounded-md
+                     text-center
+                     p-4
+                     hover:text-white hover:bg-red-500 hover:border-red-500
+                     transition
+                     "
+                     >
+                  Choose Personal
+                  </a>
+                  <div>
+                     <span class="absolute right-0 top-7 z-[-1]">
+                        <svg
+                           width="77"
+                           height="172"
+                           viewBox="0 0 77 172"
+                           fill="none"
+                           xmlns="http://www.w3.org/2000/svg"
+                           >
+                           <circle cx="86" cy="86" r="86" fill="url(#paint0_linear)" />
+                           <defs>
+                              <linearGradient
+                                 id="paint0_linear"
+                                 x1="86"
+                                 y1="0"
+                                 x2="86"
+                                 y2="172"
+                                 gradientUnits="userSpaceOnUse"
+                                 >
+                                 <stop stop-color="#3056D3" stop-opacity="0.09" />
+                                 <stop
+                                    offset="1"
+                                    stop-color="#C4C4C4"
+                                    stop-opacity="0"
+                                    />
+                              </linearGradient>
+                           </defs>
+                        </svg>
+                     </span>
+                     <span class="absolute right-4 top-4 z-[-1]">
+                        <svg
+                           width="41"
+                           height="89"
+                           viewBox="0 0 41 89"
+                           fill="none"
+                           xmlns="http://www.w3.org/2000/svg"
+                           >
+                           <circle
+                              cx="38.9138"
+                              cy="87.4849"
+                              r="1.42021"
+                              transform="rotate(180 38.9138 87.4849)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="38.9138"
+                              cy="74.9871"
+                              r="1.42021"
+                              transform="rotate(180 38.9138 74.9871)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="38.9138"
+                              cy="62.4892"
+                              r="1.42021"
+                              transform="rotate(180 38.9138 62.4892)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="38.9138"
+                              cy="38.3457"
+                              r="1.42021"
+                              transform="rotate(180 38.9138 38.3457)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="38.9138"
+                              cy="13.634"
+                              r="1.42021"
+                              transform="rotate(180 38.9138 13.634)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="38.9138"
+                              cy="50.2754"
+                              r="1.42021"
+                              transform="rotate(180 38.9138 50.2754)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="38.9138"
+                              cy="26.1319"
+                              r="1.42021"
+                              transform="rotate(180 38.9138 26.1319)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="38.9138"
+                              cy="1.42021"
+                              r="1.42021"
+                              transform="rotate(180 38.9138 1.42021)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="26.4157"
+                              cy="87.4849"
+                              r="1.42021"
+                              transform="rotate(180 26.4157 87.4849)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="26.4157"
+                              cy="74.9871"
+                              r="1.42021"
+                              transform="rotate(180 26.4157 74.9871)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="26.4157"
+                              cy="62.4892"
+                              r="1.42021"
+                              transform="rotate(180 26.4157 62.4892)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="26.4157"
+                              cy="38.3457"
+                              r="1.42021"
+                              transform="rotate(180 26.4157 38.3457)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="26.4157"
+                              cy="13.634"
+                              r="1.42021"
+                              transform="rotate(180 26.4157 13.634)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="26.4157"
+                              cy="50.2754"
+                              r="1.42021"
+                              transform="rotate(180 26.4157 50.2754)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="26.4157"
+                              cy="26.1319"
+                              r="1.42021"
+                              transform="rotate(180 26.4157 26.1319)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="26.4157"
+                              cy="1.4202"
+                              r="1.42021"
+                              transform="rotate(180 26.4157 1.4202)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="13.9177"
+                              cy="87.4849"
+                              r="1.42021"
+                              transform="rotate(180 13.9177 87.4849)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="13.9177"
+                              cy="74.9871"
+                              r="1.42021"
+                              transform="rotate(180 13.9177 74.9871)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="13.9177"
+                              cy="62.4892"
+                              r="1.42021"
+                              transform="rotate(180 13.9177 62.4892)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="13.9177"
+                              cy="38.3457"
+                              r="1.42021"
+                              transform="rotate(180 13.9177 38.3457)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="13.9177"
+                              cy="13.634"
+                              r="1.42021"
+                              transform="rotate(180 13.9177 13.634)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="13.9177"
+                              cy="50.2754"
+                              r="1.42021"
+                              transform="rotate(180 13.9177 50.2754)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="13.9177"
+                              cy="26.1319"
+                              r="1.42021"
+                              transform="rotate(180 13.9177 26.1319)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="13.9177"
+                              cy="1.42019"
+                              r="1.42021"
+                              transform="rotate(180 13.9177 1.42019)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="1.41963"
+                              cy="87.4849"
+                              r="1.42021"
+                              transform="rotate(180 1.41963 87.4849)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="1.41963"
+                              cy="74.9871"
+                              r="1.42021"
+                              transform="rotate(180 1.41963 74.9871)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="1.41963"
+                              cy="62.4892"
+                              r="1.42021"
+                              transform="rotate(180 1.41963 62.4892)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="1.41963"
+                              cy="38.3457"
+                              r="1.42021"
+                              transform="rotate(180 1.41963 38.3457)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="1.41963"
+                              cy="13.634"
+                              r="1.42021"
+                              transform="rotate(180 1.41963 13.634)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="1.41963"
+                              cy="50.2754"
+                              r="1.42021"
+                              transform="rotate(180 1.41963 50.2754)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="1.41963"
+                              cy="26.1319"
+                              r="1.42021"
+                              transform="rotate(180 1.41963 26.1319)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="1.41963"
+                              cy="1.4202"
+                              r="1.42021"
+                              transform="rotate(180 1.41963 1.4202)"
+                              fill="#3056D3"
+                              />
+                        </svg>
+                     </span>
+                  </div>
+               </div>
+            </div>
+            <div class="w-full md:w-1/2 px-4">
+               <div
+                  class="
+                  bg-white
+                  rounded-xl
+                  relative
+                  z-10
+                  overflow-hidden
+                  border border-red-500 border-opacity-20
+                  shadow-pricing
+                  py-10
+                  px-8
+                  sm:p-12
+                  lg:py-10 lg:px-6
+                  xl:p-12
+                  mb-10
+                  "
+                  >
+                  <span class="text-red-500 font-semibold text-lg block mb-4">
+                    Startup
+                  </span>
+                  <p>Brand is a collective of young, up-and-coming lateral thinkers who would describe</p>
+                  <ul class="my-5">
+                     <li class="text-base text-body-color leading-loose mb-1 list-disc">
+                        1 User
+                     </li>
+                     <li class="text-base text-body-color leading-loose mb-1 list-disc">
+                        All UI components
+                     </li>
+                     <li class="text-base text-body-color leading-loose mb-1 list-disc">
+                        Lifetime access
+                     </li>
+                     <li class="text-base text-body-color leading-loose mb-1 list-disc">
+                        Free updates
+                     </li>
+                     <li class="text-base text-body-color leading-loose mb-1 list-disc">
+                        Use on 1 (one) project
+                     </li>
+                     <li class="text-base text-body-color leading-loose mb-1 list-disc">
+                        3 Months support
+                     </li>
+                  </ul>
+                  <a
+                     href="javascript:void(0)"
+                     class="
+                     w-full
+                     block
+                     text-base
+                     font-semibold
+                     text-red-500
+                     bg-transparent
+                     border border-[#D4DEFF]
+                     rounded-md
+                     text-center
+                     p-4
+                     hover:text-white hover:bg-red-500 hover:border-red-500
+                     transition
+                     "
+                     >
+                  Choose Personal
+                  </a>
+                  <div>
+                     <span class="absolute right-0 top-7 z-[-1]">
+                        <svg
+                           width="77"
+                           height="172"
+                           viewBox="0 0 77 172"
+                           fill="none"
+                           xmlns="http://www.w3.org/2000/svg"
+                           >
+                           <circle cx="86" cy="86" r="86" fill="url(#paint0_linear)" />
+                           <defs>
+                              <linearGradient
+                                 id="paint0_linear"
+                                 x1="86"
+                                 y1="0"
+                                 x2="86"
+                                 y2="172"
+                                 gradientUnits="userSpaceOnUse"
+                                 >
+                                 <stop stop-color="#3056D3" stop-opacity="0.09" />
+                                 <stop
+                                    offset="1"
+                                    stop-color="#C4C4C4"
+                                    stop-opacity="0"
+                                    />
+                              </linearGradient>
+                           </defs>
+                        </svg>
+                     </span>
+                     <span class="absolute right-4 top-4 z-[-1]">
+                        <svg
+                           width="41"
+                           height="89"
+                           viewBox="0 0 41 89"
+                           fill="none"
+                           xmlns="http://www.w3.org/2000/svg"
+                           >
+                           <circle
+                              cx="38.9138"
+                              cy="87.4849"
+                              r="1.42021"
+                              transform="rotate(180 38.9138 87.4849)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="38.9138"
+                              cy="74.9871"
+                              r="1.42021"
+                              transform="rotate(180 38.9138 74.9871)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="38.9138"
+                              cy="62.4892"
+                              r="1.42021"
+                              transform="rotate(180 38.9138 62.4892)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="38.9138"
+                              cy="38.3457"
+                              r="1.42021"
+                              transform="rotate(180 38.9138 38.3457)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="38.9138"
+                              cy="13.634"
+                              r="1.42021"
+                              transform="rotate(180 38.9138 13.634)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="38.9138"
+                              cy="50.2754"
+                              r="1.42021"
+                              transform="rotate(180 38.9138 50.2754)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="38.9138"
+                              cy="26.1319"
+                              r="1.42021"
+                              transform="rotate(180 38.9138 26.1319)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="38.9138"
+                              cy="1.42021"
+                              r="1.42021"
+                              transform="rotate(180 38.9138 1.42021)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="26.4157"
+                              cy="87.4849"
+                              r="1.42021"
+                              transform="rotate(180 26.4157 87.4849)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="26.4157"
+                              cy="74.9871"
+                              r="1.42021"
+                              transform="rotate(180 26.4157 74.9871)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="26.4157"
+                              cy="62.4892"
+                              r="1.42021"
+                              transform="rotate(180 26.4157 62.4892)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="26.4157"
+                              cy="38.3457"
+                              r="1.42021"
+                              transform="rotate(180 26.4157 38.3457)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="26.4157"
+                              cy="13.634"
+                              r="1.42021"
+                              transform="rotate(180 26.4157 13.634)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="26.4157"
+                              cy="50.2754"
+                              r="1.42021"
+                              transform="rotate(180 26.4157 50.2754)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="26.4157"
+                              cy="26.1319"
+                              r="1.42021"
+                              transform="rotate(180 26.4157 26.1319)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="26.4157"
+                              cy="1.4202"
+                              r="1.42021"
+                              transform="rotate(180 26.4157 1.4202)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="13.9177"
+                              cy="87.4849"
+                              r="1.42021"
+                              transform="rotate(180 13.9177 87.4849)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="13.9177"
+                              cy="74.9871"
+                              r="1.42021"
+                              transform="rotate(180 13.9177 74.9871)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="13.9177"
+                              cy="62.4892"
+                              r="1.42021"
+                              transform="rotate(180 13.9177 62.4892)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="13.9177"
+                              cy="38.3457"
+                              r="1.42021"
+                              transform="rotate(180 13.9177 38.3457)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="13.9177"
+                              cy="13.634"
+                              r="1.42021"
+                              transform="rotate(180 13.9177 13.634)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="13.9177"
+                              cy="50.2754"
+                              r="1.42021"
+                              transform="rotate(180 13.9177 50.2754)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="13.9177"
+                              cy="26.1319"
+                              r="1.42021"
+                              transform="rotate(180 13.9177 26.1319)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="13.9177"
+                              cy="1.42019"
+                              r="1.42021"
+                              transform="rotate(180 13.9177 1.42019)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="1.41963"
+                              cy="87.4849"
+                              r="1.42021"
+                              transform="rotate(180 1.41963 87.4849)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="1.41963"
+                              cy="74.9871"
+                              r="1.42021"
+                              transform="rotate(180 1.41963 74.9871)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="1.41963"
+                              cy="62.4892"
+                              r="1.42021"
+                              transform="rotate(180 1.41963 62.4892)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="1.41963"
+                              cy="38.3457"
+                              r="1.42021"
+                              transform="rotate(180 1.41963 38.3457)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="1.41963"
+                              cy="13.634"
+                              r="1.42021"
+                              transform="rotate(180 1.41963 13.634)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="1.41963"
+                              cy="50.2754"
+                              r="1.42021"
+                              transform="rotate(180 1.41963 50.2754)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="1.41963"
+                              cy="26.1319"
+                              r="1.42021"
+                              transform="rotate(180 1.41963 26.1319)"
+                              fill="#3056D3"
+                              />
+                           <circle
+                              cx="1.41963"
+                              cy="1.4202"
+                              r="1.42021"
+                              transform="rotate(180 1.41963 1.4202)"
+                              fill="#3056D3"
+                              />
+                        </svg>
+                     </span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+    </section>
+    <footer class="bg-slate-100 pt-24 pb-12">
+        <div class="container">
+            <div class="flex max-w-7xl mx-auto flex-wrap justify-center">
+                <div class="w-full px-4 mb-12 text-red-500 font-medium md:w-1/3">
+                    <img src="https://html.quomodosoft.com/aball/aball/assets/images/logo-3.png" alt="">
+                </div>
+                <div class="w-full px-10 mb-12 text-red-500 font-medium md:w-1/3">
+                    <h3 class="font-semibold text-md lang-link text-red-500 mb-5 border-b-2 border-red-500">Want to collaborate?</h3>
+                    <h3 class="font-semibold text-md lang-link text-red-500  ">Work with us</h3>
+                    <h3 class="font-semibold text-xl lang-link text-red-500 mb-10 ">Hello.business@brand.com</h3>
+                    <h3 class="font-semibold text-md lang-link text-red-500 mb-5 border-b-2 border-red-500">View on maps</h3>
+                    <h3 class="font-semibold text-md lang-link text-red-500  ">Corporate office</h3>
+                    <h3 class="font-semibold text-xl lang-link text-red-500 mb-5 ">Study Meeting 19, 4th floor DK-1455 Copenhagen</h3>
+                </div>
+                <div class="w-full px-10 mb-12 text-red-500 font-medium md:w-1/3">
+                    <h3 class="font-semibold text-md lang-link text-red-500 mb-5 border-b-2 border-red-500">What to say hi?</h3>
+                    <h3 class="font-semibold text-md lang-link text-red-500  ">General inquires</h3>
+                    <h3 class="font-semibold text-xl lang-link text-red-500 mb-10 ">Hello@brand.com</h3>
+                    <h3 class="font-semibold text-md lang-link text-red-500 mb-5 border-b-2 border-red-500">Join Our Social Community</h3>
+                    <h3 class="font-semibold text-md lang-link text-red-500  ">Follow us</h3>
+                    <div class="flex">
+                        <a href="#" class="text-2xl mx-2 text-red-500 hover:text-red-700 duration-300 ease-in-out transition-all"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="text-2xl mx-2 text-red-500 hover:text-red-700 duration-300 ease-in-out transition-all"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" class="text-2xl mx-2 text-red-500 hover:text-red-700 duration-300 ease-in-out transition-all"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
