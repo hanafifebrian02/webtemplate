@@ -1,0 +1,137 @@
+        <section class="py-32 bg-slate-300 dark:bg-slate-600" id="portofolio">
+            <div class="container mx-auto w-full h-full">
+                <div class="text-center">
+                    <p class="dark:text-biru font-bold text-xl">Portfolio</p>
+                    <h1 class="font-bold uppercase text-5xl font-Drift text-biru dark:text-white">Proyek Saya</h>
+                </div>
+                <div class="relative wrap overflow-hidden p-10 h-full">
+                  <div class="border-2-2 absolute border-opacity-20 border-gray-700 h-full border" style="left: 50%"></div>
+                  <!-- right timeline -->
+                  <div class="mb-8 flex justify-between items-center w-full right-timeline">
+                    <div class="order-1 w-5/12"></div>
+                    <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
+                      <h1 class="mx-auto font-semibold text-lg text-white">1</h1>
+                    </div>
+                    <div class="order-1 shadow-xl w-5/12">
+                        <a href="./webpertama/index.html" target="_blank">
+                            <img src="./assets1/w-1.png" alt="" class="rounded-xl hover:scale-105 duration-300">
+                        </a>
+                    </div>
+                  </div>
+              
+                  <!-- left timeline -->
+                  <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+                    <div class="order-1 w-5/12"></div>
+                    <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
+                      <h1 class="mx-auto text-white font-semibold text-lg">2</h1>
+                    </div>
+                    <div class="order-1 shadow-xl w-5/12">
+                        <a href="./webkedua/index.html" target="_blank">
+                            <img src="./assets1/w-2.png" alt="" class="rounded-xl hover:scale-105 duration-300">
+                        </a>
+                    </div>
+                  </div>
+                  <!-- right timeline -->
+                  <div class="mb-8 flex justify-between items-center w-full right-timeline">
+                    <div class="order-1 w-5/12"></div>
+                    <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
+                      <h1 class="mx-auto font-semibold text-lg text-white">3</h1>
+                    </div>
+                    <div class="order-1 shadow-xl w-5/12">
+                        <a href="./webketiga/index.html" target="_blank">
+                            <img src="./assets1/w-3.png" alt="" class="rounded-xl hover:scale-105 duration-300">
+                        </a>
+                    </div>
+                  </div>
+              
+                  <!-- left timeline -->
+                  <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+                    <div class="order-1 w-5/12"></div>
+                    <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
+                      <h1 class="mx-auto text-white font-semibold text-lg">4</h1>
+                    </div>
+                    <div class="order-1 shadow-xl w-5/12">
+                        <a href="./webkeempat/index.html" target="_blank">
+                            <img src="./assets1/w-4.png" alt="" class="rounded-xl hover:scale-105 duration-300">
+                        </a>
+                    </div>
+                  </div>
+                  <!-- right timeline -->
+                  <div class="mb-8 flex justify-between items-center w-full right-timeline">
+                    <div class="order-1 w-5/12"></div>
+                    <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
+                      <h1 class="mx-auto font-semibold text-lg text-white">5</h1>
+                    </div>
+                    <div class="order-1 shadow-xl w-5/12">
+                        <a href="./webkelima/index.html" target="_blank">
+                            <img src="./assets1/w-5.png" alt="" class="rounded-xl hover:scale-105 duration-300">
+                        </a>
+                    </div>
+                  </div>
+              
+                  <!-- left timeline -->
+                  <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+                    <div class="order-1 w-5/12"></div>
+                    <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
+                      <h1 class="mx-auto text-white font-semibold text-lg">6</h1>
+                    </div>
+                    <div class="order-1 shadow-xl w-5/12">
+                        <a href="./webkeenam/index.html" target="_blank">
+                            <img src="./assets1/w-6.png" alt="" class="rounded-xl hover:scale-105 duration-300">
+                        </a>
+                    </div>
+                  </div>
+                  <!-- right timeline -->
+                  <div class="mb-8 flex justify-between items-center w-full right-timeline">
+                    <div class="order-1 w-5/12"></div>
+                    <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
+                      <h1 class="mx-auto font-semibold text-lg text-white">7</h1>
+                    </div>
+                    <div class="order-1 shadow-xl w-5/12">
+                        <a href="./webketuju/index.html" target="_blank">
+                            <img src="./assets1/w-7.png" alt="" class="rounded-xl hover:scale-105 duration-300">
+                        </a>
+                    </div>
+                  </div>
+              
+                  <!-- left timeline -->
+                  <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+                    <div class="order-1 w-5/12"></div>
+                    <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
+                      <h1 class="mx-auto text-white font-semibold text-lg">8</h1>
+                    </div>
+                    <div class="order-1 shadow-xl w-5/12">
+                        <a href="./webkedelapan/index.html" target="_blank">
+                            <img src="./assets1/w-8.png" alt="" class="rounded-xl hover:scale-105 duration-300">
+                        </a>
+                    </div>
+                  </div>
+                  <!-- right timeline -->
+                  <div class="mb-8 flex justify-between items-center w-full right-timeline">
+                    <div class="order-1 w-5/12"></div>
+                    <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
+                      <h1 class="mx-auto font-semibold text-lg text-white">9</h1>
+                    </div>
+                    <div class="order-1 shadow-xl w-5/12">
+                        <a href="./webkesembilan/" class="hover:scale-105" target="_blank">
+                            <img src="./assets1/w-9.png" alt="" class="rounded-xl">
+                        </a>
+                    </div>
+                  </div>
+              
+                  <!-- left timeline -->
+                  <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+                    <div class="order-1 w-5/12"></div>
+                    <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
+                      <h1 class="mx-auto text-white font-semibold text-lg">10</h1>
+                    </div>
+                    <div class="order-1 shadow-xl w-5/12">
+                        <a href="./webkesepuluh/index.html" target="_blank">
+                            <img src="./assets1/w-10.png" alt="" class="rounded-xl hover:scale-105 duration-300">
+                        </a>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+        </section>
